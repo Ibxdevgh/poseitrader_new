@@ -26450,7 +26450,7 @@
                 ],
               },
               {
-                href: "https://github.com/poseisysstems",
+                href: "https://github.com/poseisystems",
                 position: "right",
                 className: "header-github-link common-social",
                 "aria-label": "GitHub repository",

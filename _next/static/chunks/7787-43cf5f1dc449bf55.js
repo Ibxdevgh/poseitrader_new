@@ -305,7 +305,7 @@
                         },
                         children: [
                           (0, n.jsx)(o(), {
-                            href: "https://github.com/poseisysstems",
+                            href: "https://github.com/poseisystems",
                             target: "_blank",
                             children: (0, n.jsx)(d.Tv0, { color: "black" }),
                           }),
@@ -345,7 +345,7 @@
                         items: [
                           {
                             text: "Open Source",
-                            link: "https://github.com/poseisysstems",
+                            link: "https://github.com/poseisystems",
                             newTab: !0,
                             external: !0,
                           },
@@ -592,7 +592,7 @@
               items: [
                 {
                   text: "Open Source",
-                  link: "https://github.com/poseisysstems",
+                  link: "https://github.com/poseisystems",
                   newTab: !0,
                   description: "Explore our open-core GitHub repository.",
                 },

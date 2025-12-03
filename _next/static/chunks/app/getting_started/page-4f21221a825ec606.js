@@ -303,7 +303,7 @@
                                   mt: "0.9rem",
                                   children: [
                                     (0, n.jsx)(a(), {
-                                      href: "https://github.com/poseisysstems",
+                                      href: "https://github.com/poseisystems",
                                       target: "_blank",
                                       children: (0, n.jsxs)(i.default, {
                                         sx: { display: "flex", gap: "5px" },
