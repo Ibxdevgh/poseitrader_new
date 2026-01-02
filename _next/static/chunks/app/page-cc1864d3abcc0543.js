@@ -136,51 +136,6 @@
                         "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes.",
                     }),
                     (0, n.jsx)(r.default, {
-                      sx: {
-                        display: "flex",
-                        justifyContent: { md: "flex-start", xs: "center" },
-                        width: "100%",
-                        mt: { md: "6.7rem", xs: "4rem" },
-                      },
-                      children: (0, n.jsxs)(s.default, {
-                        container: !0,
-                        spacing: { md: 1, xs: 1 },
-                        sx: {
-                          display: "grid",
-                          gridTemplateColumns: {
-                            xs: "repeat(1, minmax(200px, 1fr))",
-                            sm: "repeat(3, minmax(200px, 1fr))",
-                          },
-                          gap: { xs: 1, md: 1 },
-                          width: "100%",
-                          justifyContent: "center",
-                          justifyItems: "center",
-                          maxWidth: { sm: "900px", xs: "100%" },
-                          margin: "0 auto",
-                        },
-                        children: [
-                          (0, n.jsx)(S, {
-                            icon: c.H3b,
-                            description: "GitHub Stars",
-                            data: i,
-                            children: null !== i ? "null" : "9,400+",
-                          }),
-                          (0, n.jsx)(S, {
-                            icon: l.mSE,
-                            description: "Downloads",
-                            data: g,
-                            children: null !== g ? null : "659,000+",
-                          }),
-                          (0, n.jsx)(S, {
-                            icon: d.Nxe,
-                            description: "X Followers",
-                            data: k,
-                            children: null !== k ? null : "2,400+",
-                          }),
-                        ],
-                      }),
-                    }),
-                    (0, n.jsx)(r.default, {
                       ref: e,
                       sx: {
                         display: "flex",
