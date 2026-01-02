@@ -82,7 +82,8 @@
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              backgroundColor: "transparent",
+              backgroundColor: "#000000",
+              minHeight: "fit-content",
             },
             children: [
               (0, n.jsx)(r.default, {
