@@ -1216,7 +1216,7 @@
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
-            z-index: 1;
+            z-index: 2;
             background-image: url(2.jpg);
             -webkit-background-size: cover;
             background-size: cover;
@@ -1245,7 +1245,8 @@
               -webkit-justify-content: space-between;
               justify-content: space-between;
               width: 100%;
-              z-index: 1;
+              z-index: 10;
+              position: relative;
             }
           </style>
           <div class="MuiBox-root css-txnejr">
@@ -1275,19 +1276,21 @@
               </style>
               <div class="MuiBox-root css-cet0rr">
                 <style data-emotion="css 1x8ed26">
-                  .css-1x8ed26 {
-                    margin: 0;
-                    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-                    font-weight: 400;
-                    font-size: 1rem;
-                    line-height: 1.5;
-                    letter-spacing: 0.00938em;
-                    text-align: var(--Typography-textAlign);
-                    font-family: "newTitleFont", "newTitleFont Fallback";
-                    font-weight: 500;
-                    line-height: 1.1;
-                    color: #eeeeee;
-                  }
+                .css-1x8ed26 {
+                  margin: 0;
+                  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                  font-weight: 400;
+                  font-size: 1rem;
+                  line-height: 1.5;
+                  letter-spacing: 0.00938em;
+                  text-align: var(--Typography-textAlign);
+                  font-family: "newTitleFont", "newTitleFont Fallback";
+                  font-weight: 500;
+                  line-height: 1.1;
+                  color: #eeeeee;
+                  position: relative;
+                  z-index: 10;
+                }
                   @media (min-width: 0px) {
                     .css-1x8ed26 {
                       font-size: 3rem;
@@ -1320,6 +1323,8 @@
                   line-height: 1.4;
                   margin: 0 auto;
                   color: #d0d0dc;
+                  position: relative;
+                  z-index: 10;
                 }
                 @media (min-width: 0px) {
                   .css-10ga6az {
@@ -1350,6 +1355,8 @@
                   display: -ms-flexbox;
                   display: flex;
                   width: 100%;
+                  position: relative;
+                  z-index: 10;
                 }
                 @media (min-width: 0px) {
                   .css-moy70d {
@@ -1387,6 +1394,8 @@
                   width: 100%;
                   margin-top: 3.5rem;
                   gap: 1.5rem;
+                  position: relative;
+                  z-index: 10;
                 }
                 @media (min-width: 0px) {
                   .css-1qx82aa {
