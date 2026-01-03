@@ -245,28 +245,96 @@
       .MuiTypography-root.MuiTypography-body1.css-1sv54r:hover {
         color: #eee !important;
       }
+      /* Dark overlay for all sections with back.png background */
+      [style*="back.png"]::before,
+      [style*="url(back.png)"]::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+        pointer-events: none;
+      }
+      .css-187sud::before,
+      .css-515dhy::before,
+      .css-1qx82aa::before,
+      .css-140btpl::before,
+      .css-sqas88::before,
+      .css-6kfnv1::before,
+      .css-8qvtdx::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+        pointer-events: none;
+      }
     </style>
   </head>
-  <body class="__className_e8ce0c" style="background-image: url(1.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+  <body class="__className_e8ce0c" style="background-image: url(back.png); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; position: relative;">
+    <style>
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+        pointer-events: none;
+      }
+    </style>
     <style data-emotion="css i6bazn">
       .css-i6bazn {
         overflow: hidden;
-        background-image: url(1.jpg);
+        background-image: url(back.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        position: relative;
+      }
+      .css-i6bazn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+        pointer-events: none;
       }
     </style>
     <div class="MuiBox-root css-i6bazn">
       <style data-emotion="css 8atqhb">
         .css-8atqhb {
           width: 100%;
-          background-image: url(1.jpg);
+          background-image: url(back.png);
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
           background-attachment: fixed;
+          position: relative;
+        }
+        .css-8atqhb::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          z-index: 0;
+          pointer-events: none;
+        }
         }
       </style>
       <div class="MuiBox-root css-8atqhb">
@@ -543,7 +611,8 @@
                                   transition: all 0.2s ease;
                                 }
                                 .css-1fmymdm:hover {
-                                  background-image: url(1.jpg);
+                                  background-image: url(back.png);
+            position: relative;
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat;
@@ -1444,11 +1513,23 @@
         </div>
         <style data-emotion="css 187sud">
           .css-187sud {
-            background-image: url(1.jpg);
+            background-image: url(back.png);
+            position: relative;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+          }
+          .css-187sud::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+            pointer-events: none;
           }
         </style>
         <div class="MuiBox-root css-187sud">
@@ -2173,7 +2254,8 @@
             background-size: contain;
             -webkit-background-position: center;
             background-position: center;
-            background-image: url(1.jpg);
+            background-image: url(back.png);
+            position: relative;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -2953,7 +3035,8 @@
         </div>
         <style data-emotion="css 515dhy">
           .css-515dhy {
-            background-image: url(1.jpg);
+            background-image: url(back.png);
+            position: relative;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -4179,7 +4262,8 @@ install -U posei_trader</pre
             background-size: contain;
             -webkit-background-position: center;
             background-position: center;
-            background-image: url(1.jpg);
+            background-image: url(back.png);
+            position: relative;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -4571,7 +4655,8 @@ install -U posei_trader</pre
             <style data-emotion="css 8qvtdx">
               .css-8qvtdx {
                 width: 100%;
-                background-image: url(1.jpg);
+                background-image: url(back.png);
+            position: relative;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -4612,7 +4697,8 @@ install -U posei_trader</pre
                   -webkit-justify-content: space-between;
                   justify-content: space-between;
                   width: 100%;
-                  background-image: url(1.jpg);
+                  background-image: url(back.png);
+            position: relative;
                   background-size: cover;
                   background-position: center;
                   background-repeat: no-repeat;
@@ -4776,7 +4862,8 @@ install -U posei_trader</pre
                                 padding: 0 12px;
                                 font-size: 0.93rem;
                                 color: #eee;
-                                background-image: url(1.jpg);
+                                background-image: url(back.png);
+            position: relative;
                   background-size: cover;
                   background-position: center;
                   background-repeat: no-repeat;
@@ -4986,7 +5073,8 @@ install -U posei_trader</pre
               display: -ms-flexbox;
               display: flex;
               z-index: 1;
-              background-image: url(1.jpg);
+              background-image: url(back.png);
+            position: relative;
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat;
@@ -5281,7 +5369,8 @@ install -U posei_trader</pre
               <style data-emotion="css 6kfnv1">
                 .css-6kfnv1 {
                   width: 100%;
-                  background-image: url(1.jpg);
+                  background-image: url(back.png);
+            position: relative;
                   background-size: cover;
                   background-position: center;
                   background-repeat: no-repeat;
