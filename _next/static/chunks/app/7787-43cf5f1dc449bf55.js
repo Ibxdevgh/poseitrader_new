@@ -236,7 +236,13 @@
       }
       function y() {
         return (0, n.jsx)(i.default, {
-          sx: { backgroundColor: "#1B1B1D" },
+          sx: { 
+            backgroundImage: "url(1.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+          },
           children: (0, n.jsx)(i.default, {
             sx: {
               justifyContent: "center",
@@ -249,7 +255,11 @@
             children: (0, n.jsx)(i.default, {
               sx: {
                 width: "100%",
-                backgroundColor: "#171718",
+                backgroundImage: "url(1.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
                 backgroundImage: {
                   md: "radial-gradient(farthest-side at bottom left, #1e353d, transparent 600px), radial-gradient(farthest-corner at bottom right, #1a3831, transparent 570px)",
                   xs: "radial-gradient(farthest-corner at bottom right, #233f38, transparent 250px)",

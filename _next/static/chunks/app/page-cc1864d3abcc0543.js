@@ -78,7 +78,7 @@
               width: "100%",
               display: "flex",
               zIndex: 1,
-              backgroundImage: "url(2.jpg)",
+              backgroundImage: "url(back.png)",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -1707,7 +1707,13 @@
       function Y() {
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 });
         return (0, n.jsx)(r.default, {
-          sx: { backgroundColor: "#1B1B1D" },
+          sx: { 
+            backgroundImage: "url(1.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+          },
           children: (0, n.jsx)(r.default, {
             sx: {
               justifyContent: "center",
@@ -1722,7 +1728,11 @@
             children: (0, n.jsx)(r.default, {
               sx: {
                 width: "100%",
-                backgroundColor: "#171718",
+                backgroundImage: "url(1.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
                 borderRadius: "15px",
                 pt: { md: "2rem", xs: "2rem" },
                 pb: { md: "2rem", xs: "2rem" },
