@@ -1454,6 +1454,7 @@
         "dydx",
         "ib",
         "polymarket",
+        "pump",
         "tardisdev",
       ];
       function q() {
