@@ -1214,12 +1214,12 @@
             display: flex;
             z-index: 1;
             background-image: url(2.jpg);
-            -webkit-background-size: contain;
-            background-size: contain;
+            -webkit-background-size: cover;
+            background-size: cover;
             background-repeat: no-repeat;
             -webkit-background-position: center;
             background-position: center;
-            background-color: #000000;
+            background-color: transparent;
             min-height: fit-content;
           }
         </style>
@@ -4648,10 +4648,23 @@ install -U posei_trader</pre
               display: -ms-flexbox;
               display: flex;
               z-index: 1;
-              -webkit-background-size: contain;
-              background-size: contain;
-              -webkit-background-position: center;
+              background-image: url(back.png);
+              background-size: cover;
               background-position: center;
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              position: relative;
+            }
+            .css-1vx6k85::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.6);
+              z-index: 0;
+              pointer-events: none;
             }
             @media (min-width: 0px) {
               .css-1vx6k85 {
@@ -4670,13 +4683,7 @@ install -U posei_trader</pre
             <style data-emotion="css 8qvtdx">
               .css-8qvtdx {
                 width: 100%;
-                background-image: url(back.png);
-            position: relative;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                border-radius: 15px;
+                position: relative;
                 z-index: 10;
                 display: -webkit-box;
                 display: -webkit-flex;
@@ -4712,13 +4719,7 @@ install -U posei_trader</pre
                   -webkit-justify-content: space-between;
                   justify-content: space-between;
                   width: 100%;
-                  background-image: url(back.png);
-            position: relative;
-                  background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  background-attachment: fixed;
-                  border-radius: 15px;
+                  position: relative;
                   z-index: 10;
                 }
                 @media (min-width: 0px) {
@@ -4740,17 +4741,7 @@ install -U posei_trader</pre
                     margin: 1rem;
                     width: 100%;
                     position: relative;
-                  }
-                  .css-vahnpw::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.6);
-                    z-index: 0;
-                    pointer-events: none;
+                    z-index: 2;
                   }
                 </style>
                 <div class="MuiBox-root css-vahnpw">
