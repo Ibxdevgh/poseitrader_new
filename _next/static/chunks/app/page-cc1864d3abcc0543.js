@@ -77,7 +77,7 @@
               position: "relative",
               width: "100%",
               display: "flex",
-              zIndex: 1,
+              zIndex: 2,
               backgroundImage: "url(2.jpg)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
@@ -97,7 +97,8 @@
                   display: "flex",
                   justifyContent: "space-between",
                   width: "100%",
-                  zIndex: 1,
+                  zIndex: 10,
+                  position: "relative",
                 },
                 children: (0, n.jsxs)(r.default, {
                   sx: {
@@ -108,7 +109,7 @@
                   },
                   children: [
                     (0, n.jsx)(r.default, {
-                      sx: { mb: "0.5rem" },
+                      sx: { mb: "0.5rem", position: "relative", zIndex: 10 },
                       children: (0, n.jsxs)(a.default, {
                         color: "#EEEEEE",
                         fontFamily: y.GC.style.fontFamily,
@@ -133,6 +134,8 @@
                       lineHeight: "1.4",
                       align: "center",
                       m: "0 auto",
+                      position: "relative",
+                      zIndex: 10,
                       children:
                         "Trade any asset class in one platform. Event-driven backtests on any historical data. Live trading with no code changes.",
                     }),
@@ -146,6 +149,8 @@
                         width: "100%",
                         mt: "3.5rem",
                         gap: "1.5rem",
+                        position: "relative",
+                        zIndex: 10,
                       },
                       children: (0, n.jsx)(f.P.div, {
                         initial: { opacity: 0, y: 100 },
