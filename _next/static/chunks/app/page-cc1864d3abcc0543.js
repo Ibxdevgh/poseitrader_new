@@ -1708,11 +1708,23 @@
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 });
         return (0, n.jsx)(r.default, {
           sx: { 
-            backgroundImage: "url(1.jpg)",
+            backgroundImage: "url(back.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
+            position: "relative",
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              zIndex: 0,
+              pointerEvents: "none",
+            },
           },
           children: (0, n.jsx)(r.default, {
             sx: {
@@ -1728,12 +1740,25 @@
             children: (0, n.jsx)(r.default, {
               sx: {
                 width: "100%",
-                backgroundImage: "url(1.jpg)",
+                backgroundImage: "url(back.png)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundAttachment: "fixed",
                 borderRadius: "15px",
+                position: "relative",
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "rgba(0, 0, 0, 0.6)",
+                  zIndex: 0,
+                  pointerEvents: "none",
+                  borderRadius: "15px",
+                },
                 pt: { md: "2rem", xs: "2rem" },
                 pb: { md: "2rem", xs: "2rem" },
                 zIndex: 10,
