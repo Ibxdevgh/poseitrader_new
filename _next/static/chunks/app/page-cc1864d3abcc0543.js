@@ -84,6 +84,17 @@
               backgroundPosition: "center",
               backgroundColor: "transparent",
               minHeight: "fit-content",
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+                zIndex: 0,
+                pointerEvents: "none",
+              },
             },
             children: [
               (0, n.jsx)(r.default, {
@@ -111,7 +122,7 @@
                     (0, n.jsx)(r.default, {
                       sx: { mb: "0.5rem", position: "relative", zIndex: 10 },
                       children: (0, n.jsxs)(a.default, {
-                        color: "#EEEEEE",
+                        color: "#b8b8c0",
                         fontFamily: y.GC.style.fontFamily,
                         fontWeight: "500",
                         fontSize: { md: "3.7rem", xs: "3rem" },
@@ -125,7 +136,7 @@
                       }),
                     }),
                     (0, n.jsx)(a.default, {
-                      color: "#D0D0DC",
+                      color: "#a0a0a8",
                       fontFamily: y.Tv.style.fontFamily,
                       fontSize: { md: "1.1rem", xs: "1.2rem" },
                       mt: { md: "2.5rem", xs: "1rem" },
