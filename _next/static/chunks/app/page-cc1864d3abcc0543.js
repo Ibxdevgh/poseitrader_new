@@ -78,7 +78,7 @@
               width: "100%",
               display: "flex",
               zIndex: 1,
-              backgroundImage: "url(back.png)",
+              backgroundImage: "url(2.jpg)",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
