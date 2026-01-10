@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["BarAggregatorCore","BarBuilder","NewBarCallback","TickBarAggregator","TimeBarAggregator","ValueBarAggregator","VolumeBarAggregator"],"trait":["BarAggregator"]};

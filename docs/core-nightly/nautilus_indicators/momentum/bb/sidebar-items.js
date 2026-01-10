@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAX_PERIOD"],"fn":["fast_std_with_mean"],"struct":["BollingerBands"]};

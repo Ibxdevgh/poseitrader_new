@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["from_dict_pyo3","to_dict_pyo3"]};

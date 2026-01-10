@@ -1,0 +1,964 @@
+﻿<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="docs-wrapper plugin-docs plugin-id-default docs-version-latest docs-doc-page docs-doc-id-concepts/portfolio"
+  data-has-hydrated="false"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="Docusaurus v3.8.1" />
+    <title data-rh="true">Portfolio | PoseiTrader Documentation</title>
+    <meta
+      data-rh="true"
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+    <meta
+      data-rh="true"
+      property="og:image"
+      content="docs/latestimg/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      name="twitter:image"
+      content="docs/latestimg/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      property="og:url"
+      content="docs/latestlatest/concepts/portfolio"
+    />
+    <meta data-rh="true" property="og:locale" content="en" />
+    <meta data-rh="true" name="docusaurus_locale" content="en" />
+    <meta data-rh="true" name="docsearch:language" content="en" />
+    <meta
+      data-rh="true"
+      name="keywords"
+      content="Open-source trading platform, Algorithmic trading software, Event-driven backtesting, Live trading with no code changes, Trade any asset class, Low-latency trading execution, Python API for trading strategies, Custom market data integration, Futures and options trading, Crypto spot and derivatives trading, Equities trading simulation, FX spot trading, Sports betting markets trading, Fast backtesting strategies, Advanced trading orders, Rust-based trading platform, High-performance trading system, Nanosecond resolution market simulation, Trading across multiple venues, Trading platform for hedge funds, Seamless data integration, Customizable trading strategies, AI and ML trading strategies, Posei trading platform, Multi-venue trading, Unlimited backtesting strategies, Fast trading execution solutions, Realistic market simulations, Seamless trading API integration, PoseiTrader Documentation, Docs, PoseiTrader Docs"
+    />
+    <meta data-rh="true" name="title" content="PoseiTrader Documentation" />
+    <meta data-rh="true" name="og:title" content="PoseiTrader Documentation" />
+    <meta
+      data-rh="true"
+      name="og:description"
+      content="PoseiTrader is a high-performance platform for automating trading strategies, built on the powerful Posei framework for backtesting and real-time trading."
+    />
+    <meta data-rh="true" name="og:image" content="img/preview.png" />
+    <meta data-rh="true" name="og:url" content="/docs/latest" />
+    <meta data-rh="true" name="docusaurus_version" content="latest" />
+    <meta data-rh="true" name="docusaurus_tag" content="docs-default-latest" />
+    <meta data-rh="true" name="docsearch:version" content="latest" />
+    <meta
+      data-rh="true"
+      name="docsearch:docusaurus_tag"
+      content="docs-default-latest"
+    />
+    <meta
+      data-rh="true"
+      property="og:title"
+      content="Portfolio | PoseiTrader Documentation"
+    />
+    <meta
+      data-rh="true"
+      name="description"
+      content="We are currently working on this concept guide."
+    />
+    <meta
+      data-rh="true"
+      property="og:description"
+      content="We are currently working on this concept guide."
+    />
+    <link data-rh="true" rel="icon" href="../../../img/shell.ico" />
+    <link data-rh="true" rel="canonical" href="index.htm" />
+    <link data-rh="true" rel="alternate" href="index.htm" hreflang="en" />
+    <link
+      data-rh="true"
+      rel="alternate"
+      href="index.htm"
+      hreflang="x-default"
+    />
+    <link
+      data-rh="true"
+      rel="preconnect"
+      href="https://CWRKEEL01M-dsn.algolia.net"
+      crossorigin="anonymous"
+    />
+    <script data-rh="true" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Concepts",
+            "item": "docs/latestlatest/concepts/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portfolio",
+            "item": "docs/latestlatest/concepts/portfolio"
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="PoseiTrader Documentation"
+      href="../../../opensearch.xml"
+    />
+    <script>
+      !(function () {
+        var t = window.location.pathname;
+        if (
+          t.startsWith("/docs") &&
+          !t.startsWith("/docs/latest") &&
+          !t.startsWith("/docs/nightly")
+        ) {
+          var s = t.replace("/docs", "/docs/latest");
+          window.location.href = s;
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TR4XK597XK"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-TR4XK597XK", { anonymize_ip: !0 });
+    </script>
+    <link rel="stylesheet" href="../../../assets/css/styles.0f0f692e.css" />
+    <script
+      src="../../../assets/js/runtime~main.92b727d5.js"
+      defer="defer"
+    ></script>
+    <script src="../../../assets/js/main.1cd42d85.js" defer="defer"></script>
+  </head>
+  <body class="navigation-with-keyboard">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol id="theme-svg-external-link" viewbox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <script>
+      !(function () {
+        var t = "dark";
+        var e =
+          (function () {
+            try {
+              return new URLSearchParams(window.location.search).get(
+                "docusaurus-theme"
+              );
+            } catch (t) {}
+          })() ||
+          (function () {
+            try {
+              return window.localStorage.getItem("theme");
+            } catch (t) {}
+          })();
+        document.documentElement.setAttribute("data-theme", e || t),
+          document.documentElement.setAttribute("data-theme-choice", e || t);
+      })(),
+        (function () {
+          try {
+            const c = new URLSearchParams(window.location.search).entries();
+            for (var [t, e] of c)
+              if (t.startsWith("docusaurus-data-")) {
+                var a = t.replace("docusaurus-data-", "data-");
+                document.documentElement.setAttribute(a, e);
+              }
+          } catch (t) {}
+        })();
+    </script>
+    <div id="__docusaurus">
+      <div role="region" aria-label="Skip to main content">
+        <a
+          class="skipToContent_fXgn"
+          href="#__docusaurus_skipToContent_fallback"
+          >Skip to main content</a
+        >
+      </div>
+      <nav
+        aria-label="Main"
+        class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"
+      >
+        <div class="navbar__inner">
+          <div class="theme-layout-navbar-left navbar__items">
+            <button
+              aria-label="Toggle navigation bar"
+              aria-expanded="false"
+              class="navbar__toggle clean-btn"
+              type="button"
+            >
+              <svg
+                width="30"
+                height="30"
+                viewbox="0 0 30 30"
+                aria-hidden="true"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M4 7h22M4 15h22M4 23h22"
+                ></path>
+              </svg></button
+            ><a
+              href="../../../../index.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__brand"
+              ><div class="navbar__logo">
+                <img
+                  src="../../../img/nt-black-large.webp"
+                  alt="PoseiTrader Logo"
+                  class="themedComponent_mlkZ themedComponent--light_NVdE"
+                /><img
+                  src="../../../img/nt-white-large.webp"
+                  alt="PoseiTrader Logo"
+                  class="themedComponent_mlkZ themedComponent--dark_xIcU"
+                />
+              </div>
+              <b class="navbar__title text--truncate"></b
+            ></a>
+            <div class="navbar__item dropdown dropdown--hoverable">
+              <a
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+                role="button"
+                class="navbar__link"
+                >Version</a
+              >
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    aria-current="page"
+                    class="dropdown__link dropdown__link--active"
+                    href="../../index.htm"
+                    >latest</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown__link" href="../../../nightly/index.html"
+                    >nightly</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="navbarSearchContainer_Bca1">
+              <button
+                type="button"
+                class="DocSearch DocSearch-Button"
+                aria-label="Search (Command+K)"
+              >
+                <span class="DocSearch-Button-Container"
+                  ><svg
+                    width="20"
+                    height="20"
+                    class="DocSearch-Search-Icon"
+                    viewbox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                      stroke="currentColor"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path></svg
+                  ><span class="DocSearch-Button-Placeholder"
+                    >Search</span
+                  ></span
+                ><span class="DocSearch-Button-Keys"></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="theme-layout-navbar-right navbar__items navbar__items--right"
+          >
+            <a
+              href="https://github.com/poseisystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-github-link common-social"
+              aria-label="GitHub repository"
+            ></a>
+            <a
+              href="https://twitter.com/PoseiTrader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-x-link common-social"
+              aria-label="X"
+            ></a>
+             
+          </div>
+        </div>
+        <div role="presentation" class="navbar-sidebar__backdrop"></div>
+      </nav>
+      <div
+        id="__docusaurus_skipToContent_fallback"
+        class="theme-layout-main main-wrapper mainWrapper_z2l0"
+      >
+        <div class="docsWrapper_hBAB">
+          <button
+            aria-label="Scroll back to top"
+            class="clean-btn theme-back-to-top-button backToTopButton_sjWU"
+            type="button"
+          ></button>
+          <div class="docRoot_UBD9">
+            <aside class="theme-doc-sidebar-container docSidebarContainer_YfHR">
+              <div class="sidebarViewport_aRkj">
+                <div class="sidebar_njMd sidebarWithHideableNavbar_wUlq">
+                  <a
+                    href="../../../../index.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                    class="sidebarLogo_isFc"
+                    ><img
+                      src="../../../img/nt-black-large.webp"
+                      alt="PoseiTrader Logo"
+                      class="themedComponent_mlkZ themedComponent--light_NVdE" /><img
+                      src="../../../img/nt-white-large.webp"
+                      alt="PoseiTrader Logo"
+                      class="themedComponent_mlkZ themedComponent--dark_xIcU" /><b></b
+                  ></a>
+                  <nav
+                    aria-label="Docs sidebar"
+                    class="menu thin-scrollbar menu_SIkG"
+                  >
+                    <ul class="theme-doc-sidebar-menu menu__list">
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a class="menu__link" href="../../index.htm"
+                          >PoseiTrader Documentation</a
+                        >
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../getting_started/index.htm"
+                            >Getting Started</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Getting Started&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist menu__link--active"
+                            href="../index.htm"
+                            >Concepts</a
+                          ><button
+                            aria-label="Collapse sidebar category &#x27;Concepts&#x27;"
+                            aria-expanded="true"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                        <ul class="menu__list">
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../overview/index.htm"
+                              >Overview</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../architecture/index.htm"
+                              >Architecture</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../actors/index.htm"
+                              >Actors</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../strategies/index.htm"
+                              >Strategies</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../instruments/index.htm"
+                              >Instruments</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../data/index.htm"
+                              >Data</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../execution/index.htm"
+                              >Execution</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../orders/index.htm"
+                              >Orders</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../cache/index.htm"
+                              >Cache</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../message_bus/index.htm"
+                              >Message Bus</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link menu__link--active"
+                              aria-current="page"
+                              tabindex="0"
+                              href="index.htm"
+                              >Portfolio</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../logging/index.htm"
+                              >Logging</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../backtesting/index.htm"
+                              >Backtesting</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../live/index.htm"
+                              >Live Trading</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../adapters/index.htm"
+                              >Adapters</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../tutorials/index.htm"
+                            >Tutorials</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Tutorials&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../integrations/index.htm"
+                            >Integrations</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Integrations&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../api_reference/index.htm"
+                            >Python API</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Python API&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a
+                          href="../../../core-latest/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="menu__link menuExternalLink_NmtK"
+                          >Rust API<svg
+                            width="13.5"
+                            height="13.5"
+                            aria-hidden="true"
+                            class="iconExternalLink_nPIU"
+                          >
+                            <use href="#theme-svg-external-link"></use></svg
+                        ></a>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../developer_guide/index.htm"
+                            >Developer Guide</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Developer Guide&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </aside>
+            <main class="docMainContainer_TBSr">
+              <div class="container padding-top--md padding-bottom--lg">
+                <div>
+                  <div class="row">
+                    <div class="col docItemCol_VOVn">
+                      <div class="docItemContainer_Djhp">
+                        <article>
+                          <nav
+                            class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl"
+                            aria-label="Breadcrumbs"
+                          >
+                            <ul class="breadcrumbs">
+                              <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="../index.htm"
+                                  ><span>Concepts</span></a
+                                >
+                              </li>
+                              <li
+                                class="breadcrumbs__item breadcrumbs__item--active"
+                              >
+                                <span class="breadcrumbs__link">Portfolio</span>
+                              </li>
+                            </ul>
+                          </nav>
+                          <span
+                            class="theme-doc-version-badge badge badge--secondary"
+                            >Version: latest</span
+                          >
+                          <div
+                            class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"
+                          >
+                            <button
+                              type="button"
+                              class="clean-btn tocCollapsibleButton_TO0P"
+                            >
+                              On this page
+                            </button>
+                          </div>
+                          <div class="theme-doc-markdown markdown">
+                            <header><h1>Portfolio</h1></header>
+                            <div
+                              class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"
+                            >
+                              <div class="admonitionHeading_Gvgb">
+                                <span class="admonitionIcon_Rf37"
+                                  ><svg viewbox="0 0 14 16">
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"
+                                    ></path></svg></span
+                                >info
+                              </div>
+                              <div class="admonitionContent_BuS1">
+                                <p>
+                                  We are currently working on this concept
+                                  guide.
+                                </p>
+                              </div>
+                            </div>
+                            <p>
+                              The Portfolio serves as the central hub for
+                              managing and tracking all positions across active
+                              strategies for the trading node or backtest. It
+                              consolidates position data from multiple
+                              instruments, providing a unified view of your
+                              holdings, risk exposure, and overall performance.
+                              Explore this section to understand how PoseiTrader
+                              aggregates and updates portfolio state to support
+                              effective trading and risk management.
+                            </p>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="portfolio-statistics"
+                            >
+                              Portfolio Statistics<a
+                                href="#portfolio-statistics"
+                                class="hash-link"
+                                aria-label="Direct link to Portfolio Statistics"
+                                title="Direct link to Portfolio Statistics"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              There are a variety of
+                              <a
+                                href="https://github.com/poseisystems/tree/develop/posei_trader/analysis/statistics"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >built-in portfolio statistics</a
+                              >
+                              which are used to analyse a trading portfolios
+                              performance for both backtests and live trading.
+                            </p>
+                            <p>
+                              The statistics are generally categorized as
+                              follows.
+                            </p>
+                            <ul>
+                              <li>PnLs based statistics (per currency)</li>
+                              <li>Returns based statistics</li>
+                              <li>Positions based statistics</li>
+                              <li>Orders based statistics</li>
+                            </ul>
+                            <p>
+                              It&#x27;s also possible to call a traders
+                              <code>PortfolioAnalyzer</code> and calculate
+                              statistics at any arbitrary time, including
+                              <em>during</em> a backtest, or live trading
+                              session.
+                            </p>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="custom-statistics"
+                            >
+                              Custom Statistics<a
+                                href="#custom-statistics"
+                                class="hash-link"
+                                aria-label="Direct link to Custom Statistics"
+                                title="Direct link to Custom Statistics"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              Custom portfolio statistics can be defined by
+                              inheriting from the
+                              <code>PortfolioStatistic</code> base class, and
+                              implementing any of the
+                              <code>calculate_</code> methods.
+                            </p>
+                            <p>
+                              For example, the following is the implementation
+                              for the built-in <code>WinRate</code> statistic:
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> pandas </span><span class="token keyword" style="color:rgb(86, 156, 214)">as</span><span class="token plain"> pd</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> typing </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> Any</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">analysis</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">statistic </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> PortfolioStatistic</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">class</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(78, 201, 176)">WinRate</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">PortfolioStatistic</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token triple-quoted-string string" style="color:rgb(206, 145, 120)">&quot;&quot;&quot;</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token triple-quoted-string string" style="color:rgb(206, 145, 120)">    Calculates the win rate from a realized PnLs series.</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token triple-quoted-string string" style="color:rgb(206, 145, 120)">    &quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token keyword" style="color:rgb(86, 156, 214)">def</span><span class="token plain"> </span><span class="token function" style="color:rgb(220, 220, 170)">calculate_from_realized_pnls</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">self</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> realized_pnls</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> pd</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">Series</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(212, 212, 212)">-</span><span class="token operator" style="color:rgb(212, 212, 212)">&gt;</span><span class="token plain"> Any </span><span class="token operator" style="color:rgb(212, 212, 212)">|</span><span class="token plain"> </span><span class="token boolean">None</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token comment" style="color:rgb(106, 153, 85)"># Preconditions</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token keyword" style="color:rgb(86, 156, 214)">if</span><span class="token plain"> realized_pnls </span><span class="token keyword" style="color:rgb(86, 156, 214)">is</span><span class="token plain"> </span><span class="token boolean">None</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(86, 156, 214)">or</span><span class="token plain"> realized_pnls</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">empty</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token keyword" style="color:rgb(86, 156, 214)">return</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">0.0</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token comment" style="color:rgb(106, 153, 85)"># Calculate statistic</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        winners </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain">x </span><span class="token keyword" style="color:rgb(86, 156, 214)">for</span><span class="token plain"> x </span><span class="token keyword" style="color:rgb(86, 156, 214)">in</span><span class="token plain"> realized_pnls </span><span class="token keyword" style="color:rgb(86, 156, 214)">if</span><span class="token plain"> x </span><span class="token operator" style="color:rgb(212, 212, 212)">&gt;</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">0.0</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        losers </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain">x </span><span class="token keyword" style="color:rgb(86, 156, 214)">for</span><span class="token plain"> x </span><span class="token keyword" style="color:rgb(86, 156, 214)">in</span><span class="token plain"> realized_pnls </span><span class="token keyword" style="color:rgb(86, 156, 214)">if</span><span class="token plain"> x </span><span class="token operator" style="color:rgb(212, 212, 212)">&lt;=</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">0.0</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token keyword" style="color:rgb(86, 156, 214)">return</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(86, 156, 214)">len</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">winners</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(212, 212, 212)">/</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(86, 156, 214)">float</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token builtin" style="color:rgb(86, 156, 214)">max</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token number" style="color:rgb(181, 206, 168)">1</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token builtin" style="color:rgb(86, 156, 214)">len</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">winners</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(212, 212, 212)">+</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(86, 156, 214)">len</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">losers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <p>
+                              These statistics can then be registered with a
+                              traders <code>PortfolioAnalyzer</code>.
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">stat </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> WinRate</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Register with the portfolio analyzer</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">engine</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">portfolio</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">analyzer</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">register_statistic</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">stat</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain">info</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">See the `PortfolioAnalyzer` </span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain">API Reference</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token operator" style="color:rgb(212, 212, 212)">/</span><span class="token plain">api_reference</span><span class="token operator" style="color:rgb(212, 212, 212)">/</span><span class="token plain">analysis</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">md</span><span class="token comment" style="color:rgb(106, 153, 85)">#class-portfolioanalyzer) for details on available methods.</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"
+                            >
+                              <div class="admonitionHeading_Gvgb">
+                                <span class="admonitionIcon_Rf37"
+                                  ><svg viewbox="0 0 12 16">
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"
+                                    ></path></svg></span
+                                >tip
+                              </div>
+                              <div class="admonitionContent_BuS1">
+                                <p>
+                                  Ensure your statistic is robust to degenerate
+                                  inputs such as <code>None</code>, empty
+                                  series, or insufficient data.
+                                </p>
+                                <p>
+                                  The expectation is that you would then return
+                                  <code>None</code>, NaN or a reasonable
+                                  default.
+                                </p>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="backtest-analysis"
+                            >
+                              Backtest Analysis<a
+                                href="#backtest-analysis"
+                                class="hash-link"
+                                aria-label="Direct link to Backtest Analysis"
+                                title="Direct link to Backtest Analysis"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              Following a backtest run, a performance analysis
+                              will be carried out by passing realized PnLs,
+                              returns, positions and orders data to each
+                              registered statistic in turn, calculating their
+                              values (with a default configuration). Any output
+                              is then displayed in the tear sheet under the
+                              <code>Portfolio Performance</code> heading,
+                              grouped as.
+                            </p>
+                            <ul>
+                              <li>Realized PnL statistics (per currency)</li>
+                              <li>
+                                Returns statistics (for the entire portfolio)
+                              </li>
+                              <li>
+                                General statistics derived from position and
+                                order data (for the entire portfolio)
+                              </li>
+                            </ul>
+                          </div>
+                        </article>
+                        <nav
+                          class="docusaurus-mt-lg pagination-nav"
+                          aria-label="Docs pages"
+                        >
+                          <a
+                            class="pagination-nav__link pagination-nav__link--prev"
+                            href="../message_bus/index.htm"
+                            ><div class="pagination-nav__sublabel">
+                              Previous
+                            </div>
+                            <div class="pagination-nav__label">
+                              Message Bus
+                            </div></a
+                          ><a
+                            class="pagination-nav__link pagination-nav__link--next"
+                            href="../logging/index.htm"
+                            ><div class="pagination-nav__sublabel">Next</div>
+                            <div class="pagination-nav__label">Logging</div></a
+                          >
+                        </nav>
+                      </div>
+                    </div>
+                    <div class="col col--3">
+                      <div
+                        class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"
+                      >
+                        <ul
+                          class="table-of-contents table-of-contents__left-border"
+                        >
+                          <li>
+                            <a
+                              href="#portfolio-statistics"
+                              class="table-of-contents__link toc-highlight"
+                              >Portfolio Statistics</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#custom-statistics"
+                              class="table-of-contents__link toc-highlight"
+                              >Custom Statistics</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#backtest-analysis"
+                              class="table-of-contents__link toc-highlight"
+                              >Backtest Analysis</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-wrapper MuiBox-root css-0">
+                    <div class="social-footer-box MuiBox-root css-0">
+                      <style data-emotion="css 17rjyz3">
+                        .css-17rjyz3 {
+                          -webkit-text-decoration: underline;
+                          text-decoration: underline;
+                          text-decoration-color: rgba(25, 118, 210, 0.4);
+                          padding: 12px;
+                          margin-right: 10px;
+                        }
+                        .css-17rjyz3:hover {
+                          text-decoration-color: inherit;
+                        }</style
+                      ><style data-emotion="css jl1bw5">
+                        .css-jl1bw5 {
+                          margin: 0;
+                          font: inherit;
+                          color: #1976d2;
+                          -webkit-text-decoration: underline;
+                          text-decoration: underline;
+                          text-decoration-color: rgba(25, 118, 210, 0.4);
+                          padding: 12px;
+                          margin-right: 10px;
+                        }
+                        .css-jl1bw5:hover {
+                          text-decoration-color: inherit;
+                        }</style
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5"
+                        href="https://github.com/poseisystems"
+                        target="_blank"
+                      ></a
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5"
+                        href="https://twitter.com/PoseiTrader"
+                        target="_blank"
+                      ></a>
+                    </div>
+                    <div class="footer-copyright">
+                      © 2025 Posei Systems Pty Ltd. All rights reserved.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

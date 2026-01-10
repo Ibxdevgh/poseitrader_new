@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["TimeEventCallback"],"fn":["create_valid_interval"],"struct":["LiveTimer","TestTimer","TimeEvent","TimeEventHandlerV2"],"type":["RustTimeEventCallback"]};

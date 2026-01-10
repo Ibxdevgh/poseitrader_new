@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["DefiData"],"mod":["block","liquidity","swap","transaction"]};

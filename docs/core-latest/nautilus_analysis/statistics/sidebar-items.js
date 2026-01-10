@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["expectancy","long_ratio","loser_avg","loser_max","loser_min","profit_factor","returns_avg","returns_avg_loss","returns_avg_win","returns_volatility","risk_return_ratio","sharpe_ratio","sortino_ratio","win_rate","winner_avg","winner_max","winner_min"]};

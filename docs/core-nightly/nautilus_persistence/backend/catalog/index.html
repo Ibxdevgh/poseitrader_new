@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Parquet data catalog for efficient storage and retrieval of financial market data."><title>nautilus_persistence::backend::catalog - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="nautilus_persistence" data-themes="" data-resource-suffix="" data-rustdoc-version="1.90.0-nightly (28f1c8079 2025-06-24)" data-channel="nightly" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js"><script src="../../../static.files/storage-4e99c027.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../../static.files/main-340f468f.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../../index.html">nautilus_<wbr>persistence</a><span class="version">0.49.0</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">Module catalog</a></h2><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#key-features" title="Key Features">Key Features</a></li><li><a href="#architecture" title="Architecture">Architecture</a></li><li><a href="#usage" title="Usage">Usage</a></li></ul><h3><a href="#structs">Module Items</a></h3><ul class="block"><li><a href="#structs" title="Structs">Structs</a></li><li><a href="#traits" title="Traits">Traits</a></li></ul></section><div id="rustdoc-modnav"><h2><a href="../index.html">In nautilus_<wbr>persistence::<wbr>backend</a></h2></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><div class="rustdoc-breadcrumbs"><a href="../../index.html">nautilus_persistence</a>::<wbr><a href="../index.html">backend</a></div><h1>Module <span>catalog</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../../../src/nautilus_persistence/backend/catalog.rs.html#16-2249">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Parquet data catalog for efficient storage and retrieval of financial market data.</p>
+<p>This module provides a comprehensive data catalog implementation that uses Apache Parquet
+format for storing financial market data with object store backends. The catalog supports
+various data types including quotes, trades, bars, order book data, and other market events.</p>
+<h2 id="key-features"><a class="doc-anchor" href="#key-features">§</a>Key Features</h2>
+<ul>
+<li><strong>Object Store Integration</strong>: Works with local filesystems, S3, and other object stores</li>
+<li><strong>Data Type Support</strong>: Handles all major financial data types (quotes, trades, bars, etc.)</li>
+<li><strong>Time-based Organization</strong>: Organizes data by timestamp ranges for efficient querying</li>
+<li><strong>Consolidation</strong>: Merges multiple files to optimize storage and query performance</li>
+<li><strong>Validation</strong>: Ensures data integrity with timestamp ordering and interval validation</li>
+</ul>
+<h2 id="architecture"><a class="doc-anchor" href="#architecture">§</a>Architecture</h2>
+<p>The catalog organizes data in a hierarchical structure:</p>
+<div class="example-wrap"><pre class="language-text"><code>data/
+├── quotes/
+│   └── INSTRUMENT_ID/
+│       └── start_ts-end_ts.parquet
+├── trades/
+│   └── INSTRUMENT_ID/
+│       └── start_ts-end_ts.parquet
+└── bars/
+    └── INSTRUMENT_ID/
+        └── start_ts-end_ts.parquet</code></pre></div><h2 id="usage"><a class="doc-anchor" href="#usage">§</a>Usage</h2>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>std::path::PathBuf;
+<span class="kw">use </span>nautilus_persistence::backend::catalog::ParquetDataCatalog;
+
+<span class="comment">// Create a new catalog
+</span><span class="kw">let </span>catalog = ParquetDataCatalog::new(
+    PathBuf::from(<span class="string">"/path/to/data"</span>),
+    <span class="prelude-val">None</span>,        <span class="comment">// storage_options
+    </span><span class="prelude-val">Some</span>(<span class="number">5000</span>),  <span class="comment">// batch_size
+    </span><span class="prelude-val">None</span>,        <span class="comment">// compression (defaults to SNAPPY)
+    </span><span class="prelude-val">None</span>,        <span class="comment">// max_row_group_size (defaults to 5000)
+</span>);
+
+<span class="comment">// Write data to the catalog
+// catalog.write_to_parquet(data, None, None)?;</span></code></pre></div>
+</div></details><h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2><dl class="item-table"><dt><a class="struct" href="struct.ParquetDataCatalog.html" title="struct nautilus_persistence::backend::catalog::ParquetDataCatalog">Parquet<wbr>Data<wbr>Catalog</a></dt><dd>A high-performance data catalog for storing and retrieving financial market data using Apache Parquet format.</dd></dl><h2 id="traits" class="section-header">Traits<a href="#traits" class="anchor">§</a></h2><dl class="item-table"><dt><a class="trait" href="trait.CatalogPathPrefix.html" title="trait nautilus_persistence::backend::catalog::CatalogPathPrefix">Catalog<wbr>Path<wbr>Prefix</a></dt><dd>Trait for providing catalog path prefixes for different data types.</dd></dl></section></div></main></body></html>

@@ -1,0 +1,2075 @@
+﻿<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="docs-wrapper plugin-docs plugin-id-default docs-version-latest docs-doc-page docs-doc-id-api_reference/model/book"
+  data-has-hydrated="false"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="Docusaurus v3.8.1" />
+    <title data-rh="true">Order Book | PoseiTrader Documentation</title>
+    <meta
+      data-rh="true"
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+    <meta
+      data-rh="true"
+      property="og:image"
+      content="https://poseitrader.io/docs/img/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      name="twitter:image"
+      content="https://poseitrader.io/docs/img/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      property="og:url"
+      content="https://poseitrader.io/docs/latest/api_reference/model/book"
+    />
+    <meta data-rh="true" property="og:locale" content="en" />
+    <meta data-rh="true" name="docusaurus_locale" content="en" />
+    <meta data-rh="true" name="docsearch:language" content="en" />
+    <meta
+      data-rh="true"
+      name="keywords"
+      content="Open-source trading platform, Algorithmic trading software, Event-driven backtesting, Live trading with no code changes, Trade any asset class, Low-latency trading execution, Python API for trading strategies, Custom market data integration, Futures and options trading, Crypto spot and derivatives trading, Equities trading simulation, FX spot trading, Sports betting markets trading, Fast backtesting strategies, Advanced trading orders, Rust-based trading platform, High-performance trading system, Nanosecond resolution market simulation, Trading across multiple venues, Trading platform for hedge funds, Seamless data integration, Customizable trading strategies, AI and ML trading strategies, Nautilus trading platform, Multi-venue trading, Unlimited backtesting strategies, Fast trading execution solutions, Realistic market simulations, Seamless trading API integration, PoseiTrader Documentation, Docs, poseitrader Docs"
+    />
+    <meta data-rh="true" name="title" content="PoseiTrader Documentation" />
+    <meta data-rh="true" name="og:title" content="PoseiTrader Documentation" />
+    <meta
+      data-rh="true"
+      name="og:description"
+      content="poseitrader is a high-performance platform for automating trading strategies, built on the powerful Nautilus framework for backtesting and real-time trading."
+    />
+    <meta data-rh="true" name="og:image" content="img/preview.png" />
+    <meta
+      data-rh="true"
+      name="og:url"
+      content="https://poseitrader.io/docs"
+    />
+    <meta data-rh="true" name="docusaurus_version" content="latest" />
+    <meta data-rh="true" name="docusaurus_tag" content="docs-default-latest" />
+    <meta data-rh="true" name="docsearch:version" content="latest" />
+    <meta
+      data-rh="true"
+      name="docsearch:docusaurus_tag"
+      content="docs-default-latest"
+    />
+    <meta
+      data-rh="true"
+      property="og:title"
+      content="Order Book | PoseiTrader Documentation"
+    />
+    <meta data-rh="true" name="description" content="class BookLevel" />
+    <meta data-rh="true" property="og:description" content="class BookLevel" />
+    <link data-rh="true" rel="icon" href="../../../../img/shell.ico" />
+    <link data-rh="true" rel="canonical" href="index.htm" />
+    <link data-rh="true" rel="alternate" href="index.htm" hreflang="en" />
+    <link
+      data-rh="true"
+      rel="alternate"
+      href="index.htm"
+      hreflang="x-default"
+    />
+    <link
+      data-rh="true"
+      rel="preconnect"
+      href="https://CWRKEEL01M-dsn.algolia.net"
+      crossorigin="anonymous"
+    />
+    <script data-rh="true" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Python API",
+            "item": "https://poseitrader.io/docs/latest/api_reference/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Model",
+            "item": "https://poseitrader.io/docs/latest/api_reference/model/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Order Book",
+            "item": "https://poseitrader.io/docs/latest/api_reference/model/book"
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="PoseiTrader Documentation"
+      href="../../../../opensearch.xml"
+    />
+    <script>
+      !(function () {
+        var t = window.location.pathname;
+        if (
+          t.startsWith("/docs") &&
+          !t.startsWith("/docs/latest") &&
+          !t.startsWith("/docs/nightly")
+        ) {
+          var s = t.replace("/docs", "/docs/latest");
+          window.location.href = s;
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TR4XK597XK"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-TR4XK597XK", { anonymize_ip: !0 });
+    </script>
+    <link rel="stylesheet" href="../../../../assets/css/styles.0f0f692e.css" />
+    <script
+      src="../../../../assets/js/runtime~main.92b727d5.js"
+      defer="defer"
+    ></script>
+    <script src="../../../../assets/js/main.1cd42d85.js" defer="defer"></script>
+  </head>
+  <body class="navigation-with-keyboard">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol id="theme-svg-external-link" viewbox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <script>
+      !(function () {
+        var t = "dark";
+        var e =
+          (function () {
+            try {
+              return new URLSearchParams(window.location.search).get(
+                "docusaurus-theme"
+              );
+            } catch (t) {}
+          })() ||
+          (function () {
+            try {
+              return window.localStorage.getItem("theme");
+            } catch (t) {}
+          })();
+        document.documentElement.setAttribute("data-theme", e || t),
+          document.documentElement.setAttribute("data-theme-choice", e || t);
+      })(),
+        (function () {
+          try {
+            const c = new URLSearchParams(window.location.search).entries();
+            for (var [t, e] of c)
+              if (t.startsWith("docusaurus-data-")) {
+                var a = t.replace("docusaurus-data-", "data-");
+                document.documentElement.setAttribute(a, e);
+              }
+          } catch (t) {}
+        })();
+    </script>
+    <div id="__docusaurus">
+      <div role="region" aria-label="Skip to main content">
+        <a
+          class="skipToContent_fXgn"
+          href="#__docusaurus_skipToContent_fallback"
+          >Skip to main content</a
+        >
+      </div>
+      <nav
+        aria-label="Main"
+        class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"
+      >
+        <div class="navbar__inner">
+          <div class="theme-layout-navbar-left navbar__items">
+            <button
+              aria-label="Toggle navigation bar"
+              aria-expanded="false"
+              class="navbar__toggle clean-btn"
+              type="button"
+            >
+              <svg
+                width="30"
+                height="30"
+                viewbox="0 0 30 30"
+                aria-hidden="true"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M4 7h22M4 15h22M4 23h22"
+                ></path>
+              </svg></button
+            ><a
+              href="../../../../../index.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__brand"
+              ><div class="navbar__logo">
+                <img
+                  src="../../../../img/nt-black-large.webp"
+                  alt="poseitrader Logo"
+                  class="themedComponent_mlkZ themedComponent--light_NVdE"
+                /><img
+                  src="../../../../img/nt-white-large.webp"
+                  alt="poseitrader Logo"
+                  class="themedComponent_mlkZ themedComponent--dark_xIcU"
+                />
+              </div>
+              <b class="navbar__title text--truncate"></b
+            ></a>
+            <div class="navbar__item dropdown dropdown--hoverable">
+              <a
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+                role="button"
+                class="navbar__link"
+                >Version</a
+              >
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    aria-current="page"
+                    class="dropdown__link dropdown__link--active"
+                    href="../../../index.htm"
+                    >latest</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown__link" href="../../../../nightly/index.htm"
+                    >nightly</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="navbarSearchContainer_Bca1">
+              <button
+                type="button"
+                class="DocSearch DocSearch-Button"
+                aria-label="Search (Command+K)"
+              >
+                <span class="DocSearch-Button-Container"
+                  ><svg
+                    width="20"
+                    height="20"
+                    class="DocSearch-Search-Icon"
+                    viewbox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                      stroke="currentColor"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path></svg
+                  ><span class="DocSearch-Button-Placeholder"
+                    >Search</span
+                  ></span
+                ><span class="DocSearch-Button-Keys"></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="theme-layout-navbar-right navbar__items navbar__items--right"
+          >
+            <a
+              href="https://github.com/poseisystems/posei_trader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-github-link common-social"
+              aria-label="GitHub repository"
+            ></a
+            ><a
+              href="https://discord.gg/poseitrader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-discord-link common-social"
+              aria-label="Discord"
+            ></a
+            ><a
+              href="https://www.linkedin.com/company/poseisysstems/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-linkedin-link common-social"
+              aria-label="Linkedin"
+            ></a
+            ><a
+              href="https://twitter.com/poseitrader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-x-link common-social"
+              aria-label="X"
+            ></a>
+             
+          </div>
+        </div>
+        <div role="presentation" class="navbar-sidebar__backdrop"></div>
+      </nav>
+      <div
+        id="__docusaurus_skipToContent_fallback"
+        class="theme-layout-main main-wrapper mainWrapper_z2l0"
+      >
+        <div class="docsWrapper_hBAB">
+          <button
+            aria-label="Scroll back to top"
+            class="clean-btn theme-back-to-top-button backToTopButton_sjWU"
+            type="button"
+          ></button>
+          <div class="docRoot_UBD9">
+            <aside class="theme-doc-sidebar-container docSidebarContainer_YfHR">
+              <div class="sidebarViewport_aRkj">
+                <div class="sidebar_njMd sidebarWithHideableNavbar_wUlq">
+                  <a
+                    href="../../../../../index.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                    class="sidebarLogo_isFc"
+                    ><img
+                      src="../../../../img/nt-black-large.webp"
+                      alt="poseitrader Logo"
+                      class="themedComponent_mlkZ themedComponent--light_NVdE" /><img
+                      src="../../../../img/nt-white-large.webp"
+                      alt="poseitrader Logo"
+                      class="themedComponent_mlkZ themedComponent--dark_xIcU" /><b></b
+                  ></a>
+                  <nav
+                    aria-label="Docs sidebar"
+                    class="menu thin-scrollbar menu_SIkG"
+                  >
+                    <ul class="theme-doc-sidebar-menu menu__list">
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a class="menu__link" href="../../../index.htm"
+                          >PoseiTrader Documentation</a
+                        >
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../../getting_started/index.htm"
+                            >Getting Started</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Getting Started&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../../concepts/index.htm"
+                            >Concepts</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Concepts&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../../tutorials/index.htm"
+                            >Tutorials</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Tutorials&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../../integrations/index.htm"
+                            >Integrations</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Integrations&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist menu__link--active"
+                            href="../../index.htm"
+                            >Python API</a
+                          ><button
+                            aria-label="Collapse sidebar category &#x27;Python API&#x27;"
+                            aria-expanded="true"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                        <ul class="menu__list">
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../accounting/index.htm"
+                              >Accounting</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"
+                          >
+                            <div class="menu__list-item-collapsible">
+                              <a
+                                class="menu__link menu__link--sublist"
+                                tabindex="0"
+                                href="../../adapters/index.htm"
+                                >Adapters</a
+                              ><button
+                                aria-label="Expand sidebar category &#x27;Adapters&#x27;"
+                                aria-expanded="false"
+                                type="button"
+                                class="clean-btn menu__caret"
+                              ></button>
+                            </div>
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../analysis/index.htm"
+                              >Analysis</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../backtest/index.htm"
+                              >Backtest</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../cache/index.htm"
+                              >Cache</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../common/index.htm"
+                              >Common</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../config/index.htm"
+                              >Config</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../core/index.htm"
+                              >Core</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../data/index.htm"
+                              >Data</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../execution/index.htm"
+                              >Execution</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../indicators/index.htm"
+                              >Indicators</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../live/index.htm"
+                              >Live</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"
+                          >
+                            <div class="menu__list-item-collapsible">
+                              <a
+                                class="menu__link menu__link--sublist menu__link--active"
+                                tabindex="0"
+                                href="../index.htm"
+                                >Model</a
+                              ><button
+                                aria-label="Collapse sidebar category &#x27;Model&#x27;"
+                                aria-expanded="true"
+                                type="button"
+                                class="clean-btn menu__caret"
+                              ></button>
+                            </div>
+                            <ul class="menu__list">
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link menu__link--active"
+                                  aria-current="page"
+                                  tabindex="0"
+                                  href="index.htm"
+                                  >Order Book</a
+                                >
+                              </li>
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link"
+                                  tabindex="0"
+                                  href="../data/index.htm"
+                                  >Data</a
+                                >
+                              </li>
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link"
+                                  tabindex="0"
+                                  href="../events/index.htm"
+                                  >Events</a
+                                >
+                              </li>
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link"
+                                  tabindex="0"
+                                  href="../identifiers/index.htm"
+                                  >Identifiers</a
+                                >
+                              </li>
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link"
+                                  tabindex="0"
+                                  href="../instruments/index.htm"
+                                  >Instruments</a
+                                >
+                              </li>
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link"
+                                  tabindex="0"
+                                  href="../objects/index.htm"
+                                  >Objects</a
+                                >
+                              </li>
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link"
+                                  tabindex="0"
+                                  href="../orders/index.htm"
+                                  >Orders</a
+                                >
+                              </li>
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link"
+                                  tabindex="0"
+                                  href="../position/index.htm"
+                                  >Position</a
+                                >
+                              </li>
+                              <li
+                                class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"
+                              >
+                                <a
+                                  class="menu__link"
+                                  tabindex="0"
+                                  href="../tick_scheme/index.htm"
+                                  >Tick Scheme</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../persistence/index.htm"
+                              >Persistence</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../portfolio/index.htm"
+                              >Portfolio</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../risk/index.htm"
+                              >Risk</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../serialization/index.htm"
+                              >Serialization</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../system/index.htm"
+                              >System</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../../trading/index.htm"
+                              >Trading</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a
+                          href="../../../../core-latest/index.htm"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="menu__link menuExternalLink_NmtK"
+                          >Rust API<svg
+                            width="13.5"
+                            height="13.5"
+                            aria-hidden="true"
+                            class="iconExternalLink_nPIU"
+                          >
+                            <use href="#theme-svg-external-link"></use></svg
+                        ></a>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../../developer_guide/index.htm"
+                            >Developer Guide</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Developer Guide&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </aside>
+            <main class="docMainContainer_TBSr">
+              <div class="container padding-top--md padding-bottom--lg">
+                <div>
+                  <div class="row">
+                    <div class="col docItemCol_VOVn">
+                      <div class="docItemContainer_Djhp">
+                        <article>
+                          <nav
+                            class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl"
+                            aria-label="Breadcrumbs"
+                          >
+                            <ul class="breadcrumbs">
+                              <li class="breadcrumbs__item">
+                                <a
+                                  class="breadcrumbs__link"
+                                  href="../../index.htm"
+                                  ><span>Python API</span></a
+                                >
+                              </li>
+                              <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="../index.htm"
+                                  ><span>Model</span></a
+                                >
+                              </li>
+                              <li
+                                class="breadcrumbs__item breadcrumbs__item--active"
+                              >
+                                <span class="breadcrumbs__link"
+                                  >Order Book</span
+                                >
+                              </li>
+                            </ul>
+                          </nav>
+                          <span
+                            class="theme-doc-version-badge badge badge--secondary"
+                            >Version: latest</span
+                          >
+                          <div
+                            class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"
+                          >
+                            <button
+                              type="button"
+                              class="clean-btn tocCollapsibleButton_TO0P"
+                            >
+                              On this page
+                            </button>
+                          </div>
+                          <div class="theme-doc-markdown markdown">
+                            <header><h1>Order Book</h1></header>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-booklevel"
+                            >
+                              <em>class</em> BookLevel<a
+                                href="#class-booklevel"
+                                class="hash-link"
+                                aria-label="Direct link to class-booklevel"
+                                title="Direct link to class-booklevel"
+                                >​</a
+                              >
+                            </h3>
+                            <p>Bases: <code>object</code></p>
+                            <p>Represents an order book price level.</p>
+                            <p>
+                              A price level on one side of the order book with
+                              one or more individual orders.
+                            </p>
+                            <p>
+                              This class is read-only and cannot be initialized
+                              from Python.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>price</strong> (<a
+                                      href="../index.htm#posei_trader.model.Price"
+                                      ><em>Price</em></a
+                                    >) – The price for the level.
+                                  </li>
+                                  <li>
+                                    <strong>orders</strong> (<em>list</em>
+                                    <em>[</em
+                                    ><a
+                                      href="../data/index.htm#posei_trader.model.data.BookOrder"
+                                      ><em>BookOrder</em></a
+                                    >
+                                    <em>]</em>) – The orders for the level.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If orders is
+                                empty.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="exposureself--double"
+                            >
+                              exposure(self) → double<a
+                                href="#exposureself--double"
+                                class="hash-link"
+                                aria-label="Direct link to exposure(self) → double"
+                                title="Direct link to exposure(self) → double"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the exposure at this level (price *
+                              volume).
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="ordersself--list"
+                            >
+                              orders(self) → list<a
+                                href="#ordersself--list"
+                                class="hash-link"
+                                aria-label="Direct link to orders(self) → list"
+                                title="Direct link to orders(self) → list"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return the orders for the level.</p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> list[<a
+                                  href="../data/index.htm#posei_trader.model.data.BookOrder"
+                                  >BookOrder</a
+                                >]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="price"
+                            >
+                              price<a
+                                href="#price"
+                                class="hash-link"
+                                aria-label="Direct link to price"
+                                title="Direct link to price"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Price Return the price for the level.</p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong>
+                                <a
+                                  href="../index.htm#posei_trader.model.Price"
+                                  >Price</a
+                                >
+                              </li>
+                              <li><strong>Type:</strong> BookLevel.price</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="side"
+                            >
+                              side<a
+                                href="#side"
+                                class="hash-link"
+                                aria-label="Direct link to side"
+                                title="Direct link to side"
+                                >​</a
+                              >
+                            </h4>
+                            <p>OrderSide Return the side for the level.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> OrderSide</li>
+                              <li><strong>Type:</strong> BookLevel.side</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="sizeself--double"
+                            >
+                              size(self) → double<a
+                                href="#sizeself--double"
+                                class="hash-link"
+                                aria-label="Direct link to size(self) → double"
+                                title="Direct link to size(self) → double"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return the size at this level.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> double</li>
+                            </ul>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-orderbook"
+                            >
+                              <em>class</em> OrderBook<a
+                                href="#class-orderbook"
+                                class="hash-link"
+                                aria-label="Direct link to class-orderbook"
+                                title="Direct link to class-orderbook"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="../../core/index.htm#posei_trader.core.Data"
+                                ><code>Data</code></a
+                              >
+                            </p>
+                            <p>
+                              OrderBook(InstrumentId instrument_id, BookType
+                              book_type) -&gt; None Provides an order book which
+                              can handle L1/L2/L3 granularity data.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>instrument_id</strong>
+                                    (<em>IntrumentId</em>) – The instrument ID
+                                    for the order book.
+                                  </li>
+                                  <li>
+                                    <strong>book_type</strong> (BookType
+                                    {<code>L1_MBP</code>, <code>L2_MBP</code>,
+                                    <code>L3_MBO</code>}) – The order book type.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="addself-bookorder-order-uint64_t-ts_event-uint8_t-flags0-uint64_t-sequence0--void"
+                            >
+                              add(self, BookOrder order, uint64_t ts_event,
+                              uint8_t flags=0, uint64_t sequence=0) → void<a
+                                href="#addself-bookorder-order-uint64_t-ts_event-uint8_t-flags0-uint64_t-sequence0--void"
+                                class="hash-link"
+                                aria-label="Direct link to add(self, BookOrder order, uint64_t ts_event, uint8_t flags=0, uint64_t sequence=0) → void"
+                                title="Direct link to add(self, BookOrder order, uint64_t ts_event, uint8_t flags=0, uint64_t sequence=0) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Add the given order to the book.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>order</strong> (<a
+                                      href="../data/index.htm#posei_trader.model.data.BookOrder"
+                                      ><em>BookOrder</em></a
+                                    >) – The order to add.
+                                  </li>
+                                  <li>
+                                    <strong>ts_event</strong>
+                                    (<em>uint64_t</em>) – UNIX timestamp
+                                    (nanoseconds) when the book event occurred.
+                                  </li>
+                                  <li>
+                                    <strong>flags</strong> (<em>uint8_t</em>
+                                    <em>,</em> <em>default 0</em>) – The record
+                                    flags bit field, indicating event end and
+                                    data information.
+                                  </li>
+                                  <li>
+                                    <strong>sequence</strong> (<em>uint64_t</em>
+                                    <em>,</em> <em>default 0</em>) – The unique
+                                    sequence number for the update. If default 0
+                                    then will increment the sequence.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>RuntimeError</strong> – If the book type
+                                is L1_MBP.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="applyself-data-data--void"
+                            >
+                              apply(self, Data data) → void<a
+                                href="#applyself-data-data--void"
+                                class="hash-link"
+                                aria-label="Direct link to apply(self, Data data) → void"
+                                title="Direct link to apply(self, Data data) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Apply the given data to the order book.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>delta</strong> (<a
+                                  href="../data/index.htm#posei_trader.model.data.OrderBookDelta"
+                                  ><em>OrderBookDelta</em></a
+                                >
+                                <em>,</em>
+                                <a
+                                  href="../data/index.htm#posei_trader.model.data.OrderBookDeltas"
+                                  ><em>OrderBookDeltas</em></a
+                                >) – The data to apply.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="apply_deltaself-orderbookdelta-delta--void"
+                            >
+                              apply_delta(self, OrderBookDelta delta) → void<a
+                                href="#apply_deltaself-orderbookdelta-delta--void"
+                                class="hash-link"
+                                aria-label="Direct link to apply_delta(self, OrderBookDelta delta) → void"
+                                title="Direct link to apply_delta(self, OrderBookDelta delta) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Apply the order book delta.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>delta</strong> (<a
+                                  href="../data/index.htm#posei_trader.model.data.OrderBookDelta"
+                                  ><em>OrderBookDelta</em></a
+                                >) – The delta to apply.
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If delta.book_type
+                                is not equal to self.type.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="apply_deltasself-orderbookdeltas-deltas--void"
+                            >
+                              apply_deltas(self, OrderBookDeltas deltas) →
+                              void<a
+                                href="#apply_deltasself-orderbookdeltas-deltas--void"
+                                class="hash-link"
+                                aria-label="Direct link to apply_deltas(self, OrderBookDeltas deltas) → void"
+                                title="Direct link to apply_deltas(self, OrderBookDeltas deltas) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Apply the bulk deltas to the order book.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>deltas</strong> (<a
+                                  href="../data/index.htm#posei_trader.model.data.OrderBookDeltas"
+                                  ><em>OrderBookDeltas</em></a
+                                >) – The deltas to apply.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="apply_depthself-orderbookdepth10-depth--void"
+                            >
+                              apply_depth(self, OrderBookDepth10 depth) → void<a
+                                href="#apply_depthself-orderbookdepth10-depth--void"
+                                class="hash-link"
+                                aria-label="Direct link to apply_depth(self, OrderBookDepth10 depth) → void"
+                                title="Direct link to apply_depth(self, OrderBookDepth10 depth) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Apply the depth update to the order book.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>depth</strong> (<a
+                                  href="../data/index.htm#posei_trader.model.data.OrderBookDepth10"
+                                  ><em>OrderBookDepth10</em></a
+                                >) – The depth update to apply.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="asksself--list"
+                            >
+                              asks(self) → list<a
+                                href="#asksself--list"
+                                class="hash-link"
+                                aria-label="Direct link to asks(self) → list"
+                                title="Direct link to asks(self) → list"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return the bid levels for the order book.</p>
+                            <ul>
+                              <li>
+                                <strong>Returns:</strong> Sorted in ascending
+                                order of price.
+                              </li>
+                              <li>
+                                <strong>Return type:</strong> list[<a
+                                  href="#posei_trader.model.book.BookLevel"
+                                  >BookLevel</a
+                                >]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="best_ask_priceself"
+                            >
+                              best_ask_price(self)<a
+                                href="#best_ask_priceself"
+                                class="hash-link"
+                                aria-label="Direct link to best_ask_price(self)"
+                                title="Direct link to best_ask_price(self)"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the best ask price in the book (if no asks
+                              then returns <code>None</code>).
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="best_ask_sizeself"
+                            >
+                              best_ask_size(self)<a
+                                href="#best_ask_sizeself"
+                                class="hash-link"
+                                aria-label="Direct link to best_ask_size(self)"
+                                title="Direct link to best_ask_size(self)"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the best ask size in the book (if no asks
+                              then returns <code>None</code>).
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> double or
+                                <code>None</code>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="best_bid_priceself"
+                            >
+                              best_bid_price(self)<a
+                                href="#best_bid_priceself"
+                                class="hash-link"
+                                aria-label="Direct link to best_bid_price(self)"
+                                title="Direct link to best_bid_price(self)"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the best bid price in the book (if no bids
+                              then returns <code>None</code>).
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="best_bid_sizeself"
+                            >
+                              best_bid_size(self)<a
+                                href="#best_bid_sizeself"
+                                class="hash-link"
+                                aria-label="Direct link to best_bid_size(self)"
+                                title="Direct link to best_bid_size(self)"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the best bid size in the book (if no bids
+                              then returns <code>None</code>).
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="bidsself--list"
+                            >
+                              bids(self) → list<a
+                                href="#bidsself--list"
+                                class="hash-link"
+                                aria-label="Direct link to bids(self) → list"
+                                title="Direct link to bids(self) → list"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return the bid levels for the order book.</p>
+                            <ul>
+                              <li>
+                                <strong>Returns:</strong> Sorted in descending
+                                order of price.
+                              </li>
+                              <li>
+                                <strong>Return type:</strong> list[<a
+                                  href="#posei_trader.model.book.BookLevel"
+                                  >BookLevel</a
+                                >]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="book_type"
+                            >
+                              book_type<a
+                                href="#book_type"
+                                class="hash-link"
+                                aria-label="Direct link to book_type"
+                                title="Direct link to book_type"
+                                >​</a
+                              >
+                            </h4>
+                            <p>BookType Return the order book type.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> BookType</li>
+                              <li>
+                                <strong>Type:</strong> OrderBook.book_type
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="check_integrityself--void"
+                            >
+                              check_integrity(self) → void<a
+                                href="#check_integrityself--void"
+                                class="hash-link"
+                                aria-label="Direct link to check_integrity(self) → void"
+                                title="Direct link to check_integrity(self) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Check book integrity.</p>
+                            <p>For all order books:</p>
+                            <ul>
+                              <li>
+                                The bid side price should not be greater than
+                                the ask side price.
+                              </li>
+                            </ul>
+                            <ul>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>RuntimeError</strong> – If book
+                                integrity check fails.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="clearself-uint64_t-ts_event-uint64_t-sequence0--void"
+                            >
+                              clear(self, uint64_t ts_event, uint64_t
+                              sequence=0) → void<a
+                                href="#clearself-uint64_t-ts_event-uint64_t-sequence0--void"
+                                class="hash-link"
+                                aria-label="Direct link to clear(self, uint64_t ts_event, uint64_t sequence=0) → void"
+                                title="Direct link to clear(self, uint64_t ts_event, uint64_t sequence=0) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Clear the entire order book.</p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="clear_asksself-uint64_t-ts_event-uint64_t-sequence0--void"
+                            >
+                              clear_asks(self, uint64_t ts_event, uint64_t
+                              sequence=0) → void<a
+                                href="#clear_asksself-uint64_t-ts_event-uint64_t-sequence0--void"
+                                class="hash-link"
+                                aria-label="Direct link to clear_asks(self, uint64_t ts_event, uint64_t sequence=0) → void"
+                                title="Direct link to clear_asks(self, uint64_t ts_event, uint64_t sequence=0) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Clear the asks from the order book.</p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="clear_bidsself-uint64_t-ts_event-uint64_t-sequence0--void"
+                            >
+                              clear_bids(self, uint64_t ts_event, uint64_t
+                              sequence=0) → void<a
+                                href="#clear_bidsself-uint64_t-ts_event-uint64_t-sequence0--void"
+                                class="hash-link"
+                                aria-label="Direct link to clear_bids(self, uint64_t ts_event, uint64_t sequence=0) → void"
+                                title="Direct link to clear_bids(self, uint64_t ts_event, uint64_t sequence=0) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Clear the bids from the order book.</p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="deleteself-bookorder-order-uint64_t-ts_event-uint8_t-flags0-uint64_t-sequence0--void"
+                            >
+                              delete(self, BookOrder order, uint64_t ts_event,
+                              uint8_t flags=0, uint64_t sequence=0) → void<a
+                                href="#deleteself-bookorder-order-uint64_t-ts_event-uint8_t-flags0-uint64_t-sequence0--void"
+                                class="hash-link"
+                                aria-label="Direct link to delete(self, BookOrder order, uint64_t ts_event, uint8_t flags=0, uint64_t sequence=0) → void"
+                                title="Direct link to delete(self, BookOrder order, uint64_t ts_event, uint8_t flags=0, uint64_t sequence=0) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Cancel the given order in the book.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>order</strong> (<a
+                                      href="../orders/index.htm#nautilus_trader.model.orders.Order"
+                                      ><em>Order</em></a
+                                    >) – The order to delete.
+                                  </li>
+                                  <li>
+                                    <strong>ts_event</strong>
+                                    (<em>uint64_t</em>) – UNIX timestamp
+                                    (nanoseconds) when the book event occurred.
+                                  </li>
+                                  <li>
+                                    <strong>flags</strong> (<em>uint8_t</em>
+                                    <em>,</em> <em>default 0</em>) – The record
+                                    flags bit field, indicating event end and
+                                    data information.
+                                  </li>
+                                  <li>
+                                    <strong>sequence</strong> (<em>uint64_t</em>
+                                    <em>,</em> <em>default 0</em>) – The unique
+                                    sequence number for the update. If default 0
+                                    then will increment the sequence.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-fully_qualified_namecls--str"
+                            >
+                              <em>classmethod</em> fully_qualified_name(cls) →
+                              str<a
+                                href="#classmethod-fully_qualified_namecls--str"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-fully_qualified_namecls--str"
+                                title="Direct link to classmethod-fully_qualified_namecls--str"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the fully qualified name for the Data
+                              class.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="get_avg_px_for_quantityself-quantity-quantity-orderside-order_side--double"
+                            >
+                              get_avg_px_for_quantity(self, Quantity quantity,
+                              OrderSide order_side) → double<a
+                                href="#get_avg_px_for_quantityself-quantity-quantity-orderside-order_side--double"
+                                class="hash-link"
+                                aria-label="Direct link to get_avg_px_for_quantity(self, Quantity quantity, OrderSide order_side) → double"
+                                title="Direct link to get_avg_px_for_quantity(self, Quantity quantity, OrderSide order_side) → double"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the average price expected for the given
+                              quantity based on the current state of the order
+                              book.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>quantity</strong> (<a
+                                      href="../index.htm#nautilus_trader.model.Quantity"
+                                      ><em>Quantity</em></a
+                                    >) – The quantity for the calculation.
+                                  </li>
+                                  <li>
+                                    <strong>order_side</strong>
+                                    (<em>OrderSide</em>) – The order side for
+                                    the calculation.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><strong>Return type:</strong> double</li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If order_side is
+                                equal to <code>NO_ORDER_SIDE</code>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="warning"
+                            >
+                              WARNING<a
+                                href="#warning"
+                                class="hash-link"
+                                aria-label="Direct link to WARNING"
+                                title="Direct link to WARNING"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              If no average price can be calculated then will
+                              return 0.0 (zero).
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="get_quantity_for_priceself-price-price-orderside-order_side--double"
+                            >
+                              get_quantity_for_price(self, Price price,
+                              OrderSide order_side) → double<a
+                                href="#get_quantity_for_priceself-price-price-orderside-order_side--double"
+                                class="hash-link"
+                                aria-label="Direct link to get_quantity_for_price(self, Price price, OrderSide order_side) → double"
+                                title="Direct link to get_quantity_for_price(self, Price price, OrderSide order_side) → double"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the current total quantity for the given
+                              price based on the current state of the order
+                              book.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>price</strong> (<a
+                                      href="../index.htm#nautilus_trader.model.Price"
+                                      ><em>Price</em></a
+                                    >) – The quantity for the calculation.
+                                  </li>
+                                  <li>
+                                    <strong>order_side</strong>
+                                    (<em>OrderSide</em>) – The order side for
+                                    the calculation.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><strong>Return type:</strong> double</li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If order_side is
+                                equal to <code>NO_ORDER_SIDE</code>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="instrument_id"
+                            >
+                              instrument_id<a
+                                href="#instrument_id"
+                                class="hash-link"
+                                aria-label="Direct link to instrument_id"
+                                title="Direct link to instrument_id"
+                                >​</a
+                              >
+                            </h4>
+                            <p>InstrumentId Return the books instrument ID.</p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong>
+                                <a
+                                  href="../identifiers/index.htm#nautilus_trader.model.identifiers.InstrumentId"
+                                  >InstrumentId</a
+                                >
+                              </li>
+                              <li>
+                                <strong>Type:</strong> OrderBook.instrument_id
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-is_signalcls-str-name--bool"
+                            >
+                              <em>classmethod</em> is_signal(cls, str
+                              name=&#x27;&#x27;) → bool<a
+                                href="#classmethod-is_signalcls-str-name--bool"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-is_signalcls-str-name--bool"
+                                title="Direct link to classmethod-is_signalcls-str-name--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Determine if the current class is a signal type,
+                              optionally checking for a specific signal name.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>name</strong> (<em>str</em> <em>,</em>
+                                <em>optional</em>) – The specific signal name to
+                                check. If name not provided or if an empty
+                                string is passed, the method checks whether the
+                                class name indicates a general signal type. If
+                                name is provided, the method checks if the class
+                                name corresponds to that specific signal.
+                              </li>
+                              <li>
+                                <strong>Returns:</strong> True if the class name
+                                matches the signal type or the specific signal
+                                name, otherwise False.
+                              </li>
+                              <li><strong>Return type:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="midpointself"
+                            >
+                              midpoint(self)<a
+                                href="#midpointself"
+                                class="hash-link"
+                                aria-label="Direct link to midpoint(self)"
+                                title="Direct link to midpoint(self)"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the mid point (if no market exists then
+                              returns <code>None</code>).
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> double or
+                                <code>None</code>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="pprintself-int-num_levels3--str"
+                            >
+                              pprint(self, int num_levels=3) → str<a
+                                href="#pprintself-int-num_levels3--str"
+                                class="hash-link"
+                                aria-label="Direct link to pprint(self, int num_levels=3) → str"
+                                title="Direct link to pprint(self, int num_levels=3) → str"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a string representation of the order book
+                              in a human-readable table format.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>num_levels</strong> (<em>int</em>) – The
+                                number of levels to include.
+                              </li>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="resetself--void"
+                            >
+                              reset(self) → void<a
+                                href="#resetself--void"
+                                class="hash-link"
+                                aria-label="Direct link to reset(self) → void"
+                                title="Direct link to reset(self) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Reset the order book (clear all stateful values).
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="sequence"
+                            >
+                              sequence<a
+                                href="#sequence"
+                                class="hash-link"
+                                aria-label="Direct link to sequence"
+                                title="Direct link to sequence"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              int Return the last sequence number for the book.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> int</li>
+                              <li><strong>Type:</strong> OrderBook.sequence</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="simulate_fillsself-order-order-uint8_t-price_prec-uint8_t-size_prec-bool-is_aggressive--list"
+                            >
+                              simulate_fills(self, Order order, uint8_t
+                              price_prec, uint8_t size_prec, bool is_aggressive)
+                              → list<a
+                                href="#simulate_fillsself-order-order-uint8_t-price_prec-uint8_t-size_prec-bool-is_aggressive--list"
+                                class="hash-link"
+                                aria-label="Direct link to simulate_fills(self, Order order, uint8_t price_prec, uint8_t size_prec, bool is_aggressive) → list"
+                                title="Direct link to simulate_fills(self, Order order, uint8_t price_prec, uint8_t size_prec, bool is_aggressive) → list"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Simulate filling the book with the given order.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>order</strong> (<a
+                                      href="../orders/index.htm#nautilus_trader.model.orders.Order"
+                                      ><em>Order</em></a
+                                    >) – The order to simulate fills for.
+                                  </li>
+                                  <li>
+                                    <strong>price_prec</strong>
+                                    (<em>uint8_t</em>) – The price precision for
+                                    the fills.
+                                  </li>
+                                  <li>
+                                    <strong>size_prec</strong>
+                                    (<em>uint8_t</em>) – The size precision for
+                                    the fills (based on the instrument
+                                    definition).
+                                  </li>
+                                  <li>
+                                    <strong>is_aggressive</strong>
+                                    (<em>bool</em>) – If the order is an
+                                    aggressive liquidity taking order.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="spreadself"
+                            >
+                              spread(self)<a
+                                href="#spreadself"
+                                class="hash-link"
+                                aria-label="Direct link to spread(self)"
+                                title="Direct link to spread(self)"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the top-of-book spread (if no bids or asks
+                              then returns <code>None</code>).
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> double or
+                                <code>None</code>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="ts_event"
+                            >
+                              ts_event<a
+                                href="#ts_event"
+                                class="hash-link"
+                                aria-label="Direct link to ts_event"
+                                title="Direct link to ts_event"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              int UNIX timestamp (nanoseconds) when the data
+                              event occurred.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> int</li>
+                              <li><strong>Type:</strong> OrderBook.ts_event</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="ts_init"
+                            >
+                              ts_init<a
+                                href="#ts_init"
+                                class="hash-link"
+                                aria-label="Direct link to ts_init"
+                                title="Direct link to ts_init"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              int UNIX timestamp (nanoseconds) when the object
+                              was initialized.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> int</li>
+                              <li><strong>Type:</strong> OrderBook.ts_init</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="ts_last"
+                            >
+                              ts_last<a
+                                href="#ts_last"
+                                class="hash-link"
+                                aria-label="Direct link to ts_last"
+                                title="Direct link to ts_last"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              int Return the UNIX timestamp (nanoseconds) when
+                              the order book was last updated.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> int</li>
+                              <li><strong>Type:</strong> OrderBook.ts_last</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="updateself-bookorder-order-uint64_t-ts_event-uint8_t-flags0-uint64_t-sequence0--void"
+                            >
+                              update(self, BookOrder order, uint64_t ts_event,
+                              uint8_t flags=0, uint64_t sequence=0) → void<a
+                                href="#updateself-bookorder-order-uint64_t-ts_event-uint8_t-flags0-uint64_t-sequence0--void"
+                                class="hash-link"
+                                aria-label="Direct link to update(self, BookOrder order, uint64_t ts_event, uint8_t flags=0, uint64_t sequence=0) → void"
+                                title="Direct link to update(self, BookOrder order, uint64_t ts_event, uint8_t flags=0, uint64_t sequence=0) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Update the given order in the book.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>order</strong> (<a
+                                      href="../orders/index.htm#nautilus_trader.model.orders.Order"
+                                      ><em>Order</em></a
+                                    >) – The order to update.
+                                  </li>
+                                  <li>
+                                    <strong>ts_event</strong>
+                                    (<em>uint64_t</em>) – UNIX timestamp
+                                    (nanoseconds) when the book event occurred.
+                                  </li>
+                                  <li>
+                                    <strong>flags</strong> (<em>uint8_t</em>
+                                    <em>,</em> <em>default 0</em>) – The record
+                                    flags bit field, indicating event end and
+                                    data information.
+                                  </li>
+                                  <li>
+                                    <strong>sequence</strong> (<em>uint64_t</em>
+                                    <em>,</em> <em>default 0</em>) – The unique
+                                    sequence number for the update. If default 0
+                                    then will increment the sequence.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_count"
+                            >
+                              update_count<a
+                                href="#update_count"
+                                class="hash-link"
+                                aria-label="Direct link to update_count"
+                                title="Direct link to update_count"
+                                >​</a
+                              >
+                            </h4>
+                            <p>int Return the books update count.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> int</li>
+                              <li>
+                                <strong>Type:</strong> OrderBook.update_count
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_quote_tickself-quotetick-tick--void"
+                            >
+                              update_quote_tick(self, QuoteTick tick) → void<a
+                                href="#update_quote_tickself-quotetick-tick--void"
+                                class="hash-link"
+                                aria-label="Direct link to update_quote_tick(self, QuoteTick tick) → void"
+                                title="Direct link to update_quote_tick(self, QuoteTick tick)   → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the order book with the given quote tick.
+                            </p>
+                            <p>
+                              This operation is only valid for
+                              <code>L1_MBP</code> books maintaining a top level.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../data/index.htm#nautilus_trader.model.data.QuoteTick"
+                                  ><em>QuoteTick</em></a
+                                >) – The quote tick to update with.
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>RuntimeError</strong> – If book_type is
+                                not <code>L1_MBP</code>.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_trade_tickself-tradetick-tick--void"
+                            >
+                              update_trade_tick(self, TradeTick tick) → void<a
+                                href="#update_trade_tickself-tradetick-tick--void"
+                                class="hash-link"
+                                aria-label="Direct link to update_trade_tick(self, TradeTick tick) → void"
+                                title="Direct link to update_trade_tick(self, TradeTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the order book with the given trade tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../data/index.htm#nautilus_trader.model.data.TradeTick"
+                                  ><em>TradeTick</em></a
+                                >) – The trade tick to update with.
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>RuntimeError</strong> – If book_type is
+                                not <code>L1_MBP</code>.
+                              </li>
+                            </ul>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="py_should_handle_own_book_orderorder-order--bool"
+                            >
+                              py_should_handle_own_book_order(Order order) →
+                              bool<a
+                                href="#py_should_handle_own_book_orderorder-order--bool"
+                                class="hash-link"
+                                aria-label="Direct link to py_should_handle_own_book_order(Order order) → bool"
+                                title="Direct link to py_should_handle_own_book_order(Order order) → bool"
+                                >​</a
+                              >
+                            </h3>
+                          </div>
+                        </article>
+                        <nav
+                          class="docusaurus-mt-lg pagination-nav"
+                          aria-label="Docs pages"
+                        >
+                          <a
+                            class="pagination-nav__link pagination-nav__link--prev"
+                            href="../index.htm"
+                            ><div class="pagination-nav__sublabel">
+                              Previous
+                            </div>
+                            <div class="pagination-nav__label">Model</div></a
+                          ><a
+                            class="pagination-nav__link pagination-nav__link--next"
+                            href="../data/index.htm"
+                            ><div class="pagination-nav__sublabel">Next</div>
+                            <div class="pagination-nav__label">Data</div></a
+                          >
+                        </nav>
+                      </div>
+                    </div>
+                    <div class="col col--3">
+                      <div
+                        class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"
+                      >
+                        <ul
+                          class="table-of-contents table-of-contents__left-border"
+                        >
+                          <li>
+                            <a
+                              href="#class-booklevel"
+                              class="table-of-contents__link toc-highlight"
+                              ><em>class</em> BookLevel</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#class-orderbook"
+                              class="table-of-contents__link toc-highlight"
+                              ><em>class</em> OrderBook</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#py_should_handle_own_book_orderorder-order--bool"
+                              class="table-of-contents__link toc-highlight"
+                              >py_should_handle_own_book_order(Order order) →
+                              bool</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-wrapper MuiBox-root css-0">
+                    <div class="social-footer-box MuiBox-root css-0">
+                      <style data-emotion="css 17rjyz3">
+                        .css-17rjyz3 {
+                          -webkit-text-decoration: underline;
+                          text-decoration: underline;
+                          text-decoration-color: rgba(25, 118, 210, 0.4);
+                          padding: 12px;
+                          margin-right: 10px;
+                        }
+                        .css-17rjyz3:hover {
+                          text-decoration-color: inherit;
+                        }</style
+                      ><style data-emotion="css jl1bw5">
+                        .css-jl1bw5 {
+                          margin: 0;
+                          font: inherit;
+                          color: #1976d2;
+                          -webkit-text-decoration: underline;
+                          text-decoration: underline;
+                          text-decoration-color: rgba(25, 118, 210, 0.4);
+                          padding: 12px;
+                          margin-right: 10px;
+                        }
+                        .css-jl1bw5:hover {
+                          text-decoration-color: inherit;
+                        }</style
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5"
+                        href="https://github.com/poseisysstems/posei_trader"
+                        target="_blank"
+                      ></a
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways discord-footer css-jl1bw5"
+                        href="https://discord.gg/NautilusTrader"
+                        target="_blank"
+                      ></a
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways linkedin-footer css-jl1bw5"
+                        href="https://www.linkedin.com/company/poseisysstems/"
+                        target="_blank"
+                      ></a
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5"
+                        href="https://twitter.com/NautilusTrader"
+                        target="_blank"
+                      ></a>
+                    </div>
+                    <div class="footer-copyright">
+                      © 2025 Posei Systems Pty Ltd. All rights reserved.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

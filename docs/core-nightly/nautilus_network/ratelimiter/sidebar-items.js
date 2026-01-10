@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["clock","quota"],"struct":["InMemoryState","RateLimiter"],"trait":["StateStore"],"type":["DashMapStateStore"]};

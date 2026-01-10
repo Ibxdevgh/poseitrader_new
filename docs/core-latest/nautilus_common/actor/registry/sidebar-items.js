@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["get_actor","get_actor_registry","get_actor_unchecked","register_actor"],"struct":["ActorRegistry"]};

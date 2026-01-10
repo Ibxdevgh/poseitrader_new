@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["ERC20"],"struct":["Erc20Contract","TokenInfo"]};

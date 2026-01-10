@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["py_init_logging","py_init_tracing","py_log_header","py_log_sysinfo","py_logger_flush","py_logger_log","py_logging_clock_set_realtime_mode","py_logging_clock_set_static_mode","py_logging_clock_set_static_time"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["all_dex","dex_extended_map"],"mod":["arbitrum","base","ethereum","extended"]};

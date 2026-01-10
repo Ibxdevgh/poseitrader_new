@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["linear_weight","linear_weighting","pos_search","quad_polynomial","quadratic_interpolation"]};

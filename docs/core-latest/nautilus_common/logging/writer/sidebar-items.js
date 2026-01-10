@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["FileRotateConfig","FileWriter","FileWriterConfig","StderrWriter","StdoutWriter"],"trait":["LogWriter"]};

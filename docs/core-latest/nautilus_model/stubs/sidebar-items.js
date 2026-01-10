@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["calculate_commission","stub_order_book_mbp","stub_order_book_mbp_appl_xnas","stub_position_long","stub_position_short"],"struct":["stub_position_long","stub_position_short"]};

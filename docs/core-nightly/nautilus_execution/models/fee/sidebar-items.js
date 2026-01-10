@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["FeeModelAny"],"struct":["FixedFeeModel","MakerTakerFeeModel"],"trait":["FeeModel"]};

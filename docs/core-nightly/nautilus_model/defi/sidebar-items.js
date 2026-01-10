@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["amm","chain","data","dex","hex","rpc","token","types"],"static":["WEI_PRECISION"]};

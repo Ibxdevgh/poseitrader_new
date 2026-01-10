@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["ama","dema","ema","hma","lr","rma","sma","vidya","vwap","wma"]};

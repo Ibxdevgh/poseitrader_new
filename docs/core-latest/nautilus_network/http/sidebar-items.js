@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["HttpClientError","HttpMethod"],"struct":["HttpClient","HttpResponse","HttpStatus","InnerHttpClient"]};

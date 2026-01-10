@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Converts an ISO 8601 (RFC 3339) format string to UNIX nanoseconds timestamp."><title>iso8601_to_unix_nanos in nautilus_core::datetime - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="nautilus_core" data-themes="" data-resource-suffix="" data-rustdoc-version="1.90.0-nightly (28f1c8079 2025-06-24)" data-channel="nightly" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js"><script src="../../static.files/storage-4e99c027.js"></script><script defer src="sidebar-items.js"></script><script defer src="../../static.files/main-340f468f.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc fn"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../index.html">nautilus_<wbr>core</a><span class="version">0.49.0</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">iso8601_<wbr>to_<wbr>unix_<wbr>nanos</a></h2><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#parameters" title="Parameters">Parameters</a></li><li><a href="#returns" title="Returns">Returns</a></li><li><a href="#errors" title="Errors">Errors</a></li><li><a href="#examples" title="Examples">Examples</a></li></ul></section><div id="rustdoc-modnav"><h2><a href="index.html">In nautilus_<wbr>core::<wbr>datetime</a></h2></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><div class="rustdoc-breadcrumbs"><a href="../index.html">nautilus_core</a>::<wbr><a href="index.html">datetime</a></div><h1>Function <span class="fn">iso8601_to_unix_nanos</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../../src/nautilus_core/datetime.rs.html#163-167">Source</a> </span></div><pre class="rust item-decl"><code>pub fn iso8601_to_unix_nanos(date_string: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.98/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="../nanos/struct.UnixNanos.html" title="struct nautilus_core::nanos::UnixNanos">UnixNanos</a>&gt;</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Converts an ISO 8601 (RFC 3339) format string to UNIX nanoseconds timestamp.</p>
+<p>This function accepts various ISO 8601 formats including:</p>
+<ul>
+<li>Full RFC 3339 with nanosecond precision: “2024-02-10T14:58:43.456789Z”</li>
+<li>RFC 3339 without fractional seconds: “2024-02-10T14:58:43Z”</li>
+<li>Simple date format: “2024-02-10” (interpreted as midnight UTC)</li>
+</ul>
+<h2 id="parameters"><a class="doc-anchor" href="#parameters">§</a>Parameters</h2>
+<ul>
+<li><code>date_string</code>: The ISO 8601 formatted date string to parse</li>
+</ul>
+<h2 id="returns"><a class="doc-anchor" href="#returns">§</a>Returns</h2>
+<p>Returns <code>Ok(UnixNanos)</code> if the string is successfully parsed, or an error if the format
+is invalid or the timestamp is out of range.</p>
+<h2 id="errors"><a class="doc-anchor" href="#errors">§</a>Errors</h2>
+<p>Returns an error if:</p>
+<ul>
+<li>The string format is not a valid ISO 8601 format</li>
+<li>The timestamp is out of range for <code>UnixNanos</code></li>
+<li>The date/time values are invalid</li>
+</ul>
+<h2 id="examples"><a class="doc-anchor" href="#examples">§</a>Examples</h2>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>nautilus_core::datetime::iso8601_to_unix_nanos;
+<span class="kw">use </span>nautilus_core::UnixNanos;
+
+<span class="comment">// Full RFC 3339 format
+</span><span class="kw">let </span>nanos = iso8601_to_unix_nanos(<span class="string">"2024-02-10T14:58:43.456789Z"</span>.to_string())<span class="question-mark">?</span>;
+<span class="macro">assert_eq!</span>(nanos, UnixNanos::from(<span class="number">1_707_577_123_456_789_000</span>));
+
+<span class="comment">// Without fractional seconds
+</span><span class="kw">let </span>nanos = iso8601_to_unix_nanos(<span class="string">"2024-02-10T14:58:43Z"</span>.to_string())<span class="question-mark">?</span>;
+<span class="macro">assert_eq!</span>(nanos, UnixNanos::from(<span class="number">1_707_577_123_000_000_000</span>));
+
+<span class="comment">// Simple date format (midnight UTC)
+</span><span class="kw">let </span>nanos = iso8601_to_unix_nanos(<span class="string">"2024-02-10"</span>.to_string())<span class="question-mark">?</span>;
+<span class="macro">assert_eq!</span>(nanos, UnixNanos::from(<span class="number">1_707_523_200_000_000_000</span>));</code></pre></div>
+</div></details></section></div></main></body></html>

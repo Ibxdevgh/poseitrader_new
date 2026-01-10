@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["BettingInstrumentModel","BinaryOptionModel","CryptoFutureModel","CryptoOptionModel","CryptoPerpetualModel","CurrencyPairModel","EquityModel","FuturesContractModel","FuturesSpreadModel","InstrumentAnyModel","OptionContractModel","OptionSpreadModel"]};

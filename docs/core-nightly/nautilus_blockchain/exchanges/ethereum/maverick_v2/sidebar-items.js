@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"static":["MAVERICK_V2"]};
