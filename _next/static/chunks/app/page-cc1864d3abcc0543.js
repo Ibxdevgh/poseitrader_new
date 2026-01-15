@@ -24,6 +24,7 @@
         h = i(3096),
         y = i(59822);
       async function b() {
+<<<<<<< HEAD
         // DISABLED: Data transfer blocked
         // let e = await fetch(
         //   "https://api.github.com/repos/nautechsystems/posei_trader"
@@ -45,6 +46,23 @@
         // if (!e.ok) console.log("Failed to fetch data");
         // return e.json();
         return { approximate_member_count: 0 };
+=======
+        let e = await fetch(
+          "https://api.github.com/repos/nautechsystems/posei_trader"
+        );
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.json();
+      }
+      async function j() {
+        let e = await fetch("/api/downloads");
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.text();
+      }
+      async function v() {
+        let e = await fetch("/api/discord");
+        if (!e.ok) console.log("Failed to fetch data");
+        return e.json();
+>>>>>>> 5b87db0309c8a14273e3cb4d35cd47471132a46c
       }
       function w() {
         let [e, t] = (0, h.useInView)({ triggerOnce: !0 }),
@@ -1226,6 +1244,7 @@
               : v();
           },
           k = async () => {
+<<<<<<< HEAD
             // DISABLED: Data transfer blocked
             try {
               j(!0);
@@ -1235,6 +1254,15 @@
               //   g(t.version);
               // }
               g("1.0.0"); // Use default version
+=======
+            try {
+              j(!0);
+              let e = await fetch("/api/version");
+              if (e.ok) {
+                let t = await e.json();
+                g(t.version);
+              }
+>>>>>>> 5b87db0309c8a14273e3cb4d35cd47471132a46c
             } catch (e) {
               console.error("Error fetching version:", e);
             } finally {

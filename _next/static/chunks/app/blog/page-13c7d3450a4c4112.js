@@ -430,11 +430,17 @@
           (0, r.useEffect)(() => {
             (async function () {
               try {
+<<<<<<< HEAD
                 // DISABLED: Data transfer blocked
                 // let t = await fetch("/api/blog-posts"),
                 //   n = await t.json();
                 // e(n);
                 e([]); // Return empty array instead
+=======
+                let t = await fetch("/api/blog-posts"),
+                  n = await t.json();
+                e(n);
+>>>>>>> 5b87db0309c8a14273e3cb4d35cd47471132a46c
               } catch (t) {
                 console.error("Failed to fetch blog posts:", t);
               } finally {

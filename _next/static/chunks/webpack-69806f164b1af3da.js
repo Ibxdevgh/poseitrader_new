@@ -210,6 +210,7 @@
       o.forEach(t.bind(null, 0)), (o.push = t.bind(null, o.push.bind(o)));
     })();
 })();
+<<<<<<< HEAD
 // DISABLED: Vercel feedback script blocked to prevent data transfer
 // (function () {
 //   if (!/(?:^|;\s)__vercel_toolbar=1(?:;|$)/.test(document.cookie)) return;
@@ -220,3 +221,14 @@
 //   s.setAttribute("data-deployment-id", "dpl_5FtihTsG6MGy779mFqQAjJSMA6id");
 //   (document.head || document.documentElement).appendChild(s);
 // })();
+=======
+(function () {
+  if (!/(?:^|;\s)__vercel_toolbar=1(?:;|$)/.test(document.cookie)) return;
+  var s = document.createElement("script");
+  s.src = "https://vercel.live/_next-live/feedback/feedback.js";
+  s.setAttribute("data-explicit-opt-in", "true");
+  s.setAttribute("data-cookie-opt-in", "true");
+  s.setAttribute("data-deployment-id", "dpl_5FtihTsG6MGy779mFqQAjJSMA6id");
+  (document.head || document.documentElement).appendChild(s);
+})();
+>>>>>>> 5b87db0309c8a14273e3cb4d35cd47471132a46c

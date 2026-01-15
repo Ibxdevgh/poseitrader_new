@@ -1,0 +1,7 @@
+# Ignore documentation folders from deployment to reduce size
+# These folders contain thousands of files causing excessive crawling
+docs/core-nightly/
+docs/core-latest/
+docs/nightly/
+docs/latest/
+

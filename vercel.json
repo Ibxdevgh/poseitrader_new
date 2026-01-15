@@ -4,5 +4,20 @@
     { "source": "/terms.html", "destination": "/terms.html" },
     { "source": "/privacy.html", "destination": "/privacy.html" },
     { "source": "/cookies.html", "destination": "/cookies.html" }
+  ],
+  "headers": [
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
+    }
   ]
 }
