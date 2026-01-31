@@ -1,0 +1,1185 @@
+﻿<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="docs-wrapper plugin-docs plugin-id-default docs-version-latest docs-doc-page docs-doc-id-tutorials/backtest_binance_orderbook"
+  data-has-hydrated="false"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="Docusaurus v3.8.1" />
+    <title data-rh="true">
+      Backtest: Binance OrderBook data | PoseiTrader Documentation
+    </title>
+    <meta
+      data-rh="true"
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+    <meta
+      data-rh="true"
+      property="og:image"
+      content="docs/latestimg/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      name="twitter:image"
+      content="docs/latestimg/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      property="og:url"
+      content="docs/latestlatest/tutorials/backtest_binance_orderbook"
+    />
+    <meta data-rh="true" property="og:locale" content="en" />
+    <meta data-rh="true" name="docusaurus_locale" content="en" />
+    <meta data-rh="true" name="docsearch:language" content="en" />
+    <meta
+      data-rh="true"
+      name="keywords"
+      content="Open-source trading platform, Algorithmic trading software, Event-driven backtesting, Live trading with no code changes, Trade any asset class, Low-latency trading execution, Python API for trading strategies, Custom market data integration, Futures and options trading, Crypto spot and derivatives trading, Equities trading simulation, FX spot trading, Sports betting markets trading, Fast backtesting strategies, Advanced trading orders, Rust-based trading platform, High-performance trading system, Nanosecond resolution market simulation, Trading across multiple venues, Trading platform for hedge funds, Seamless data integration, Customizable trading strategies, AI and ML trading strategies, Posei trading platform, Multi-venue trading, Unlimited backtesting strategies, Fast trading execution solutions, Realistic market simulations, Seamless trading API integration, PoseiTrader Documentation, Docs, PoseiTrader Docs"
+    />
+    <meta data-rh="true" name="title" content="PoseiTrader Documentation" />
+    <meta data-rh="true" name="og:title" content="PoseiTrader Documentation" />
+    <meta
+      data-rh="true"
+      name="og:description"
+      content="PoseiTrader is a high-performance platform for automating trading strategies, built on the powerful Posei framework for backtesting and real-time trading."
+    />
+    <meta data-rh="true" name="og:image" content="img/preview.png" />
+    <meta data-rh="true" name="og:url" content="/docs/latest" />
+    <meta data-rh="true" name="docusaurus_version" content="latest" />
+    <meta data-rh="true" name="docusaurus_tag" content="docs-default-latest" />
+    <meta data-rh="true" name="docsearch:version" content="latest" />
+    <meta
+      data-rh="true"
+      name="docsearch:docusaurus_tag"
+      content="docs-default-latest"
+    />
+    <meta
+      data-rh="true"
+      property="og:title"
+      content="Backtest: Binance OrderBook data | PoseiTrader Documentation"
+    />
+    <meta
+      data-rh="true"
+      name="description"
+      content="Tutorial for PoseiTrader a high-performance algorithmic trading platform and event driven backtester."
+    />
+    <meta
+      data-rh="true"
+      property="og:description"
+      content="Tutorial for PoseiTrader a high-performance algorithmic trading platform and event driven backtester."
+    />
+    <link data-rh="true" rel="icon" href="../../../img/shell.ico" />
+    <link data-rh="true" rel="canonical" href="index.htm" />
+    <link data-rh="true" rel="alternate" href="index.htm" hreflang="en" />
+    <link
+      data-rh="true"
+      rel="alternate"
+      href="index.htm"
+      hreflang="x-default"
+    />
+    <link
+      data-rh="true"
+      rel="preconnect"
+      href="https://CWRKEEL01M-dsn.algolia.net"
+      crossorigin="anonymous"
+    />
+    <script data-rh="true" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Tutorials",
+            "item": "docs/latestlatest/tutorials/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Backtest: Binance OrderBook data",
+            "item": "docs/latestlatest/tutorials/backtest_binance_orderbook"
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="PoseiTrader Documentation"
+      href="../../../opensearch.xml"
+    />
+    <script>
+      !(function () {
+        var t = window.location.pathname;
+        if (
+          t.startsWith("/docs") &&
+          !t.startsWith("/docs/latest") &&
+          !t.startsWith("/docs/nightly")
+        ) {
+          var s = t.replace("/docs", "/docs/latest");
+          window.location.href = s;
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TR4XK597XK"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-TR4XK597XK", { anonymize_ip: !0 });
+    </script>
+    <link rel="stylesheet" href="../../../assets/css/styles.0f0f692e.css" />
+    <script
+      src="../../../assets/js/runtime~main.92b727d5.js"
+      defer="defer"
+    ></script>
+    <script src="../../../assets/js/main.1cd42d85.js" defer="defer"></script>
+  </head>
+  <body class="navigation-with-keyboard">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol id="theme-svg-external-link" viewbox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <script>
+      !(function () {
+        var t = "dark";
+        var e =
+          (function () {
+            try {
+              return new URLSearchParams(window.location.search).get(
+                "docusaurus-theme"
+              );
+            } catch (t) {}
+          })() ||
+          (function () {
+            try {
+              return window.localStorage.getItem("theme");
+            } catch (t) {}
+          })();
+        document.documentElement.setAttribute("data-theme", e || t),
+          document.documentElement.setAttribute("data-theme-choice", e || t);
+      })(),
+        (function () {
+          try {
+            const c = new URLSearchParams(window.location.search).entries();
+            for (var [t, e] of c)
+              if (t.startsWith("docusaurus-data-")) {
+                var a = t.replace("docusaurus-data-", "data-");
+                document.documentElement.setAttribute(a, e);
+              }
+          } catch (t) {}
+        })();
+    </script>
+    <div id="__docusaurus">
+      <div role="region" aria-label="Skip to main content">
+        <a
+          class="skipToContent_fXgn"
+          href="#__docusaurus_skipToContent_fallback"
+          >Skip to main content</a
+        >
+      </div>
+      <nav
+        aria-label="Main"
+        class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"
+      >
+        <div class="navbar__inner">
+          <div class="theme-layout-navbar-left navbar__items">
+            <button
+              aria-label="Toggle navigation bar"
+              aria-expanded="false"
+              class="navbar__toggle clean-btn"
+              type="button"
+            >
+              <svg
+                width="30"
+                height="30"
+                viewbox="0 0 30 30"
+                aria-hidden="true"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M4 7h22M4 15h22M4 23h22"
+                ></path>
+              </svg></button
+            ><a
+              href="../../../../index.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__brand"
+              ><div class="navbar__logo">
+                <img
+                  src="../../../img/nt-black-large.webp"
+                  alt="PoseiTrader Logo"
+                  class="themedComponent_mlkZ themedComponent--light_NVdE"
+                /><img
+                  src="../../../img/nt-white-large.webp"
+                  alt="PoseiTrader Logo"
+                  class="themedComponent_mlkZ themedComponent--dark_xIcU"
+                />
+              </div>
+              <b class="navbar__title text--truncate"></b
+            ></a>
+            <div class="navbar__item dropdown dropdown--hoverable">
+              <a
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+                role="button"
+                class="navbar__link"
+                >Version</a
+              >
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    aria-current="page"
+                    class="dropdown__link dropdown__link--active"
+                    href="../../index.htm"
+                    >latest</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown__link" href="../../../nightly/index.html"
+                    >nightly</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="navbarSearchContainer_Bca1">
+              <button
+                type="button"
+                class="DocSearch DocSearch-Button"
+                aria-label="Search (Command+K)"
+              >
+                <span class="DocSearch-Button-Container"
+                  ><svg
+                    width="20"
+                    height="20"
+                    class="DocSearch-Search-Icon"
+                    viewbox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                      stroke="currentColor"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path></svg
+                  ><span class="DocSearch-Button-Placeholder"
+                    >Search</span
+                  ></span
+                ><span class="DocSearch-Button-Keys"></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="theme-layout-navbar-right navbar__items navbar__items--right"
+          >
+            <a
+              href="https://github.com/poseisystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-github-link common-social"
+              aria-label="GitHub repository"
+            ></a>
+            <a
+              href="https://twitter.com/PoseiTrader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-x-link common-social"
+              aria-label="X"
+            ></a>
+             
+          </div>
+        </div>
+        <div role="presentation" class="navbar-sidebar__backdrop"></div>
+      </nav>
+      <div
+        id="__docusaurus_skipToContent_fallback"
+        class="theme-layout-main main-wrapper mainWrapper_z2l0"
+      >
+        <div class="docsWrapper_hBAB">
+          <button
+            aria-label="Scroll back to top"
+            class="clean-btn theme-back-to-top-button backToTopButton_sjWU"
+            type="button"
+          ></button>
+          <div class="docRoot_UBD9">
+            <aside class="theme-doc-sidebar-container docSidebarContainer_YfHR">
+              <div class="sidebarViewport_aRkj">
+                <div class="sidebar_njMd sidebarWithHideableNavbar_wUlq">
+                  <a
+                    href="../../../../index.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                    class="sidebarLogo_isFc"
+                    ><img
+                      src="../../../img/nt-black-large.webp"
+                      alt="PoseiTrader Logo"
+                      class="themedComponent_mlkZ themedComponent--light_NVdE" /><img
+                      src="../../../img/nt-white-large.webp"
+                      alt="PoseiTrader Logo"
+                      class="themedComponent_mlkZ themedComponent--dark_xIcU" /><b></b
+                  ></a>
+                  <nav
+                    aria-label="Docs sidebar"
+                    class="menu thin-scrollbar menu_SIkG"
+                  >
+                    <ul class="theme-doc-sidebar-menu menu__list">
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a class="menu__link" href="../../index.htm"
+                          >PoseiTrader Documentation</a
+                        >
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../getting_started/index.htm"
+                            >Getting Started</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Getting Started&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../concepts/index.htm"
+                            >Concepts</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Concepts&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist menu__link--active"
+                            href="../index.htm"
+                            >Tutorials</a
+                          ><button
+                            aria-label="Collapse sidebar category &#x27;Tutorials&#x27;"
+                            aria-expanded="true"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                        <ul class="menu__list">
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../backtest_fx_bars/index.htm"
+                              >Backtest: FX bar data</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link menu__link--active"
+                              aria-current="page"
+                              tabindex="0"
+                              href="index.htm"
+                              >Backtest: Binance OrderBook data</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../backtest_bybit_orderbook/index.htm"
+                              >Backtest: Bybit OrderBook data</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../databento_overview/index.htm"
+                              >Databento overview</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../databento_data_catalog/index.htm"
+                              >Databento data catalog</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../integrations/index.htm"
+                            >Integrations</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Integrations&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../api_reference/index.htm"
+                            >Python API</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Python API&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a
+                          href="../../../core-latest/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="menu__link menuExternalLink_NmtK"
+                          >Rust API<svg
+                            width="13.5"
+                            height="13.5"
+                            aria-hidden="true"
+                            class="iconExternalLink_nPIU"
+                          >
+                            <use href="#theme-svg-external-link"></use></svg
+                        ></a>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../developer_guide/index.htm"
+                            >Developer Guide</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Developer Guide&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </aside>
+            <main class="docMainContainer_TBSr">
+              <div class="container padding-top--md padding-bottom--lg">
+                <div>
+                  <div class="row">
+                    <div class="col docItemCol_VOVn">
+                      <div class="docItemContainer_Djhp">
+                        <article>
+                          <nav
+                            class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl"
+                            aria-label="Breadcrumbs"
+                          >
+                            <ul class="breadcrumbs">
+                              <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="../index.htm"
+                                  ><span>Tutorials</span></a
+                                >
+                              </li>
+                              <li
+                                class="breadcrumbs__item breadcrumbs__item--active"
+                              >
+                                <span class="breadcrumbs__link"
+                                  >Backtest: Binance OrderBook data</span
+                                >
+                              </li>
+                            </ul>
+                          </nav>
+                          <span
+                            class="theme-doc-version-badge badge badge--secondary"
+                            >Version: latest</span
+                          >
+                          <div
+                            class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"
+                          >
+                            <button
+                              type="button"
+                              class="clean-btn tocCollapsibleButton_TO0P"
+                            >
+                              On this page
+                            </button>
+                          </div>
+                          <div class="theme-doc-markdown markdown">
+                            <header>
+                              <h1>Backtest: Binance OrderBook data</h1>
+                            </header>
+                            <p>
+                              Tutorial for
+                              <a
+                                href="docs/latest"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >PoseiTrader</a
+                              >
+                              a high-performance algorithmic trading platform
+                              and event driven backtester.
+                            </p>
+                            <p>
+                              <a
+                                href="https://github.com/poseisystems/blob/develop/docs/tutorials/backtest_binance_orderbook.ipynb"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >View source on GitHub</a
+                              >.
+                            </p>
+                            <div
+                              class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"
+                            >
+                              <div class="admonitionHeading_Gvgb">
+                                <span class="admonitionIcon_Rf37"
+                                  ><svg viewbox="0 0 14 16">
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"
+                                    ></path></svg></span
+                                >info
+                              </div>
+                              <div class="admonitionContent_BuS1">
+                                <p>
+                                  We are currently working on this tutorial.
+                                </p>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="overview"
+                            >
+                              Overview<a
+                                href="#overview"
+                                class="hash-link"
+                                aria-label="Direct link to Overview"
+                                title="Direct link to Overview"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              This tutorial runs through how to set up the data
+                              catalog and a <code>BacktestNode</code> to
+                              backtest an
+                              <code>OrderBookImbalance</code> strategy or order
+                              book data. This example requires you bring your
+                              own Binance order book data.
+                            </p>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="prerequisites"
+                            >
+                              Prerequisites<a
+                                href="#prerequisites"
+                                class="hash-link"
+                                aria-label="Direct link to Prerequisites"
+                                title="Direct link to Prerequisites"
+                                >​</a
+                              >
+                            </h2>
+                            <ul>
+                              <li>Python 3.11+ installed</li>
+                              <li>
+                                <a
+                                  href="https://jupyter.org/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >JupyterLab</a
+                                >
+                                or similar installed (<code
+                                  >pip install -U jupyterlab</code
+                                >)
+                              </li>
+                              <li>
+                                <a
+                                  href="https://pypi.org/project/posei_trader/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  >PoseiTrader</a
+                                >
+                                latest release installed (<code
+                                  >pip install -U posei_trader</code
+                                >)
+                              </li>
+                            </ul>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="imports"
+                            >
+                              Imports<a
+                                href="#imports"
+                                class="hash-link"
+                                aria-label="Direct link to Imports"
+                                title="Direct link to Imports"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              We&#x27;ll start with all of our imports for the
+                              remainder of this guide:
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> os</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> shutil</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> decimal </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> Decimal</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> pathlib </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> Path</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> pandas </span><span class="token keyword" style="color:rgb(86, 156, 214)">as</span><span class="token plain"> pd</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">binance</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">loaders </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> BinanceOrderBookDeltaDataLoader</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">backtest</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">node </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> BacktestDataConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">backtest</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">node </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> BacktestEngineConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">backtest</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">node </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> BacktestNode</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">backtest</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">node </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> BacktestRunConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">backtest</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">node </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> BacktestVenueConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> ImportableStrategyConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> LoggingConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">core</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">datetime </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> dt_to_unix_nanos</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">model </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> OrderBookDelta</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">persistence</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">catalog </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> ParquetDataCatalog</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">persistence</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">wranglers </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> OrderBookDeltaDataWrangler</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">test_kit</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">providers </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> TestInstrumentProvider</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="loading-data"
+                            >
+                              Loading data<a
+                                href="#loading-data"
+                                class="hash-link"
+                                aria-label="Direct link to Loading data"
+                                title="Direct link to Loading data"
+                                >​</a
+                              >
+                            </h2>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token comment" style="color:rgb(106, 153, 85)"># Path to your data directory, using user /Downloads as an example</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">DATA_DIR </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;~/Downloads&quot;</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">data_path </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> Path</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">DATA_DIR</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">expanduser</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(212, 212, 212)">/</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;Data&quot;</span><span class="token plain"> </span><span class="token operator" style="color:rgb(212, 212, 212)">/</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;Binance&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">raw_files </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(86, 156, 214)">list</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">data_path</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">iterdir</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">assert</span><span class="token plain"> raw_files</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> </span><span class="token string-interpolation string" style="color:rgb(206, 145, 120)">f&quot;Unable to find any histdata files in directory </span><span class="token string-interpolation interpolation punctuation" style="color:rgb(212, 212, 212)">{</span><span class="token string-interpolation interpolation">data_path</span><span class="token string-interpolation interpolation punctuation" style="color:rgb(212, 212, 212)">}</span><span class="token string-interpolation string" style="color:rgb(206, 145, 120)">&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">raw_files</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token comment" style="color:rgb(106, 153, 85)"># First we&#x27;ll load the initial order book snapshot</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">path_snap </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> data_path </span><span class="token operator" style="color:rgb(212, 212, 212)">/</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;BTCUSDT_T_DEPTH_2022-11-01_depth_snap.csv&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">df_snap </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> BinanceOrderBookDeltaDataLoader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">load</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">path_snap</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">df_snap</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">head</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token comment" style="color:rgb(106, 153, 85)"># Then we&#x27;ll load the order book updates, to save time here we&#x27;re limiting to 1 million rows</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">path_update </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> data_path </span><span class="token operator" style="color:rgb(212, 212, 212)">/</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;BTCUSDT_T_DEPTH_2022-11-01_depth_update.csv&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">nrows </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">1_000_000</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">df_update </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> BinanceOrderBookDeltaDataLoader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">load</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">path_update</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> nrows</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">nrows</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">df_update</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">head</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="process-deltas-using-a-wrangler"
+                            >
+                              Process deltas using a wrangler<a
+                                href="#process-deltas-using-a-wrangler"
+                                class="hash-link"
+                                aria-label="Direct link to Process deltas using a wrangler"
+                                title="Direct link to Process deltas using a wrangler"
+                                >​</a
+                              >
+                            </h3>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">BTCUSDT_BINANCE </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> TestInstrumentProvider</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">btcusdt_binance</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">wrangler </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> OrderBookDeltaDataWrangler</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">BTCUSDT_BINANCE</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">deltas </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> wrangler</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">process</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">df_snap</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">deltas </span><span class="token operator" style="color:rgb(212, 212, 212)">+=</span><span class="token plain"> wrangler</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">process</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">df_update</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">deltas</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">sort</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">key</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token keyword" style="color:rgb(86, 156, 214)">lambda</span><span class="token plain"> x</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> x</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">ts_init</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain">  </span><span class="token comment" style="color:rgb(106, 153, 85)"># Ensure data is non-decreasing by `ts_init`</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">deltas</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token number" style="color:rgb(181, 206, 168)">10</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="set-up-data-catalog"
+                            >
+                              Set up data catalog<a
+                                href="#set-up-data-catalog"
+                                class="hash-link"
+                                aria-label="Direct link to Set up data catalog"
+                                title="Direct link to Set up data catalog"
+                                >​</a
+                              >
+                            </h3>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">CATALOG_PATH </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> os</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">getcwd</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"> </span><span class="token operator" style="color:rgb(212, 212, 212)">+</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;/catalog&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Clear if it already exists, then create fresh</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">if</span><span class="token plain"> os</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">path</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">exists</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">CATALOG_PATH</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    shutil</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">rmtree</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">CATALOG_PATH</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">os</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">mkdir</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">CATALOG_PATH</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Create a catalog instance</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">catalog </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> ParquetDataCatalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">CATALOG_PATH</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token comment" style="color:rgb(106, 153, 85)"># Write instrument and ticks to catalog</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">catalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">write_data</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain">BTCUSDT_BINANCE</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">catalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">write_data</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">deltas</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token comment" style="color:rgb(106, 153, 85)"># Confirm the instrument was written</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">catalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">instruments</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token comment" style="color:rgb(106, 153, 85)"># Explore the available data in the catalog</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">start </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> dt_to_unix_nanos</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">pd</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">Timestamp</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;2022-11-01&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> tz</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;UTC&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">end </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">  dt_to_unix_nanos</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">pd</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">Timestamp</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;2022-11-04&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> tz</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;UTC&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">deltas </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> catalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">order_book_deltas</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">start</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">start</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> end</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">end</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">print</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token builtin" style="color:rgb(86, 156, 214)">len</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">deltas</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">deltas</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token number" style="color:rgb(181, 206, 168)">10</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="configure-backtest"
+                            >
+                              Configure backtest<a
+                                href="#configure-backtest"
+                                class="hash-link"
+                                aria-label="Direct link to Configure backtest"
+                                title="Direct link to Configure backtest"
+                                >​</a
+                              >
+                            </h2>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">instrument </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> catalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">instruments</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token number" style="color:rgb(181, 206, 168)">0</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">book_type </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;L2_MBP&quot;</span><span class="token plain">  </span><span class="token comment" style="color:rgb(106, 153, 85)"># Ensure data book type matches venue book type</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">data_configs </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain">BacktestDataConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        catalog_path</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">CATALOG_PATH</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        data_cls</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">OrderBookDelta</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        instrument_id</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">instrument</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token builtin" style="color:rgb(86, 156, 214)">id</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token comment" style="color:rgb(106, 153, 85)"># start_time=start,  # Run across all data</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token comment" style="color:rgb(106, 153, 85)"># end_time=end,  # Run across all data</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">venues_configs </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    BacktestVenueConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        name</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;BINANCE&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        oms_type</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;NETTING&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        account_type</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;CASH&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        base_currency</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">None</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        starting_balances</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;20 BTC&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;100000 USDT&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        book_type</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">book_type</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">  </span><span class="token comment" style="color:rgb(106, 153, 85)"># &lt;-- Venues book type</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">strategies </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    ImportableStrategyConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        strategy_path</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;posei_trader.examples.strategies.orderbook_imbalance:OrderBookImbalance&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        config_path</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;posei_trader.examples.strategies.orderbook_imbalance:OrderBookImbalanceConfig&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        config</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token punctuation" style="color:rgb(212, 212, 212)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;instrument_id&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> instrument</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token builtin" style="color:rgb(86, 156, 214)">id</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;book_type&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> book_type</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;max_trade_size&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> Decimal</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;1.000&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;min_seconds_between_triggers&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">1.0</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(212, 212, 212)">}</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># PoseiTrader currently exceeds the rate limit for Jupyter notebook logging (stdout output),</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># this is why the `log_level` is set to &quot;ERROR&quot;. If you lower this level to see</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># more logging then the notebook will hang during cell execution. A fix is currently</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># being investigated which involves either raising the configured rate limits for</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Jupyter, or throttling the log flushing from Posei.</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># https://github.com/jupyterlab/jupyterlab/issues/12845</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># https://github.com/deshaw/jupyterlab-limit-output</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">config </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> BacktestRunConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    engine</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">BacktestEngineConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        strategies</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">strategies</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        logging</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">LoggingConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">log_level</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;ERROR&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    data</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">data_configs</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    venues</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">venues_configs</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">config</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="run-the-backtest"
+                            >
+                              Run the backtest<a
+                                href="#run-the-backtest"
+                                class="hash-link"
+                                aria-label="Direct link to Run the backtest"
+                                title="Direct link to Run the backtest"
+                                >​</a
+                              >
+                            </h2>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">node </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> BacktestNode</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">configs</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain">config</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">result </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">run</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">result</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">backtest</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">engine </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> BacktestEngine</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">model </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> Venue</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">engine</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> BacktestEngine </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">get_engine</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">config</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token builtin" style="color:rgb(86, 156, 214)">id</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">engine</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">generate_order_fills_report</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">engine</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">generate_positions_report</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">engine</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">generate_account_report</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">Venue</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;BINANCE&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <pre
+                              tabindex="0"
+                              class="codeBlockStandalone_MEMb thin-scrollbar language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            ><code class="codeBlockLines_e6Vv"></code></pre>
+                          </div>
+                        </article>
+                        <nav
+                          class="docusaurus-mt-lg pagination-nav"
+                          aria-label="Docs pages"
+                        >
+                          <a
+                            class="pagination-nav__link pagination-nav__link--prev"
+                            href="../backtest_fx_bars/index.htm"
+                            ><div class="pagination-nav__sublabel">
+                              Previous
+                            </div>
+                            <div class="pagination-nav__label">
+                              Backtest: FX bar data
+                            </div></a
+                          ><a
+                            class="pagination-nav__link pagination-nav__link--next"
+                            href="../backtest_bybit_orderbook/index.htm"
+                            ><div class="pagination-nav__sublabel">Next</div>
+                            <div class="pagination-nav__label">
+                              Backtest: Bybit OrderBook data
+                            </div></a
+                          >
+                        </nav>
+                      </div>
+                    </div>
+                    <div class="col col--3">
+                      <div
+                        class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"
+                      >
+                        <ul
+                          class="table-of-contents table-of-contents__left-border"
+                        >
+                          <li>
+                            <a
+                              href="#overview"
+                              class="table-of-contents__link toc-highlight"
+                              >Overview</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#prerequisites"
+                              class="table-of-contents__link toc-highlight"
+                              >Prerequisites</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#imports"
+                              class="table-of-contents__link toc-highlight"
+                              >Imports</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#loading-data"
+                              class="table-of-contents__link toc-highlight"
+                              >Loading data</a
+                            >
+                            <ul>
+                              <li>
+                                <a
+                                  href="#process-deltas-using-a-wrangler"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Process deltas using a wrangler</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#set-up-data-catalog"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Set up data catalog</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a
+                              href="#configure-backtest"
+                              class="table-of-contents__link toc-highlight"
+                              >Configure backtest</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#run-the-backtest"
+                              class="table-of-contents__link toc-highlight"
+                              >Run the backtest</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-wrapper MuiBox-root css-0">
+                    <div class="social-footer-box MuiBox-root css-0">
+                      <style data-emotion="css 17rjyz3">
+                        .css-17rjyz3 {
+                          -webkit-text-decoration: underline;
+                          text-decoration: underline;
+                          text-decoration-color: rgba(25, 118, 210, 0.4);
+                          padding: 12px;
+                          margin-right: 10px;
+                        }
+                        .css-17rjyz3:hover {
+                          text-decoration-color: inherit;
+                        }</style
+                      ><style data-emotion="css jl1bw5">
+                        .css-jl1bw5 {
+                          margin: 0;
+                          font: inherit;
+                          color: #1976d2;
+                          -webkit-text-decoration: underline;
+                          text-decoration: underline;
+                          text-decoration-color: rgba(25, 118, 210, 0.4);
+                          padding: 12px;
+                          margin-right: 10px;
+                        }
+                        .css-jl1bw5:hover {
+                          text-decoration-color: inherit;
+                        }</style
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5"
+                        href="https://github.com/poseisystems"
+                        target="_blank"
+                      ></a
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5"
+                        href="https://twitter.com/PoseiTrader"
+                        target="_blank"
+                      ></a>
+                    </div>
+                    <div class="footer-copyright">
+                      © 2025 Posei Systems Pty Ltd. All rights reserved.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

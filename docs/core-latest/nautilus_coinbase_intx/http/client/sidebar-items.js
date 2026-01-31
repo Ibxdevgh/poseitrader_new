@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"static":["COINBASE_INTX_REST_QUOTA"],"struct":["CoinbaseIntxHttpClient","CoinbaseIntxHttpInnerClient","CoinbaseIntxResponse"]};

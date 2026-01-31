@@ -1,0 +1,55 @@
+# Robots.txt - Block Googlebot completely to prevent bandwidth usage
+# This file completely blocks Googlebot crawling
+
+# Allow other crawlers but with crawl-delay
+User-agent: *
+Crawl-delay: 10
+Allow: /
+Disallow: /docs/core-nightly/
+Disallow: /docs/core-latest/
+Disallow: /_next/static/
+Disallow: /api/
+
+# COMPLETE BLOCK for Googlebot - Zero crawling allowed
+User-agent: Googlebot
+Disallow: /
+
+# Block all Google crawlers
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Googlebot-News
+Disallow: /
+
+User-agent: Googlebot-Video
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /
+
+User-agent: AdsBot-Google-Mobile
+Disallow: /
+
+User-agent: Mediapartners-Google
+Disallow: /
+
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Crawl-delay: 60
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 60
+Disallow: /
+
+User-agent: DotBot
+Crawl-delay: 60
+Disallow: /
+
+User-agent: MJ12bot
+Crawl-delay: 60
+Disallow: /
+
+# Allow sitemap (if you have one)
+# Sitemap: https://poseitrader.io/sitemap.xml
+

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["logger_drop","logger_flush","logger_log","logging_clock_set_realtime_mode","logging_clock_set_static_mode","logging_clock_set_static_time","logging_init","logging_is_colored","logging_is_initialized","logging_log_header","logging_log_sysinfo","logging_set_bypass","logging_shutdown"],"struct":["LogGuard_API"]};

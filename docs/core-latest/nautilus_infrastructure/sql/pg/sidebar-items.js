@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["PostgresConnectOptionsBuilderError"],"fn":["connect_pg","drop_postgres","get_postgres_connect_options","init_postgres"],"struct":["PostgresConnectOptions","PostgresConnectOptionsBuilder"]};

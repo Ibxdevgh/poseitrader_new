@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ForexSession"],"fn":["fx_local_from_utc","fx_next_end","fx_next_start","fx_prev_end","fx_prev_start"],"struct":["ForexSessionIter"]};

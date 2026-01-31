@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["DatabaseConfig","MessageBusConfig"],"trait":["MessageBusDatabaseAdapter"]};

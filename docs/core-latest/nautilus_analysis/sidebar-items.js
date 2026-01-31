@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["analyzer","python","statistic","statistics"],"type":["Returns"]};

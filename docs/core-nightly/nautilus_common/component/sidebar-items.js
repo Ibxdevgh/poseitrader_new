@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["dispose_component","get_component","get_component_registry","register_component","register_component_actor","reset_component","start_component","stop_component"],"struct":["ComponentRegistry"],"trait":["Component"]};

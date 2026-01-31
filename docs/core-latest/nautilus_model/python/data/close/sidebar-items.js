@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["pyobjects_to_instrument_closes"]};

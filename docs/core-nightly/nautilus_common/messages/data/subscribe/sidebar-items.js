@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["SubscribeBars","SubscribeBookDeltas","SubscribeBookDepth10","SubscribeBookSnapshots","SubscribeCustomData","SubscribeIndexPrices","SubscribeInstrument","SubscribeInstrumentClose","SubscribeInstrumentStatus","SubscribeInstruments","SubscribeMarkPrices","SubscribeQuotes","SubscribeTrades"]};

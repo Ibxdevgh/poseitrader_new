@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["CandleBodySize","CandleDirection","CandleSize","CandleWickSize"],"struct":["FuzzyCandle","FuzzyCandlesticks"]};

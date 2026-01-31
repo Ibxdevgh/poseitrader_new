@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["instrument_id","symbol","trade_id"]};

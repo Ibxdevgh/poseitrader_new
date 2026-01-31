@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["build_query"],"struct":["DataBackendSession","DataQueryResult","TsInitComparator"],"type":["QueryResult"]};

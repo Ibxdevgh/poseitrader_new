@@ -1,0 +1,1819 @@
+﻿<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="docs-wrapper plugin-docs plugin-id-default docs-version-latest docs-doc-page docs-doc-id-integrations/ib"
+  data-has-hydrated="false"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="Docusaurus v3.8.1" />
+    <title data-rh="true">
+      Interactive Brokers | PoseiTrader Documentation
+    </title>
+    <meta
+      data-rh="true"
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+    <meta
+      data-rh="true"
+      property="og:image"
+      content="docs/latestimg/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      name="twitter:image"
+      content="docs/latestimg/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      property="og:url"
+      content="docs/latestlatest/integrations/ib"
+    />
+    <meta data-rh="true" property="og:locale" content="en" />
+    <meta data-rh="true" name="docusaurus_locale" content="en" />
+    <meta data-rh="true" name="docsearch:language" content="en" />
+    <meta
+      data-rh="true"
+      name="keywords"
+      content="Open-source trading platform, Algorithmic trading software, Event-driven backtesting, Live trading with no code changes, Trade any asset class, Low-latency trading execution, Python API for trading strategies, Custom market data integration, Futures and options trading, Crypto spot and derivatives trading, Equities trading simulation, FX spot trading, Sports betting markets trading, Fast backtesting strategies, Advanced trading orders, Rust-based trading platform, High-performance trading system, Nanosecond resolution market simulation, Trading across multiple venues, Trading platform for hedge funds, Seamless data integration, Customizable trading strategies, AI and ML trading strategies, Posei trading platform, Multi-venue trading, Unlimited backtesting strategies, Fast trading execution solutions, Realistic market simulations, Seamless trading API integration, PoseiTrader Documentation, Docs, PoseiTrader Docs"
+    />
+    <meta data-rh="true" name="title" content="PoseiTrader Documentation" />
+    <meta data-rh="true" name="og:title" content="PoseiTrader Documentation" />
+    <meta
+      data-rh="true"
+      name="og:description"
+      content="PoseiTrader is a high-performance platform for automating trading strategies, built on the powerful Posei framework for backtesting and real-time trading."
+    />
+    <meta data-rh="true" name="og:image" content="img/preview.png" />
+    <meta data-rh="true" name="og:url" content="/docs/latest" />
+    <meta data-rh="true" name="docusaurus_version" content="latest" />
+    <meta data-rh="true" name="docusaurus_tag" content="docs-default-latest" />
+    <meta data-rh="true" name="docsearch:version" content="latest" />
+    <meta
+      data-rh="true"
+      name="docsearch:docusaurus_tag"
+      content="docs-default-latest"
+    />
+    <meta
+      data-rh="true"
+      property="og:title"
+      content="Interactive Brokers | PoseiTrader Documentation"
+    />
+    <meta
+      data-rh="true"
+      name="description"
+      content="Interactive Brokers (IB) is a trading platform providing market access across a wide range of financial instruments, including stocks, options, futures, currencies, bonds, funds, and cryptocurrencies. PoseiTrader offers an adapter to integrate with IB using their Trader Workstation (TWS) API through their Python library, ibapi."
+    />
+    <meta
+      data-rh="true"
+      property="og:description"
+      content="Interactive Brokers (IB) is a trading platform providing market access across a wide range of financial instruments, including stocks, options, futures, currencies, bonds, funds, and cryptocurrencies. PoseiTrader offers an adapter to integrate with IB using their Trader Workstation (TWS) API through their Python library, ibapi."
+    />
+    <link data-rh="true" rel="icon" href="../../../img/shell.ico" />
+    <link data-rh="true" rel="canonical" href="index.htm" />
+    <link data-rh="true" rel="alternate" href="index.htm" hreflang="en" />
+    <link
+      data-rh="true"
+      rel="alternate"
+      href="index.htm"
+      hreflang="x-default"
+    />
+    <link
+      data-rh="true"
+      rel="preconnect"
+      href="https://CWRKEEL01M-dsn.algolia.net"
+      crossorigin="anonymous"
+    />
+    <script data-rh="true" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Integrations",
+            "item": "docs/latestlatest/integrations/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Interactive Brokers",
+            "item": "docs/latestlatest/integrations/ib"
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="PoseiTrader Documentation"
+      href="../../../opensearch.xml"
+    />
+    <script>
+      !(function () {
+        var t = window.location.pathname;
+        if (
+          t.startsWith("/docs") &&
+          !t.startsWith("/docs/latest") &&
+          !t.startsWith("/docs/nightly")
+        ) {
+          var s = t.replace("/docs", "/docs/latest");
+          window.location.href = s;
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TR4XK597XK"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-TR4XK597XK", { anonymize_ip: !0 });
+    </script>
+    <link rel="stylesheet" href="../../../assets/css/styles.0f0f692e.css" />
+    <script
+      src="../../../assets/js/runtime~main.92b727d5.js"
+      defer="defer"
+    ></script>
+    <script src="../../../assets/js/main.1cd42d85.js" defer="defer"></script>
+  </head>
+  <body class="navigation-with-keyboard">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol id="theme-svg-external-link" viewbox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <script>
+      !(function () {
+        var t = "dark";
+        var e =
+          (function () {
+            try {
+              return new URLSearchParams(window.location.search).get(
+                "docusaurus-theme"
+              );
+            } catch (t) {}
+          })() ||
+          (function () {
+            try {
+              return window.localStorage.getItem("theme");
+            } catch (t) {}
+          })();
+        document.documentElement.setAttribute("data-theme", e || t),
+          document.documentElement.setAttribute("data-theme-choice", e || t);
+      })(),
+        (function () {
+          try {
+            const c = new URLSearchParams(window.location.search).entries();
+            for (var [t, e] of c)
+              if (t.startsWith("docusaurus-data-")) {
+                var a = t.replace("docusaurus-data-", "data-");
+                document.documentElement.setAttribute(a, e);
+              }
+          } catch (t) {}
+        })();
+    </script>
+    <div id="__docusaurus">
+      <div role="region" aria-label="Skip to main content">
+        <a
+          class="skipToContent_fXgn"
+          href="#__docusaurus_skipToContent_fallback"
+          >Skip to main content</a
+        >
+      </div>
+      <nav
+        aria-label="Main"
+        class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"
+      >
+        <div class="navbar__inner">
+          <div class="theme-layout-navbar-left navbar__items">
+            <button
+              aria-label="Toggle navigation bar"
+              aria-expanded="false"
+              class="navbar__toggle clean-btn"
+              type="button"
+            >
+              <svg
+                width="30"
+                height="30"
+                viewbox="0 0 30 30"
+                aria-hidden="true"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M4 7h22M4 15h22M4 23h22"
+                ></path>
+              </svg></button
+            ><a
+              href="../../../../index.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__brand"
+              ><div class="navbar__logo">
+                <img
+                  src="../../../img/nt-black-large.webp"
+                  alt="PoseiTrader Logo"
+                  class="themedComponent_mlkZ themedComponent--light_NVdE"
+                /><img
+                  src="../../../img/nt-white-large.webp"
+                  alt="PoseiTrader Logo"
+                  class="themedComponent_mlkZ themedComponent--dark_xIcU"
+                />
+              </div>
+              <b class="navbar__title text--truncate"></b
+            ></a>
+            <div class="navbar__item dropdown dropdown--hoverable">
+              <a
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+                role="button"
+                class="navbar__link"
+                >Version</a
+              >
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    aria-current="page"
+                    class="dropdown__link dropdown__link--active"
+                    href="../../index.htm"
+                    >latest</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown__link" href="../../../nightly/index.html"
+                    >nightly</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="navbarSearchContainer_Bca1">
+              <button
+                type="button"
+                class="DocSearch DocSearch-Button"
+                aria-label="Search (Command+K)"
+              >
+                <span class="DocSearch-Button-Container"
+                  ><svg
+                    width="20"
+                    height="20"
+                    class="DocSearch-Search-Icon"
+                    viewbox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                      stroke="currentColor"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path></svg
+                  ><span class="DocSearch-Button-Placeholder"
+                    >Search</span
+                  ></span
+                ><span class="DocSearch-Button-Keys"></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="theme-layout-navbar-right navbar__items navbar__items--right"
+          >
+            <a
+              href="https://github.com/poseisystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-github-link common-social"
+              aria-label="GitHub repository"
+            ></a>
+            <a
+              href="https://twitter.com/PoseiTrader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-x-link common-social"
+              aria-label="X"
+            ></a>
+             
+          </div>
+        </div>
+        <div role="presentation" class="navbar-sidebar__backdrop"></div>
+      </nav>
+      <div
+        id="__docusaurus_skipToContent_fallback"
+        class="theme-layout-main main-wrapper mainWrapper_z2l0"
+      >
+        <div class="docsWrapper_hBAB">
+          <button
+            aria-label="Scroll back to top"
+            class="clean-btn theme-back-to-top-button backToTopButton_sjWU"
+            type="button"
+          ></button>
+          <div class="docRoot_UBD9">
+            <aside class="theme-doc-sidebar-container docSidebarContainer_YfHR">
+              <div class="sidebarViewport_aRkj">
+                <div class="sidebar_njMd sidebarWithHideableNavbar_wUlq">
+                  <a
+                    href="../../../../index.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                    class="sidebarLogo_isFc"
+                    ><img
+                      src="../../../img/nt-black-large.webp"
+                      alt="PoseiTrader Logo"
+                      class="themedComponent_mlkZ themedComponent--light_NVdE" /><img
+                      src="../../../img/nt-white-large.webp"
+                      alt="PoseiTrader Logo"
+                      class="themedComponent_mlkZ themedComponent--dark_xIcU" /><b></b
+                  ></a>
+                  <nav
+                    aria-label="Docs sidebar"
+                    class="menu thin-scrollbar menu_SIkG"
+                  >
+                    <ul class="theme-doc-sidebar-menu menu__list">
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a class="menu__link" href="../../index.htm"
+                          >PoseiTrader Documentation</a
+                        >
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../getting_started/index.htm"
+                            >Getting Started</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Getting Started&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../concepts/index.htm"
+                            >Concepts</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Concepts&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../tutorials/index.htm"
+                            >Tutorials</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Tutorials&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist menu__link--active"
+                            href="../index.htm"
+                            >Integrations</a
+                          ><button
+                            aria-label="Collapse sidebar category &#x27;Integrations&#x27;"
+                            aria-expanded="true"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                        <ul class="menu__list">
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../betfair/index.htm"
+                              >Betfair</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../binance/index.htm"
+                              >Binance</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../bybit/index.htm"
+                              >Bybit</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../coinbase_intx/index.htm"
+                              >Coinbase International</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../databento/index.htm"
+                              >Databento</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../dydx/index.htm"
+                              >dYdX</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link menu__link--active"
+                              aria-current="page"
+                              tabindex="0"
+                              href="index.htm"
+                              >Interactive Brokers</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../polymarket/index.htm"
+                              >Polymarket</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../tardis/index.htm"
+                              >Tardis</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../api_reference/index.htm"
+                            >Python API</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Python API&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a
+                          href="../../../core-latest/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="menu__link menuExternalLink_NmtK"
+                          >Rust API<svg
+                            width="13.5"
+                            height="13.5"
+                            aria-hidden="true"
+                            class="iconExternalLink_nPIU"
+                          >
+                            <use href="#theme-svg-external-link"></use></svg
+                        ></a>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../developer_guide/index.htm"
+                            >Developer Guide</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Developer Guide&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </aside>
+            <main class="docMainContainer_TBSr">
+              <div class="container padding-top--md padding-bottom--lg">
+                <div>
+                  <div class="row">
+                    <div class="col docItemCol_VOVn">
+                      <div class="docItemContainer_Djhp">
+                        <article>
+                          <nav
+                            class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl"
+                            aria-label="Breadcrumbs"
+                          >
+                            <ul class="breadcrumbs">
+                              <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="../index.htm"
+                                  ><span>Integrations</span></a
+                                >
+                              </li>
+                              <li
+                                class="breadcrumbs__item breadcrumbs__item--active"
+                              >
+                                <span class="breadcrumbs__link"
+                                  >Interactive Brokers</span
+                                >
+                              </li>
+                            </ul>
+                          </nav>
+                          <span
+                            class="theme-doc-version-badge badge badge--secondary"
+                            >Version: latest</span
+                          >
+                          <div
+                            class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"
+                          >
+                            <button
+                              type="button"
+                              class="clean-btn tocCollapsibleButton_TO0P"
+                            >
+                              On this page
+                            </button>
+                          </div>
+                          <div class="theme-doc-markdown markdown">
+                            <header><h1>Interactive Brokers</h1></header>
+                            <p>
+                              Interactive Brokers (IB) is a trading platform
+                              providing market access across a wide range of
+                              financial instruments, including stocks, options,
+                              futures, currencies, bonds, funds, and
+                              cryptocurrencies. PoseiTrader offers an adapter to
+                              integrate with IB using their
+                              <a
+                                href="https://ibkrcampus.com/ibkr-api-page/trader-workstation-api/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Trader Workstation (TWS) API</a
+                              >
+                              through their Python library,
+                              <a
+                                href="https://github.com/poseisystems"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >ibapi</a
+                              >.
+                            </p>
+                            <p>
+                              The TWS API serves as an interface to IB&#x27;s
+                              standalone trading applications: TWS and IB
+                              Gateway. Both can be downloaded from the IB
+                              website. If you haven&#x27;t installed TWS or IB
+                              Gateway yet, refer to the
+                              <a
+                                href="https://ibkrcampus.com/ibkr-api-page/trader-workstation-api/#tws-download"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Initial Setup</a
+                              >
+                              guide. In PoseiTrader, you&#x27;ll establish a
+                              connection to one of these applications via the
+                              <code>InteractiveBrokersClient</code>.
+                            </p>
+                            <p>
+                              Alternatively, you can start with a
+                              <a
+                                href="https://github.com/gnzsnz/ib-gateway-docker"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >dockerized version</a
+                              >
+                              of the IB Gateway, which is particularly useful
+                              when deploying trading strategies on a hosted
+                              cloud platform. This requires having
+                              <a
+                                href="https://www.docker.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Docker</a
+                              >
+                              installed on your machine, along with the
+                              <a
+                                href="https://pypi.org/project/docker/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >docker</a
+                              >
+                              Python package, which PoseiTrader conveniently
+                              includes as an extra package.
+                            </p>
+                            <div
+                              class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"
+                            >
+                              <div class="admonitionHeading_Gvgb">
+                                <span class="admonitionIcon_Rf37"
+                                  ><svg viewbox="0 0 14 16">
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"
+                                    ></path></svg></span
+                                >note
+                              </div>
+                              <div class="admonitionContent_BuS1">
+                                <p>
+                                  The standalone TWS and IB Gateway applications
+                                  require manually inputting username, password,
+                                  and trading mode (live or paper) at startup.
+                                  The dockerized version of the IB Gateway
+                                  handles these steps programmatically.
+                                </p>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="installation"
+                            >
+                              Installation<a
+                                href="#installation"
+                                class="hash-link"
+                                aria-label="Direct link to Installation"
+                                title="Direct link to Installation"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              To install PoseiTrader with Interactive Brokers
+                              (and Docker) support:
+                            </p>
+                            <div
+                              class="language-bash codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-bash codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">pip install --upgrade &quot;posei_trader[ib,docker]&quot;</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <p>
+                              To build from source with all extras (including IB
+                              and Docker):
+                            </p>
+                            <div
+                              class="language-bash codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-bash codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">uv sync --all-extras</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"
+                            >
+                              <div class="admonitionHeading_Gvgb">
+                                <span class="admonitionIcon_Rf37"
+                                  ><svg viewbox="0 0 14 16">
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"
+                                    ></path></svg></span
+                                >note
+                              </div>
+                              <div class="admonitionContent_BuS1">
+                                <p>
+                                  Because IB does not provide wheels for
+                                  <code>ibapi</code>, PoseiTrader
+                                  <a
+                                    href="https://pypi.org/project/nautilus-ibapi/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >repackages</a
+                                  >
+                                  it for release on PyPI.
+                                </p>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="examples"
+                            >
+                              Examples<a
+                                href="#examples"
+                                class="hash-link"
+                                aria-label="Direct link to Examples"
+                                title="Direct link to Examples"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              You can find live example scripts
+                              <a
+                                href="https://github.com/poseisystems/tree/develop/examples/live/interactive_brokers/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >here</a
+                              >.
+                            </p>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="getting-started"
+                            >
+                              Getting Started<a
+                                href="#getting-started"
+                                class="hash-link"
+                                aria-label="Direct link to Getting Started"
+                                title="Direct link to Getting Started"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              Before implementing your trading strategies,
+                              please ensure that either TWS (Trader Workstation)
+                              or IB Gateway is currently running. You have the
+                              option to log in to one of these standalone
+                              applications using your personal credentials or
+                              alternatively, via
+                              <code>DockerizedIBGateway</code>.
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="establish-connection-to-an-existing-gateway-or-tws"
+                            >
+                              Establish Connection to an Existing Gateway or
+                              TWS<a
+                                href="#establish-connection-to-an-existing-gateway-or-tws"
+                                class="hash-link"
+                                aria-label="Direct link to Establish Connection to an Existing Gateway or TWS"
+                                title="Direct link to Establish Connection to an Existing Gateway or TWS"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Should you choose to connect to a pre-existing
+                              Gateway or TWS, it is crucial that you specify the
+                              <code>host</code> and <code>port</code> parameters
+                              in both the
+                              <code>InteractiveBrokersDataClientConfig</code>
+                              and
+                              <code>InteractiveBrokersExecClientConfig</code> to
+                              guarantee a successful connection.
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="establish-connection-to-dockerizedibgateway"
+                            >
+                              Establish Connection to DockerizedIBGateway<a
+                                href="#establish-connection-to-dockerizedibgateway"
+                                class="hash-link"
+                                aria-label="Direct link to Establish Connection to DockerizedIBGateway"
+                                title="Direct link to Establish Connection to DockerizedIBGateway"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              In this case, it&#x27;s essential to supply
+                              <code>dockerized_gateway</code> with an instance
+                              of <code>DockerizedIBGatewayConfig</code> in both
+                              the
+                              <code>InteractiveBrokersDataClientConfig</code>
+                              and
+                              <code>InteractiveBrokersExecClientConfig</code>.
+                              It&#x27;s important to stress, however, that
+                              <code>host</code> and <code>port</code> parameters
+                              aren&#x27;t necessary in this context. The
+                              following example provides a clear illustration of
+                              how to establish a connection to a Dockerized
+                              Gateway, which is judiciously managed internally
+                              by the Factories.
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> DockerizedIBGatewayConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">gateway </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> DockerizedIBGateway</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">gateway_config </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> DockerizedIBGatewayConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    username</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;test&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    password</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;test&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    trading_mode</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;paper&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># This may take a short while to start up, especially the first time</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">gateway </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> DockerizedIBGateway</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    config</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">gateway_config</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">gateway</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">start</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Confirm you are logged in</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">print</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">gateway</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">is_logged_in</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">gateway</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">container</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Inspect the logs</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">print</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">gateway</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">container</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">logs</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <p>
+                              <strong>Note</strong>: To supply credentials to
+                              the Interactive Brokers Gateway, either pass the
+                              <code>username</code> and <code>password</code> to
+                              the <code>DockerizedIBGatewayConfig</code>, or set
+                              the following environment variables:
+                            </p>
+                            <ul>
+                              <li><code>TWS_USERNAME</code></li>
+                              <li><code>TWS_PASSWORD</code></li>
+                            </ul>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="overview"
+                            >
+                              Overview<a
+                                href="#overview"
+                                class="hash-link"
+                                aria-label="Direct link to Overview"
+                                title="Direct link to Overview"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              The adapter includes several major components:
+                            </p>
+                            <ul>
+                              <li>
+                                <code>InteractiveBrokersClient</code>: Executes
+                                TWS API requests using <code>ibapi</code>.
+                              </li>
+                              <li>
+                                <code>HistoricInteractiveBrokersClient</code>:
+                                Provides methods for retrieving instruments and
+                                historical data, useful for backtesting.
+                              </li>
+                              <li>
+                                <code>InteractiveBrokersInstrumentProvider</code
+                                >: Retrieves or queries instruments for trading.
+                              </li>
+                              <li>
+                                <code>InteractiveBrokersDataClient</code>:
+                                Connects to the Gateway for streaming market
+                                data.
+                              </li>
+                              <li>
+                                <code>InteractiveBrokersExecutionClient</code>:
+                                Handles account information and executes trades.
+                              </li>
+                            </ul>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="the-interactive-brokers-client"
+                            >
+                              The Interactive Brokers Client<a
+                                href="#the-interactive-brokers-client"
+                                class="hash-link"
+                                aria-label="Direct link to The Interactive Brokers Client"
+                                title="Direct link to The Interactive Brokers Client"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              The <code>InteractiveBrokersClient</code> serves
+                              as the central component of the IB adapter,
+                              overseeing a range of critical functions. These
+                              include establishing and maintaining connections,
+                              handling API errors, executing trades, and
+                              gathering various types of data such as market
+                              data, contract/instrument data, and account
+                              details.
+                            </p>
+                            <p>
+                              To ensure efficient management of these diverse
+                              responsibilities, the
+                              <code>InteractiveBrokersClient</code> is divided
+                              into several specialized mixin classes. This
+                              modular approach enhances manageability and
+                              clarity. The key subcomponents are:
+                            </p>
+                            <ul>
+                              <li>
+                                <code
+                                  >InteractiveBrokersClientConnectionMixin</code
+                                >: This class is dedicated to managing the
+                                connection with TWS/Gateway.
+                              </li>
+                              <li>
+                                <code>InteractiveBrokersClientErrorMixin</code>:
+                                It focuses on addressing all encountered errors
+                                and warnings.
+                              </li>
+                              <li>
+                                <code>InteractiveBrokersClientAccountMixin</code
+                                >: Responsible for handling requests related to
+                                account information and positions.
+                              </li>
+                              <li>
+                                <code
+                                  >InteractiveBrokersClientContractMixin</code
+                                >: Handles retrieving contracts (instruments)
+                                data.
+                              </li>
+                              <li>
+                                <code
+                                  >InteractiveBrokersClientMarketDataMixin</code
+                                >: Handles market data requests, subscriptions
+                                and data processing.
+                              </li>
+                              <li>
+                                <code>InteractiveBrokersClientOrderMixin</code>:
+                                Oversees all aspects of order placement and
+                                management.
+                              </li>
+                            </ul>
+                            <div
+                              class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"
+                            >
+                              <div class="admonitionHeading_Gvgb">
+                                <span class="admonitionIcon_Rf37"
+                                  ><svg viewbox="0 0 12 16">
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"
+                                    ></path></svg></span
+                                >tip
+                              </div>
+                              <div class="admonitionContent_BuS1">
+                                <p>
+                                  To troubleshoot TWS API incoming message
+                                  issues, consider starting at the
+                                  <code
+                                    >InteractiveBrokersClient._process_message</code
+                                  >
+                                  method, which acts as the primary gateway for
+                                  processing all messages received from the API.
+                                </p>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="symbology"
+                            >
+                              Symbology<a
+                                href="#symbology"
+                                class="hash-link"
+                                aria-label="Direct link to Symbology"
+                                title="Direct link to Symbology"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              The InteractiveBrokersInstrumentProvider supports
+                              three methods for constructing InstrumentId
+                              instances, which can be configured via the
+                              <code>symbology_method</code> enum in
+                              <code
+                                >InteractiveBrokersInstrumentProviderConfig</code
+                              >.
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="simplified-symbology"
+                            >
+                              Simplified Symbology<a
+                                href="#simplified-symbology"
+                                class="hash-link"
+                                aria-label="Direct link to Simplified Symbology"
+                                title="Direct link to Simplified Symbology"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              When symbology_method is set to
+                              <code>IB_SIMPLIFIED</code> (the default setting),
+                              the system utilizes the following parsing rules
+                              for symbology:
+                            </p>
+                            <ul>
+                              <li>
+                                Forex: The format is
+                                <code>{symbol}/{currency}.{exchange}</code>,
+                                where the currency pair is constructed as
+                                <code>EUR/USD.IDEALPRO</code>.
+                              </li>
+                              <li>
+                                Stocks: The format is
+                                <code>{localSymbol}.{primaryExchange}</code>.
+                                Any spaces in localSymbol are replaced with -,
+                                e.g., <code>BF-B.NYSE</code>.
+                              </li>
+                              <li>
+                                Futures: The format is
+                                <code>{localSymbol}.{exchange}</code>. Single
+                                digit years are expanded to two digits, e.g.,
+                                <code>ESM24.CME</code>.
+                              </li>
+                              <li>
+                                Options: The format is
+                                <code>{localSymbol}.{exchange}</code>, with all
+                                spaces removed from localSymbol, e.g.,
+                                <code>AAPL230217P00155000.SMART</code>.
+                              </li>
+                              <li>
+                                Index: The format is
+                                <code>^{localSymbol}.{exchange}</code>, e.g.,
+                                <code>^SPX.CBOE</code>.
+                              </li>
+                            </ul>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="raw-symbology"
+                            >
+                              Raw Symbology<a
+                                href="#raw-symbology"
+                                class="hash-link"
+                                aria-label="Direct link to Raw Symbology"
+                                title="Direct link to Raw Symbology"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Setting symbology_method to
+                              <code>IB_RAW</code> enforces stricter parsing
+                              rules that align directly with the fields defined
+                              in the ibapi. The format for each security type is
+                              as follows:
+                            </p>
+                            <ul>
+                              <li>
+                                CFDs: <code>{localSymbol}={secType}.IBCFD</code>
+                              </li>
+                              <li>
+                                Commodities:
+                                <code>{localSymbol}={secType}.IBCMDTY</code>
+                              </li>
+                              <li>
+                                Default for Other Types:
+                                <code>{localSymbol}={secType}.{exchange}</code>
+                              </li>
+                            </ul>
+                            <p>
+                              This configuration ensures that the symbology is
+                              explicitly defined and matched with the
+                              Interactive Brokers API requirements, providing
+                              clear and consistent instrument identification.
+                              While this format may lack visual clarity, it is
+                              robust and supports instruments from any region,
+                              especially those with non-standard symbology where
+                              simplified parsing may fail.
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="databento-symbology"
+                            >
+                              Databento Symbology<a
+                                href="#databento-symbology"
+                                class="hash-link"
+                                aria-label="Direct link to Databento Symbology"
+                                title="Direct link to Databento Symbology"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Setting symbology_method to
+                              <code>DATABENTO</code>, the system utilized the
+                              symbology rules defined by
+                              <code>DatabentoInstrumentProvider</code>. Note
+                              that this symbology is only compatible with venues
+                              supported by Databento and there is not automatic
+                              fall-back to other symbology methods to avoid any
+                              conflicts.
+                            </p>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="instruments--contracts"
+                            >
+                              Instruments &amp; Contracts<a
+                                href="#instruments--contracts"
+                                class="hash-link"
+                                aria-label="Direct link to Instruments &amp; Contracts"
+                                title="Direct link to Instruments &amp; Contracts"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              In IB, a PoseiTrader <code>Instrument</code> is
+                              equivalent to a
+                              <a
+                                href="https://ibkrcampus.com/ibkr-api-page/trader-workstation-api/#contracts"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Contract</a
+                              >. Contracts can be either a
+                              <a
+                                href="https://ibkrcampus.com/ibkr-api-page/trader-workstation-api/#contract-object"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >basic contract</a
+                              >
+                              or a more
+                              <a
+                                href="https://ibkrcampus.com/ibkr-api-page/trader-workstation-api/#contract-details"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >detailed</a
+                              >
+                              version (ContractDetails). The adapter models
+                              these using <code>IBContract</code> and
+                              <code>IBContractDetails</code> classes. The latter
+                              includes critical data like order types and
+                              trading hours, which are absent in the basic
+                              contract. As a result,
+                              <code>IBContractDetails</code> can be converted to
+                              an <code>Instrument</code> while
+                              <code>IBContract</code> cannot.
+                            </p>
+                            <p>
+                              To search for contract information, use the
+                              <a
+                                href="https://pennies.interactivebrokers.com/cstools/contract_info/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >IB Contract Information Center</a
+                              >.
+                            </p>
+                            <p>
+                              It&#x27;s typically suggested to utilize
+                              <code
+                                >symbology_method=SymbologyMethod.IB_SIMPLIFIED</code
+                              >
+                              (which is the default setting). This provides a
+                              cleaner and more intuitive use of
+                              <code>InstrumentId</code> by employing
+                              <code>load_ids</code> in the
+                              <code
+                                >InteractiveBrokersInstrumentProviderConfig</code
+                              >, following the guidelines established in the
+                              Simplified Symbology section. In order to load
+                              multiple Instruments, such as Options Instrument
+                              without having to specify each strike explicitly,
+                              you would need to utilize
+                              <code>load_contracts</code> with provided
+                              instances of <code>IBContract</code>.
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">for_loading_instrument_expiry </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;IND&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;SPX&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;CBOE&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    build_options_chain</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">True</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    lastTradeDateOrContractMonth</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;20240718&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">for_loading_instrument_range </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;IND&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;SPX&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;CBOE&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    build_options_chain</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">True</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    min_expiry_days</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token number" style="color:rgb(181, 206, 168)">0</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    max_expiry_days</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token number" style="color:rgb(181, 206, 168)">30</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <blockquote>
+                              <p>
+                                <strong>Note</strong>: The
+                                <code>secType</code> and
+                                <code>symbol</code> should be specified for the
+                                Underlying Contract.
+                              </p>
+                            </blockquote>
+                            <p>Some more examples of building IBContracts:</p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">common </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> IBContract</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Stock</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;STK&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;SMART&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> primaryExchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;ARCA&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;SPY&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Bond</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;BOND&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> secIdType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;ISIN&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> secId</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;US03076KAA60&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Option</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;STK&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;SMART&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> primaryExchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;ARCA&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;SPY&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> lastTradeDateOrContractMonth</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;20251219&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> build_options_chain</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">True</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># CFD</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;CFD&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;IBUS30&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Future</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;CONTFUT&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;CME&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;ES&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> build_futures_chain</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">True</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Forex</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;CASH&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;IDEALPRO&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;EUR&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> currency</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;GBP&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Crypto</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;CRYPTO&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;ETH&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;PAXOS&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> currency</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;USD&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="historical-data--backtesting"
+                            >
+                              Historical Data &amp; Backtesting<a
+                                href="#historical-data--backtesting"
+                                class="hash-link"
+                                aria-label="Direct link to Historical Data &amp; Backtesting"
+                                title="Direct link to Historical Data &amp; Backtesting"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              When developing strategies with the IB adapter,
+                              the first step usually involves acquiring
+                              historical data for backtesting. The
+                              <code>HistoricInteractiveBrokersClient</code>
+                              offers methods to request and save this data.
+                            </p>
+                            <p>
+                              Here&#x27;s an example of retrieving and saving
+                              instrument and bar data. A more comprehensive
+                              example is available
+                              <a
+                                href="https://github.com/poseisystems/blob/master/examples/live/interactive_brokers/historic_download.py"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >here</a
+                              >.
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> datetime</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">common </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> IBContract</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">historic </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> HistoricInteractiveBrokersClient</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">persistence</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">catalog </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> ParquetDataCatalog</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">async</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(86, 156, 214)">def</span><span class="token plain"> </span><span class="token function" style="color:rgb(220, 220, 170)">main</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    contract </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;STK&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;AAPL&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;SMART&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        primaryExchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;NASDAQ&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    client </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> HistoricInteractiveBrokersClient</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    instruments </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(86, 156, 214)">await</span><span class="token plain"> client</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">request_instruments</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        contracts</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain">contract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    bars </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(86, 156, 214)">await</span><span class="token plain"> client</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">request_bars</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        bar_specifications</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;1-HOUR-LAST&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;30-MINUTE-MID&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        end_date_time</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">datetime</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">datetime</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token number" style="color:rgb(181, 206, 168)">2023</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">11</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">6</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">16</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> </span><span class="token number" style="color:rgb(181, 206, 168)">30</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        tz_name</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;America/New_York&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        duration</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;1 D&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        contracts</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain">contract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    catalog </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> ParquetDataCatalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;./catalog&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    catalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">write_data</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">instruments</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    catalog</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">write_data</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">bars</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="live-trading"
+                            >
+                              Live Trading<a
+                                href="#live-trading"
+                                class="hash-link"
+                                aria-label="Direct link to Live Trading"
+                                title="Direct link to Live Trading"
+                                >​</a
+                              >
+                            </h2>
+                            <p>
+                              Engaging in live or paper trading requires
+                              constructing and running a
+                              <code>TradingNode</code>. This node incorporates
+                              both <code>InteractiveBrokersDataClient</code> and
+                              <code>InteractiveBrokersExecutionClient</code>,
+                              which depend on the
+                              <code>InteractiveBrokersInstrumentProvider</code>
+                              to operate.
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="instrumentprovider"
+                            >
+                              InstrumentProvider<a
+                                href="#instrumentprovider"
+                                class="hash-link"
+                                aria-label="Direct link to InstrumentProvider"
+                                title="Direct link to InstrumentProvider"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              The
+                              <code>InteractiveBrokersInstrumentProvider</code>
+                              class functions as a bridge for accessing
+                              financial instrument data from IB. Configurable
+                              through
+                              <code
+                                >InteractiveBrokersInstrumentProviderConfig</code
+                              >, it enables the customization of various
+                              instrument type parameters. Additionally, this
+                              provider offers specialized methods to build and
+                              retrieve the entire futures and options chains.
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> InteractiveBrokersInstrumentProviderConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> SymbologyMethod</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">instrument_provider_config </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> InteractiveBrokersInstrumentProviderConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    symbology_method</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">SymbologyMethod</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">IB_SIMPLIFIED</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    build_futures_chain</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">False</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">  </span><span class="token comment" style="color:rgb(106, 153, 85)"># Set to True if fetching futures</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    build_options_chain</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">False</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">  </span><span class="token comment" style="color:rgb(106, 153, 85)"># Set to True if fetching options</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    min_expiry_days</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token number" style="color:rgb(181, 206, 168)">10</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">         </span><span class="token comment" style="color:rgb(106, 153, 85)"># Relevant for futures/options with expiration</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    max_expiry_days</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token number" style="color:rgb(181, 206, 168)">60</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">         </span><span class="token comment" style="color:rgb(106, 153, 85)"># Relevant for futures/options with expiration</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    load_ids</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token builtin" style="color:rgb(86, 156, 214)">frozenset</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;EUR/USD.IDEALPRO&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;BTC/USD.PAXOS&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;SPY.ARCA&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;V.NYSE&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;YMH24.CBOT&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;CLZ27.NYMEX&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;ESZ27.CME&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    load_contracts</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token builtin" style="color:rgb(86, 156, 214)">frozenset</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(212, 212, 212)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;STK&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;SPY&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;SMART&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> primaryExchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;ARCA&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">            IBContract</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">secType</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;STK&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> symbol</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;AAPL&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> exchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;SMART&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> primaryExchange</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&#x27;NASDAQ&#x27;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(212, 212, 212)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="integration-with-databento-data-client"
+                            >
+                              Integration with Databento Data Client<a
+                                href="#integration-with-databento-data-client"
+                                class="hash-link"
+                                aria-label="Direct link to Integration with Databento Data Client"
+                                title="Direct link to Integration with Databento Data Client"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              To integrate with
+                              <code>DatabentoDataClient</code>, set the
+                              <code>symbology_method</code> in
+                              <code
+                                >InteractiveBrokersInstrumentProviderConfig</code
+                              >
+                              to <code>SymbologyMethod.DATABENTO</code>. This
+                              ensures seamless compatibility with Databento
+                              symbology, eliminating the need for manual
+                              translations or mappings within your strategy.
+                            </p>
+                            <p>When using this configuration:</p>
+                            <ul>
+                              <li>
+                                <code
+                                  >InteractiveBrokersInstrumentProvider</code
+                                >
+                                will not publish instruments to the cache to
+                                prevent conflicts.
+                              </li>
+                              <li>
+                                Instruments Cache management must be handled
+                                exclusively by <code>DatabentoDataClient</code>.
+                              </li>
+                            </ul>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="data-client"
+                            >
+                              Data Client<a
+                                href="#data-client"
+                                class="hash-link"
+                                aria-label="Direct link to Data Client"
+                                title="Direct link to Data Client"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              <code>InteractiveBrokersDataClient</code>
+                              interfaces with IB for streaming and retrieving
+                              market data. Upon connection, it configures the
+                              <a
+                                href="https://ibkrcampus.com/ibkr-api-page/trader-workstation-api/#delayed-market-data"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >market data type</a
+                              >
+                              and loads instruments based on the settings in
+                              <code
+                                >InteractiveBrokersInstrumentProviderConfig</code
+                              >. This client can subscribe to and unsubscribe
+                              from various market data types, including quotes,
+                              trades, and bars.
+                            </p>
+                            <p>
+                              Configurable through
+                              <code>InteractiveBrokersDataClientConfig</code>,
+                              it enables adjustments for handling revised bars,
+                              trading hours preferences, and market data types
+                              (e.g.,
+                              <code>IBMarketDataTypeEnum.REALTIME</code> or
+                              <code>IBMarketDataTypeEnum.DELAYED_FROZEN</code>).
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> IBMarketDataTypeEnum</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> InteractiveBrokersDataClientConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">data_client_config </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> InteractiveBrokersDataClientConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    ibg_port</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token number" style="color:rgb(181, 206, 168)">4002</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    handle_revised_bars</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">False</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    use_regular_trading_hours</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">True</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    market_data_type</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">IBMarketDataTypeEnum</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">DELAYED_FROZEN</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">  </span><span class="token comment" style="color:rgb(106, 153, 85)"># Default is REALTIME if not set</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    instrument_provider</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">instrument_provider_config</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    dockerized_gateway</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">dockerized_gateway_config</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="execution-client"
+                            >
+                              Execution Client<a
+                                href="#execution-client"
+                                class="hash-link"
+                                aria-label="Direct link to Execution Client"
+                                title="Direct link to Execution Client"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              The
+                              <code>InteractiveBrokersExecutionClient</code>
+                              facilitates executing trades, accessing account
+                              information, and processing order and
+                              trade-related details. It encompasses a range of
+                              methods for order management, including reporting
+                              order statuses, placing new orders, and modifying
+                              or canceling existing ones. Additionally, it
+                              generates position reports, although fill reports
+                              are not yet implemented.
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> InteractiveBrokersExecClientConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> RoutingConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">exec_client_config </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> InteractiveBrokersExecClientConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    ibg_port</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token number" style="color:rgb(181, 206, 168)">4002</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    account_id</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;DU123456&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">  </span><span class="token comment" style="color:rgb(106, 153, 85)"># Must match the connected IB Gateway/TWS</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    dockerized_gateway</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">dockerized_gateway_config</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    instrument_provider</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">instrument_provider_config</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    routing</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">RoutingConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        default</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">True</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="full-configuration"
+                            >
+                              Full Configuration<a
+                                href="#full-configuration"
+                                class="hash-link"
+                                aria-label="Direct link to Full Configuration"
+                                title="Direct link to Full Configuration"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Setting up a complete trading environment
+                              typically involves configuring a
+                              <code>TradingNodeConfig</code>, which includes
+                              data and execution client configurations.
+                              Additional configurations are specified in
+                              <code>LiveDataEngineConfig</code> to accommodate
+                              IB-specific requirements. A
+                              <code>TradingNode</code> is then instantiated from
+                              these configurations, and factories for creating
+                              <code>InteractiveBrokersDataClient</code> and
+                              <code>InteractiveBrokersExecutionClient</code> are
+                              added. Finally, the node is built and run.
+                            </p>
+                            <p>
+                              You can find additional examples here:
+                              <a
+                                href="https://github.com/poseisystems/tree/develop/examples/live/interactive_brokers"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >https://github.com/poseisystems/tree/develop/examples/live/interactive_brokers</a
+                              >
+                            </p>
+                            <div
+                              class="language-python codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-python codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">common </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> IB</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">common </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> IB_VENUE</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">factories </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> InteractiveBrokersLiveDataClientFactory</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">adapters</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">interactive_brokers</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">factories </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> InteractiveBrokersLiveExecClientFactory</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> LiveDataEngineConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> LoggingConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">config </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> TradingNodeConfig</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">from</span><span class="token plain"> posei_trader</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">live</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">node </span><span class="token keyword" style="color:rgb(86, 156, 214)">import</span><span class="token plain"> TradingNode</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># ... [continuing from prior example code] ...</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token comment" style="color:rgb(106, 153, 85)"># Configure the trading node</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">config_node </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> TradingNodeConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    trader_id</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;TESTER-001&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    logging</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">LoggingConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">log_level</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token string" style="color:rgb(206, 145, 120)">&quot;INFO&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    data_clients</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token punctuation" style="color:rgb(212, 212, 212)">{</span><span class="token plain">IB</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> data_client_config</span><span class="token punctuation" style="color:rgb(212, 212, 212)">}</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    exec_clients</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token punctuation" style="color:rgb(212, 212, 212)">{</span><span class="token plain">IB</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"> exec_client_config</span><span class="token punctuation" style="color:rgb(212, 212, 212)">}</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    data_engine</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">LiveDataEngineConfig</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        time_bars_timestamp_on_close</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">False</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">  </span><span class="token comment" style="color:rgb(106, 153, 85)"># Use opening time as `ts_event`, as per IB standard</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        validate_data_sequence</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token boolean">True</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain">         </span><span class="token comment" style="color:rgb(106, 153, 85)"># Discards bars received out of sequence</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">node </span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain"> TradingNode</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">config</span><span class="token operator" style="color:rgb(212, 212, 212)">=</span><span class="token plain">config_node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">add_data_client_factory</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">IB</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> InteractiveBrokersLiveDataClientFactory</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">add_exec_client_factory</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">IB</span><span class="token punctuation" style="color:rgb(212, 212, 212)">,</span><span class="token plain"> InteractiveBrokersLiveExecClientFactory</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">build</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">portfolio</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">set_specific_venue</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token plain">IB_VENUE</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain"></span><span class="token keyword" style="color:rgb(86, 156, 214)">if</span><span class="token plain"> __name__ </span><span class="token operator" style="color:rgb(212, 212, 212)">==</span><span class="token plain"> </span><span class="token string" style="color:rgb(206, 145, 120)">&quot;__main__&quot;</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token keyword" style="color:rgb(86, 156, 214)">try</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">run</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">    </span><span class="token keyword" style="color:rgb(86, 156, 214)">finally</span><span class="token punctuation" style="color:rgb(212, 212, 212)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        </span><span class="token comment" style="color:rgb(106, 153, 85)"># Stop and dispose of the node with SIGINT/CTRL+C</span><span class="token plain"></span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">        node</span><span class="token punctuation" style="color:rgb(212, 212, 212)">.</span><span class="token plain">dispose</span><span class="token punctuation" style="color:rgb(212, 212, 212)">(</span><span class="token punctuation" style="color:rgb(212, 212, 212)">)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+                        <nav
+                          class="docusaurus-mt-lg pagination-nav"
+                          aria-label="Docs pages"
+                        >
+                          <a
+                            class="pagination-nav__link pagination-nav__link--prev"
+                            href="../dydx/index.htm"
+                            ><div class="pagination-nav__sublabel">
+                              Previous
+                            </div>
+                            <div class="pagination-nav__label">dYdX</div></a
+                          ><a
+                            class="pagination-nav__link pagination-nav__link--next"
+                            href="../polymarket/index.htm"
+                            ><div class="pagination-nav__sublabel">Next</div>
+                            <div class="pagination-nav__label">
+                              Polymarket
+                            </div></a
+                          >
+                        </nav>
+                      </div>
+                    </div>
+                    <div class="col col--3">
+                      <div
+                        class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"
+                      >
+                        <ul
+                          class="table-of-contents table-of-contents__left-border"
+                        >
+                          <li>
+                            <a
+                              href="#installation"
+                              class="table-of-contents__link toc-highlight"
+                              >Installation</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#examples"
+                              class="table-of-contents__link toc-highlight"
+                              >Examples</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#getting-started"
+                              class="table-of-contents__link toc-highlight"
+                              >Getting Started</a
+                            >
+                            <ul>
+                              <li>
+                                <a
+                                  href="#establish-connection-to-an-existing-gateway-or-tws"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Establish Connection to an Existing Gateway
+                                  or TWS</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#establish-connection-to-dockerizedibgateway"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Establish Connection to
+                                  DockerizedIBGateway</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a
+                              href="#overview"
+                              class="table-of-contents__link toc-highlight"
+                              >Overview</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#the-interactive-brokers-client"
+                              class="table-of-contents__link toc-highlight"
+                              >The Interactive Brokers Client</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#symbology"
+                              class="table-of-contents__link toc-highlight"
+                              >Symbology</a
+                            >
+                            <ul>
+                              <li>
+                                <a
+                                  href="#simplified-symbology"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Simplified Symbology</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#raw-symbology"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Raw Symbology</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#databento-symbology"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Databento Symbology</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a
+                              href="#instruments--contracts"
+                              class="table-of-contents__link toc-highlight"
+                              >Instruments &amp; Contracts</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#historical-data--backtesting"
+                              class="table-of-contents__link toc-highlight"
+                              >Historical Data &amp; Backtesting</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#live-trading"
+                              class="table-of-contents__link toc-highlight"
+                              >Live Trading</a
+                            >
+                            <ul>
+                              <li>
+                                <a
+                                  href="#instrumentprovider"
+                                  class="table-of-contents__link toc-highlight"
+                                  >InstrumentProvider</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#integration-with-databento-data-client"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Integration with Databento Data Client</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#data-client"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Data Client</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#execution-client"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Execution Client</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#full-configuration"
+                                  class="table-of-contents__link toc-highlight"
+                                  >Full Configuration</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-wrapper MuiBox-root css-0">
+                    <div class="social-footer-box MuiBox-root css-0">
+                      <style data-emotion="css 17rjyz3">
+                        .css-17rjyz3 {
+                          -webkit-text-decoration: underline;
+                          text-decoration: underline;
+                          text-decoration-color: rgba(25, 118, 210, 0.4);
+                          padding: 12px;
+                          margin-right: 10px;
+                        }
+                        .css-17rjyz3:hover {
+                          text-decoration-color: inherit;
+                        }</style
+                      ><style data-emotion="css jl1bw5">
+                        .css-jl1bw5 {
+                          margin: 0;
+                          font: inherit;
+                          color: #1976d2;
+                          -webkit-text-decoration: underline;
+                          text-decoration: underline;
+                          text-decoration-color: rgba(25, 118, 210, 0.4);
+                          padding: 12px;
+                          margin-right: 10px;
+                        }
+                        .css-jl1bw5:hover {
+                          text-decoration-color: inherit;
+                        }</style
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways github-footer css-jl1bw5"
+                        href="https://github.com/poseisystems"
+                        target="_blank"
+                      ></a
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways discord-footer css-jl1bw5"
+                        href=""
+                        target="_blank"
+                      ></a
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways linkedin-footer css-jl1bw5"
+                        href="https://www.linkedin.com/company/poseisystems/"
+                        target="_blank"
+                      ></a
+                      ><a
+                        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways x-footer css-jl1bw5"
+                        href="https://twitter.com/PoseiTrader"
+                        target="_blank"
+                      ></a>
+                    </div>
+                    <div class="footer-copyright">
+                      © 2025 Posei Systems Pty Ltd. All rights reserved.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

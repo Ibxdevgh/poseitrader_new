@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["RunnerEvent"],"fn":["get_data_cmd_sender","get_data_event_sender","get_time_event_sender","set_data_cmd_sender","set_data_event_sender","set_time_event_sender","try_get_time_event_sender"],"struct":["SyncDataCommandSender"],"trait":["DataCommandSender","TimeEventSender"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["py_calc_bets_pnl","py_inverse_probability_to_bet","py_probability_to_bet"]};

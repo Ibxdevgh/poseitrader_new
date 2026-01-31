@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["DatabaseQuery"],"fn":["get_pg_cache_database"],"struct":["PostgresCacheDatabase"]};

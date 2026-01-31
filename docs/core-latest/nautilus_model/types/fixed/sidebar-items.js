@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["FIXED_PRECISION","FIXED_SCALAR","FIXED_SIZE_BINARY","PRECISION_DIFF_SCALAR"],"fn":["check_fixed_precision","f64_to_fixed_i128","f64_to_fixed_i64","f64_to_fixed_u128","f64_to_fixed_u64","fixed_i128_to_f64","fixed_i64_to_f64","fixed_u128_to_f64","fixed_u64_to_f64"],"static":["HIGH_PRECISION_MODE","PRECISION_BYTES"]};

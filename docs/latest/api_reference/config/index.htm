@@ -1,0 +1,3355 @@
+﻿<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="docs-wrapper plugin-docs plugin-id-default docs-version-latest docs-doc-page docs-doc-id-api_reference/config"
+  data-has-hydrated="false"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="Docusaurus v3.8.1" />
+    <title data-rh="true">Config | PoseiTrader Documentation</title>
+    <meta
+      data-rh="true"
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+    <meta
+      data-rh="true"
+      property="og:image"
+      content="/docs/latest/img/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      name="twitter:image"
+      content="/docs/latest/img/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      property="og:url"
+      content="/docs/latest/latest/api_reference/config"
+    />
+    <meta data-rh="true" property="og:locale" content="en" />
+    <meta data-rh="true" name="docusaurus_locale" content="en" />
+    <meta data-rh="true" name="docsearch:language" content="en" />
+    <meta
+      data-rh="true"
+      name="keywords"
+      content="Open-source trading platform, Algorithmic trading software, Event-driven backtesting, Live trading with no code changes, Trade any asset class, Low-latency trading execution, Python API for trading strategies, Custom market data integration, Futures and options trading, Crypto spot and derivatives trading, Equities trading simulation, FX spot trading, Sports betting markets trading, Fast backtesting strategies, Advanced trading orders, Rust-based trading platform, High-performance trading system, Nanosecond resolution market simulation, Trading across multiple venues, Trading platform for hedge funds, Seamless data integration, Customizable trading strategies, AI and ML trading strategies, Posei trading platform, Multi-venue trading, Unlimited backtesting strategies, Fast trading execution solutions, Realistic market simulations, Seamless trading API integration, PoseiTrader Documentation, Docs, PoseiTrader Docs"
+    />
+    <meta data-rh="true" name="title" content="PoseiTrader Documentation" />
+    <meta data-rh="true" name="og:title" content="PoseiTrader Documentation" />
+    <meta
+      data-rh="true"
+      name="og:description"
+      content="PoseiTrader is a high-performance platform for automating trading strategies, built on the powerful Posei framework for backtesting and real-time trading."
+    />
+    <meta data-rh="true" name="og:image" content="img/preview.png" />
+    <meta data-rh="true" name="og:url" content="/docs/latest" />
+    <meta data-rh="true" name="docusaurus_version" content="latest" />
+    <meta data-rh="true" name="docusaurus_tag" content="docs-default-latest" />
+    <meta data-rh="true" name="docsearch:version" content="latest" />
+    <meta
+      data-rh="true"
+      name="docsearch:docusaurus_tag"
+      content="docs-default-latest"
+    />
+    <meta
+      data-rh="true"
+      property="og:title"
+      content="Config | PoseiTrader Documentation"
+    />
+    <meta data-rh="true" name="description" content="Backtest" />
+    <meta data-rh="true" property="og:description" content="Backtest" />
+    <link data-rh="true" rel="icon" href="../../../img/shell.ico" />
+    <link data-rh="true" rel="canonical" href="index.htm" />
+    <link data-rh="true" rel="alternate" href="index.htm" hreflang="en" />
+    <link
+      data-rh="true"
+      rel="alternate"
+      href="index.htm"
+      hreflang="x-default"
+    />
+    <link
+      data-rh="true"
+      rel="preconnect"
+      href="https://CWRKEEL01M-dsn.algolia.net"
+      crossorigin="anonymous"
+    />
+    <script data-rh="true" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Python API",
+            "item": "/docs/latest/latest/api_reference/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Config",
+            "item": "/docs/latest/latest/api_reference/config"
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="PoseiTrader Documentation"
+      href="../../../opensearch.xml"
+    />
+    <script>
+      !(function () {
+        var t = window.location.pathname;
+        if (
+          t.startsWith("/docs") &&
+          !t.startsWith("/docs/latest") &&
+          !t.startsWith("/docs/nightly")
+        ) {
+          var s = t.replace("/docs", "/docs/latest");
+          window.location.href = s;
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TR4XK597XK"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-TR4XK597XK", { anonymize_ip: !0 });
+    </script>
+    <link rel="stylesheet" href="../../../assets/css/styles.0f0f692e.css" />
+    <script
+      src="../../../assets/js/runtime~main.92b727d5.js"
+      defer="defer"
+    ></script>
+    <script src="../../../assets/js/main.1cd42d85.js" defer="defer"></script>
+  </head>
+  <body class="navigation-with-keyboard">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol id="theme-svg-external-link" viewbox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <script>
+      !(function () {
+        var t = "dark";
+        var e =
+          (function () {
+            try {
+              return new URLSearchParams(window.location.search).get(
+                "docusaurus-theme"
+              );
+            } catch (t) {}
+          })() ||
+          (function () {
+            try {
+              return window.localStorage.getItem("theme");
+            } catch (t) {}
+          })();
+        document.documentElement.setAttribute("data-theme", e || t),
+          document.documentElement.setAttribute("data-theme-choice", e || t);
+      })(),
+        (function () {
+          try {
+            const c = new URLSearchParams(window.location.search).entries();
+            for (var [t, e] of c)
+              if (t.startsWith("docusaurus-data-")) {
+                var a = t.replace("docusaurus-data-", "data-");
+                document.documentElement.setAttribute(a, e);
+              }
+          } catch (t) {}
+        })();
+    </script>
+    <div id="__docusaurus">
+      <div role="region" aria-label="Skip to main content">
+        <a
+          class="skipToContent_fXgn"
+          href="#__docusaurus_skipToContent_fallback"
+          >Skip to main content</a
+        >
+      </div>
+      <nav
+        aria-label="Main"
+        class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"
+      >
+        <div class="navbar__inner">
+          <div class="theme-layout-navbar-left navbar__items">
+            <button
+              aria-label="Toggle navigation bar"
+              aria-expanded="false"
+              class="navbar__toggle clean-btn"
+              type="button"
+            >
+              <svg
+                width="30"
+                height="30"
+                viewbox="0 0 30 30"
+                aria-hidden="true"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M4 7h22M4 15h22M4 23h22"
+                ></path>
+              </svg></button
+            ><a
+              href="../../../../index.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__brand"
+              ><div class="navbar__logo">
+                <img
+                  src="../../../img/nt-black-large.webp"
+                  alt="PoseiTrader Logo"
+                  class="themedComponent_mlkZ themedComponent--light_NVdE"
+                /><img
+                  src="../../../img/nt-white-large.webp"
+                  alt="PoseiTrader Logo"
+                  class="themedComponent_mlkZ themedComponent--dark_xIcU"
+                />
+              </div>
+              <b class="navbar__title text--truncate"></b
+            ></a>
+            <div class="navbar__item dropdown dropdown--hoverable">
+              <a
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+                role="button"
+                class="navbar__link"
+                >Version</a
+              >
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    aria-current="page"
+                    class="dropdown__link dropdown__link--active"
+                    href="../../index.htm"
+                    >latest</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown__link" href="../../../nightly/index.htm"
+                    >nightly</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="navbarSearchContainer_Bca1">
+              <button
+                type="button"
+                class="DocSearch DocSearch-Button"
+                aria-label="Search (Command+K)"
+              >
+                <span class="DocSearch-Button-Container"
+                  ><svg
+                    width="20"
+                    height="20"
+                    class="DocSearch-Search-Icon"
+                    viewbox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                      stroke="currentColor"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path></svg
+                  ><span class="DocSearch-Button-Placeholder"
+                    >Search</span
+                  ></span
+                ><span class="DocSearch-Button-Keys"></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="theme-layout-navbar-right navbar__items navbar__items--right"
+          >
+            <a
+              href="https://github.com/poseisystems/posei_trader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-github-link common-social"
+              aria-label="GitHub repository"
+            ></a>
+            <a
+              href="https://twitter.com/PoseiTrader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-x-link common-social"
+              aria-label="X"
+            ></a>
+             
+          </div>
+        </div>
+        <div role="presentation" class="navbar-sidebar__backdrop"></div>
+      </nav>
+      <div
+        id="__docusaurus_skipToContent_fallback"
+        class="theme-layout-main main-wrapper mainWrapper_z2l0"
+      >
+        <div class="docsWrapper_hBAB">
+          <button
+            aria-label="Scroll back to top"
+            class="clean-btn theme-back-to-top-button backToTopButton_sjWU"
+            type="button"
+          ></button>
+          <div class="docRoot_UBD9">
+            <aside class="theme-doc-sidebar-container docSidebarContainer_YfHR">
+              <div class="sidebarViewport_aRkj">
+                <div class="sidebar_njMd sidebarWithHideableNavbar_wUlq">
+                  <a
+                    href="../../../../index.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                    class="sidebarLogo_isFc"
+                    ><img
+                      src="../../../img/nt-black-large.webp"
+                      alt="PoseiTrader Logo"
+                      class="themedComponent_mlkZ themedComponent--light_NVdE" /><img
+                      src="../../../img/nt-white-large.webp"
+                      alt="PoseiTrader Logo"
+                      class="themedComponent_mlkZ themedComponent--dark_xIcU" /><b></b
+                  ></a>
+                  <nav
+                    aria-label="Docs sidebar"
+                    class="menu thin-scrollbar menu_SIkG"
+                  >
+                    <ul class="theme-doc-sidebar-menu menu__list">
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a class="menu__link" href="../../index.htm"
+                          >PoseiTrader Documentation</a
+                        >
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../getting_started/index.htm"
+                            >Getting Started</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Getting Started&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../concepts/index.htm"
+                            >Concepts</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Concepts&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../tutorials/index.htm"
+                            >Tutorials</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Tutorials&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../integrations/index.htm"
+                            >Integrations</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Integrations&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist menu__link--active"
+                            href="../index.htm"
+                            >Python API</a
+                          ><button
+                            aria-label="Collapse sidebar category &#x27;Python API&#x27;"
+                            aria-expanded="true"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                        <ul class="menu__list">
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../accounting/index.htm"
+                              >Accounting</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"
+                          >
+                            <div class="menu__list-item-collapsible">
+                              <a
+                                class="menu__link menu__link--sublist"
+                                tabindex="0"
+                                href="../adapters/index.htm"
+                                >Adapters</a
+                              ><button
+                                aria-label="Expand sidebar category &#x27;Adapters&#x27;"
+                                aria-expanded="false"
+                                type="button"
+                                class="clean-btn menu__caret"
+                              ></button>
+                            </div>
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../analysis/index.htm"
+                              >Analysis</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../backtest/index.htm"
+                              >Backtest</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../cache/index.htm"
+                              >Cache</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../common/index.htm"
+                              >Common</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link menu__link--active"
+                              aria-current="page"
+                              tabindex="0"
+                              href="index.htm"
+                              >Config</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../core/index.htm"
+                              >Core</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../data/index.htm"
+                              >Data</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../execution/index.htm"
+                              >Execution</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../indicators/index.htm"
+                              >Indicators</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../live/index.htm"
+                              >Live</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"
+                          >
+                            <div class="menu__list-item-collapsible">
+                              <a
+                                class="menu__link menu__link--sublist"
+                                tabindex="0"
+                                href="../model/index.htm"
+                                >Model</a
+                              ><button
+                                aria-label="Expand sidebar category &#x27;Model&#x27;"
+                                aria-expanded="false"
+                                type="button"
+                                class="clean-btn menu__caret"
+                              ></button>
+                            </div>
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../persistence/index.htm"
+                              >Persistence</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../portfolio/index.htm"
+                              >Portfolio</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../risk/index.htm"
+                              >Risk</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../serialization/index.htm"
+                              >Serialization</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../system/index.htm"
+                              >System</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../trading/index.htm"
+                              >Trading</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a
+                          href="../../../core-latest/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="menu__link menuExternalLink_NmtK"
+                          >Rust API<svg
+                            width="13.5"
+                            height="13.5"
+                            aria-hidden="true"
+                            class="iconExternalLink_nPIU"
+                          >
+                            <use href="#theme-svg-external-link"></use></svg
+                        ></a>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../developer_guide/index.htm"
+                            >Developer Guide</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Developer Guide&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </aside>
+            <main class="docMainContainer_TBSr">
+              <div class="container padding-top--md padding-bottom--lg">
+                <div>
+                  <div class="row">
+                    <div class="col docItemCol_VOVn">
+                      <div class="docItemContainer_Djhp">
+                        <article>
+                          <nav
+                            class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl"
+                            aria-label="Breadcrumbs"
+                          >
+                            <ul class="breadcrumbs">
+                              <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="../index.htm"
+                                  ><span>Python API</span></a
+                                >
+                              </li>
+                              <li
+                                class="breadcrumbs__item breadcrumbs__item--active"
+                              >
+                                <span class="breadcrumbs__link">Config</span>
+                              </li>
+                            </ul>
+                          </nav>
+                          <span
+                            class="theme-doc-version-badge badge badge--secondary"
+                            >Version: latest</span
+                          >
+                          <div
+                            class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"
+                          >
+                            <button
+                              type="button"
+                              class="clean-btn tocCollapsibleButton_TO0P"
+                            >
+                              On this page
+                            </button>
+                          </div>
+                          <div class="theme-doc-markdown markdown">
+                            <header><h1>Config</h1></header>
+                            <h2
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="backtest"
+                            >
+                              Backtest<a
+                                href="#backtest"
+                                class="hash-link"
+                                aria-label="Direct link to Backtest"
+                                title="Direct link to Backtest"
+                                >​</a
+                              >
+                            </h2>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="parse_filters_exprs-str--none"
+                            >
+                              parse_filters_expr(s: str | None)<a
+                                href="#parse_filters_exprs-str--none"
+                                class="hash-link"
+                                aria-label="Direct link to parse_filters_expr(s: str | None)"
+                                title="Direct link to parse_filters_expr(s: str | None)"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Parse a pyarrow.dataset filter expression from a
+                              string.
+                            </p>
+                            <div
+                              class="language-pycon codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-pycon codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">&gt;&gt;&gt; parse_filters_expr(&#x27;field(&quot;Currency&quot;) == &quot;CHF&quot;&#x27;)</span><br></span><span class="token-line" style="color:#9CDCFE"><span class="token plain">&lt;pyarrow.dataset.Expression (Currency == &quot;CHF&quot;)&gt;</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-pycon codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-pycon codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">&gt;&gt;&gt; parse_filters_expr(&quot;print(&#x27;hello&#x27;)&quot;)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <div
+                              class="language-pycon codeBlockContainer_Ckt0 theme-code-block"
+                              style="
+                                --prism-color: #9cdcfe;
+                                --prism-background-color: #1e1e1e;
+                              "
+                            >
+                              <div class="codeBlockContent_QJqH">
+                                <pre
+                                  tabindex="0"
+                                  class="prism-code language-pycon codeBlock_bY9V thin-scrollbar"
+                                  style="
+                                    color: #9cdcfe;
+                                    background-color: #1e1e1e;
+                                  "
+                                ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#9CDCFE"><span class="token plain">&gt;&gt;&gt; parse_filters_expr(&quot;None&quot;)</span><br></span></code></pre>
+                              </div>
+                            </div>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-backtestvenueconfig"
+                            >
+                              <em>class</em> BacktestVenueConfig<a
+                                href="#class-backtestvenueconfig"
+                                class="hash-link"
+                                aria-label="Direct link to class-backtestvenueconfig"
+                                title="Direct link to class-backtestvenueconfig"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.common.config.PoseiConfig"
+                                ><code>PoseiConfig</code></a
+                              >
+                            </p>
+                            <p>
+                              Represents a venue configuration for one specific
+                              backtest engine.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>name</strong> (<em>str</em>) – The
+                                    name of the venue.
+                                  </li>
+                                  <li>
+                                    <strong>oms_type</strong> (<em>str</em>) –
+                                    The order management system type for the
+                                    exchange. If <code>HEDGING</code> will
+                                    generate new position IDs.
+                                  </li>
+                                  <li>
+                                    <strong>account_type</strong> (<em>str</em>)
+                                    – The account type for the exchange.
+                                  </li>
+                                  <li>
+                                    <strong>starting_balances</strong> (<em
+                                      >list</em
+                                    >
+                                    <em>[</em
+                                    ><a
+                                      href="../model/index.htm#posei_trader.model.Money"
+                                      ><em>Money</em></a
+                                    >
+                                    <em>|</em> <em>str</em> <em>]</em>) – The
+                                    starting account balances (specify one for a
+                                    single asset account).
+                                  </li>
+                                  <li>
+                                    <strong>base_currency</strong> (<a
+                                      href="../model/index.htm#posei_trader.model.Currency"
+                                      ><em>Currency</em></a
+                                    >
+                                    <em>|</em> <em>str</em> <em>,</em>
+                                    <em>optional</em>) – The account base
+                                    currency for the exchange. Use
+                                    <code>None</code> for multi-currency
+                                    accounts.
+                                  </li>
+                                  <li>
+                                    <strong>default_leverage</strong> (<em
+                                      >float</em
+                                    >
+                                    <em>,</em> <em>optional</em>) – The account
+                                    default leverage (for margin accounts).
+                                  </li>
+                                  <li>
+                                    <strong>leverages</strong> (<em>dict</em>
+                                    *[*<em>str</em> <em>,</em> <em>float</em>
+                                    <em>]</em> <em>,</em> <em>optional</em>) –
+                                    The instrument specific leverage
+                                    configuration (for margin accounts).
+                                  </li>
+                                  <li>
+                                    <strong>book_type</strong> (<em>str</em>) –
+                                    The default order book type.
+                                  </li>
+                                  <li>
+                                    <strong>routing</strong> (<em>bool</em>
+                                    <em>,</em> <em>default False</em>) – If
+                                    multi-venue routing should be enabled for
+                                    the execution client.
+                                  </li>
+                                  <li>
+                                    <strong>frozen_account</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default False</em>) – If the
+                                    account for this exchange is frozen
+                                    (balances will not change).
+                                  </li>
+                                  <li>
+                                    <strong>reject_stop_orders</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default True</em>) – If stop
+                                    orders are rejected on submission if trigger
+                                    price is in the market.
+                                  </li>
+                                  <li>
+                                    <strong>support_gtd_orders</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default True</em>) – If
+                                    orders with GTD time in force will be
+                                    supported by the venue.
+                                  </li>
+                                  <li>
+                                    <strong>support_contingent_orders</strong>
+                                    (<em>bool</em> <em>,</em>
+                                    <em>default True</em>) – If contingent
+                                    orders will be supported/respected by the
+                                    venue. If False, then it’s expected the
+                                    strategy will be managing any contingent
+                                    orders.
+                                  </li>
+                                  <li>
+                                    <strong>use_position_ids</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default True</em>) – If venue
+                                    position IDs will be generated on order
+                                    fills.
+                                  </li>
+                                  <li>
+                                    <strong>use_random_ids</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default False</em>) – If all
+                                    venue generated identifiers will be random
+                                    UUID4’s.
+                                  </li>
+                                  <li>
+                                    <strong>use_reduce_only</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default True</em>) – If the
+                                    reduce_only execution instruction on orders
+                                    will be honored.
+                                  </li>
+                                  <li>
+                                    <strong>bar_execution</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default True</em>) – If bars
+                                    should be processed by the matching
+                                    engine(s) (and move the market).
+                                  </li>
+                                  <li>
+                                    <strong
+                                      >bar_adaptive_high_low_ordering</strong
+                                    >
+                                    (<em>bool</em> <em>,</em>
+                                    <em>default False</em>) – Determines whether
+                                    the processing order of bar prices is
+                                    adaptive based on a heuristic. This setting
+                                    is only relevant when bar_execution is True.
+                                    If False, bar prices are always processed in
+                                    the fixed order: Open, High, Low, Close. If
+                                    True, the processing order adapts with the
+                                    heuristic:
+                                    <ul>
+                                      <li>
+                                        If High is closer to Open than Low then
+                                        the processing order is Open, High, Low,
+                                        Close.
+                                      </li>
+                                      <li>
+                                        If Low is closer to Open than High then
+                                        the processing order is Open, Low, High,
+                                        Close.
+                                      </li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    <strong>trade_execution</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default False</em>) – If
+                                    trades should be processed by the matching
+                                    engine(s) (and move the market).
+                                  </li>
+                                  <li>
+                                    <strong>modules</strong> (<em>list</em>
+                                    <em>[</em
+                                    ><a
+                                      href="#posei_trader.common.config.ImportableActorConfig"
+                                      ><em>ImportableActorConfig</em></a
+                                    >
+                                    <em>]</em> <em>,</em> <em>optional</em>) –
+                                    The simulation modules for the venue.
+                                  </li>
+                                  <li>
+                                    <strong>fill_model</strong> (<a
+                                      href="#posei_trader.backtest.config.ImportableFillModelConfig"
+                                      ><em>ImportableFillModelConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The fill
+                                    model for the venue.
+                                  </li>
+                                  <li>
+                                    <strong>latency_model</strong> (<a
+                                      href="#posei_trader.backtest.config.ImportableLatencyModelConfig"
+                                      ><em>ImportableLatencyModelConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The latency
+                                    model for the venue.
+                                  </li>
+                                  <li>
+                                    <strong>fee_model</strong> (<a
+                                      href="#posei_trader.backtest.config.ImportableFeeModelConfig"
+                                      ><em>ImportableFeeModelConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The fee
+                                    model for the venue.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="name--str"
+                            >
+                              name <em>: str</em
+                              ><a
+                                href="#name--str"
+                                class="hash-link"
+                                aria-label="Direct link to name--str"
+                                title="Direct link to name--str"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="oms_type--str"
+                            >
+                              oms_type <em>: str</em
+                              ><a
+                                href="#oms_type--str"
+                                class="hash-link"
+                                aria-label="Direct link to oms_type--str"
+                                title="Direct link to oms_type--str"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="account_type--str"
+                            >
+                              account_type <em>: str</em
+                              ><a
+                                href="#account_type--str"
+                                class="hash-link"
+                                aria-label="Direct link to account_type--str"
+                                title="Direct link to account_type--str"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="starting_balances--liststr"
+                            >
+                              starting_balances <em>: list[str]</em
+                              ><a
+                                href="#starting_balances--liststr"
+                                class="hash-link"
+                                aria-label="Direct link to starting_balances--liststr"
+                                title="Direct link to starting_balances--liststr"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="base_currency--str--none"
+                            >
+                              base_currency <em>: str | None</em
+                              ><a
+                                href="#base_currency--str--none"
+                                class="hash-link"
+                                aria-label="Direct link to base_currency--str--none"
+                                title="Direct link to base_currency--str--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="default_leverage--float"
+                            >
+                              default_leverage <em>: float</em
+                              ><a
+                                href="#default_leverage--float"
+                                class="hash-link"
+                                aria-label="Direct link to default_leverage--float"
+                                title="Direct link to default_leverage--float"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="leverages--dictstr-float--none"
+                            >
+                              leverages <em>: dict[str, float] | None</em
+                              ><a
+                                href="#leverages--dictstr-float--none"
+                                class="hash-link"
+                                aria-label="Direct link to leverages--dictstr-float--none"
+                                title="Direct link to leverages--dictstr-float--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="book_type--str"
+                            >
+                              book_type <em>: str</em
+                              ><a
+                                href="#book_type--str"
+                                class="hash-link"
+                                aria-label="Direct link to book_type--str"
+                                title="Direct link to book_type--str"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="routing--bool"
+                            >
+                              routing <em>: bool</em
+                              ><a
+                                href="#routing--bool"
+                                class="hash-link"
+                                aria-label="Direct link to routing--bool"
+                                title="Direct link to routing--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="frozen_account--bool"
+                            >
+                              frozen_account <em>: bool</em
+                              ><a
+                                href="#frozen_account--bool"
+                                class="hash-link"
+                                aria-label="Direct link to frozen_account--bool"
+                                title="Direct link to frozen_account--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="reject_stop_orders--bool"
+                            >
+                              reject_stop_orders <em>: bool</em
+                              ><a
+                                href="#reject_stop_orders--bool"
+                                class="hash-link"
+                                aria-label="Direct link to reject_stop_orders--bool"
+                                title="Direct link to reject_stop_orders--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="support_gtd_orders--bool"
+                            >
+                              support_gtd_orders <em>: bool</em
+                              ><a
+                                href="#support_gtd_orders--bool"
+                                class="hash-link"
+                                aria-label="Direct link to support_gtd_orders--bool"
+                                title="Direct link to support_gtd_orders--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="support_contingent_orders--bool"
+                            >
+                              support_contingent_orders <em>: bool</em
+                              ><a
+                                href="#support_contingent_orders--bool"
+                                class="hash-link"
+                                aria-label="Direct link to support_contingent_orders--bool"
+                                title="Direct link to support_contingent_orders--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="use_position_ids--bool"
+                            >
+                              use_position_ids <em>: bool</em
+                              ><a
+                                href="#use_position_ids--bool"
+                                class="hash-link"
+                                aria-label="Direct link to use_position_ids--bool"
+                                title="Direct link to use_position_ids--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="use_random_ids--bool"
+                            >
+                              use_random_ids <em>: bool</em
+                              ><a
+                                href="#use_random_ids--bool"
+                                class="hash-link"
+                                aria-label="Direct link to use_random_ids--bool"
+                                title="Direct link to use_random_ids--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="use_reduce_only--bool"
+                            >
+                              use_reduce_only <em>: bool</em
+                              ><a
+                                href="#use_reduce_only--bool"
+                                class="hash-link"
+                                aria-label="Direct link to use_reduce_only--bool"
+                                title="Direct link to use_reduce_only--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="bar_execution--bool"
+                            >
+                              bar_execution <em>: bool</em
+                              ><a
+                                href="#bar_execution--bool"
+                                class="hash-link"
+                                aria-label="Direct link to bar_execution--bool"
+                                title="Direct link to bar_execution--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="bar_adaptive_high_low_ordering--bool"
+                            >
+                              bar_adaptive_high_low_ordering <em>: bool</em
+                              ><a
+                                href="#bar_adaptive_high_low_ordering--bool"
+                                class="hash-link"
+                                aria-label="Direct link to bar_adaptive_high_low_ordering--bool"
+                                title="Direct link to bar_adaptive_high_low_ordering--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="trade_execution--bool"
+                            >
+                              trade_execution <em>: bool</em
+                              ><a
+                                href="#trade_execution--bool"
+                                class="hash-link"
+                                aria-label="Direct link to trade_execution--bool"
+                                title="Direct link to trade_execution--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="modules--listimportableactorconfig--none"
+                            >
+                              modules
+                              <em
+                                >: list[<a
+                                  href="#posei_trader.common.config.ImportableActorConfig"
+                                  >ImportableActorConfig</a
+                                >] | None</em
+                              ><a
+                                href="#modules--listimportableactorconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to modules--listimportableactorconfig--none"
+                                title="Direct link to modules--listimportableactorconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="fill_model--importablefillmodelconfig--none"
+                            >
+                              fill_model
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.backtest.config.ImportableFillModelConfig"
+                                  >ImportableFillModelConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#fill_model--importablefillmodelconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to fill_model--importablefillmodelconfig--none"
+                                title="Direct link to fill_model--importablefillmodelconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="latency_model--importablelatencymodelconfig--none"
+                            >
+                              latency_model
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.backtest.config.ImportableLatencyModelConfig"
+                                  >ImportableLatencyModelConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#latency_model--importablelatencymodelconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to latency_model--importablelatencymodelconfig--none"
+                                title="Direct link to latency_model--importablelatencymodelconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="fee_model--importablefeemodelconfig--none"
+                            >
+                              fee_model
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.backtest.config.ImportableFeeModelConfig"
+                                  >ImportableFeeModelConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#fee_model--importablefeemodelconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to fee_model--importablefeemodelconfig--none"
+                                title="Direct link to fee_model--importablefeemodelconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="dict--dictstr-any"
+                            >
+                              dict() → dict[str, Any]<a
+                                href="#dict--dictstr-any"
+                                class="hash-link"
+                                aria-label="Direct link to dict() → dict[str, Any]"
+                                title="Direct link to dict() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-fully_qualified_name--str"
+                            >
+                              <em>classmethod</em> fully_qualified_name() →
+                              str<a
+                                href="#classmethod-fully_qualified_name--str"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-fully_qualified_name--str"
+                                title="Direct link to classmethod-fully_qualified_name--str"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the fully qualified name for the
+                              PoseiConfig class.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-id--str"
+                            >
+                              <em>property</em> id <em>: str</em
+                              ><a
+                                href="#property-id--str"
+                                class="hash-link"
+                                aria-label="Direct link to property-id--str"
+                                title="Direct link to property-id--str"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the hashed identifier for the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="json--bytes"
+                            >
+                              json() → bytes<a
+                                href="#json--bytes"
+                                class="hash-link"
+                                aria-label="Direct link to json() → bytes"
+                                title="Direct link to json() → bytes"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return serialized JSON encoded bytes.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> bytes</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="json_primitives--dictstr-any"
+                            >
+                              json_primitives() → dict[str, Any]<a
+                                href="#json_primitives--dictstr-any"
+                                class="hash-link"
+                                aria-label="Direct link to json_primitives() → dict[str, Any]"
+                                title="Direct link to json_primitives() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration with JSON primitive types as values.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-json_schema--dictstr-any"
+                            >
+                              <em>classmethod</em> json_schema() → dict[str,
+                              Any]<a
+                                href="#classmethod-json_schema--dictstr-any"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-json_schema--dictstr-any"
+                                title="Direct link to classmethod-json_schema--dictstr-any"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Generate a JSON schema for this configuration
+                              class.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-parseraw-bytes--str--any"
+                            >
+                              <em>classmethod</em> parse(raw: bytes | str) →
+                              Any<a
+                                href="#classmethod-parseraw-bytes--str--any"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-parseraw-bytes--str--any"
+                                title="Direct link to classmethod-parseraw-bytes--str--any"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return a decoded object of the given cls.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>cls</strong> (<em>type</em>) – The
+                                    type to decode to.
+                                  </li>
+                                  <li>
+                                    <strong>raw</strong> (<em>bytes</em>
+                                    <em>or</em> <em>str</em>) – The raw bytes or
+                                    JSON string to decode.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><strong>Return type:</strong> Any</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="validate--bool"
+                            >
+                              validate() → bool<a
+                                href="#validate--bool"
+                                class="hash-link"
+                                aria-label="Direct link to validate() → bool"
+                                title="Direct link to validate() → bool"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return whether the configuration can be
+                              represented as valid JSON.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> bool</li>
+                            </ul>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-backtestdataconfig"
+                            >
+                              <em>class</em> BacktestDataConfig<a
+                                href="#class-backtestdataconfig"
+                                class="hash-link"
+                                aria-label="Direct link to class-backtestdataconfig"
+                                title="Direct link to class-backtestdataconfig"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.common.config.PoseiConfig"
+                                ><code>PoseiConfig</code></a
+                              >
+                            </p>
+                            <p>
+                              Represents the data configuration for one specific
+                              backtest run.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>catalog_path</strong> (<em>str</em>)
+                                    – The path to the data catalog.
+                                  </li>
+                                  <li>
+                                    <strong>data_cls</strong> (<em>str</em>) –
+                                    The data type for the configuration.
+                                  </li>
+                                  <li>
+                                    <strong>catalog_fs_protocol</strong> (<em
+                                      >str</em
+                                    >
+                                    <em>,</em> <em>optional</em>) – The fsspec
+                                    filesystem protocol for the catalog.
+                                  </li>
+                                  <li>
+                                    <strong>catalog_fs_storage_options</strong>
+                                    (<em>dict</em> <em>,</em> <em>optional</em>)
+                                    – The fsspec storage options.
+                                  </li>
+                                  <li>
+                                    <strong>instrument_id</strong> (<a
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
+                                      ><em>InstrumentId</em></a
+                                    >
+                                    <em>|</em> <em>str</em> <em>,</em>
+                                    <em>optional</em>) – The instrument ID for
+                                    the data configuration.
+                                  </li>
+                                  <li>
+                                    <strong>start_time</strong> (<em>str</em>
+                                    <em>or</em> <em>int</em> <em>,</em>
+                                    <em>optional</em>) – The start time for the
+                                    data configuration. Can be an ISO 8601
+                                    format datetime string, or UNIX nanoseconds
+                                    integer.
+                                  </li>
+                                  <li>
+                                    <strong>end_time</strong> (<em>str</em>
+                                    <em>or</em> <em>int</em> <em>,</em>
+                                    <em>optional</em>) – The end time for the
+                                    data configuration. Can be an ISO 8601
+                                    format datetime string, or UNIX nanoseconds
+                                    integer.
+                                  </li>
+                                  <li>
+                                    <strong>filter_expr</strong> (<em>str</em>
+                                    <em>,</em> <em>optional</em>) – The
+                                    additional filter expressions for the data
+                                    catalog query.
+                                  </li>
+                                  <li>
+                                    <strong>client_id</strong> (<em>str</em>
+                                    <em>,</em> <em>optional</em>) – The client
+                                    ID for the data configuration.
+                                  </li>
+                                  <li>
+                                    <strong>metadata</strong> (<em>dict</em>
+                                    <em>,</em> <em>optional</em>) – The metadata
+                                    for the data catalog query.
+                                  </li>
+                                  <li>
+                                    <strong>bar_spec</strong> (<a
+                                      href="../model/data/index.htm#posei_trader.model.data.BarSpecification"
+                                      ><em>BarSpecification</em></a
+                                    >
+                                    <em>|</em> <em>str</em> <em>,</em>
+                                    <em>optional</em>) – The bar specification
+                                    for the data catalog query.
+                                  </li>
+                                  <li>
+                                    <strong>instrument_ids</strong> (<em
+                                      >list</em
+                                    >
+                                    <em>[</em
+                                    ><a
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
+                                      ><em>InstrumentId</em></a
+                                    >
+                                    <em>|</em> <em>str</em> <em>]</em>
+                                    <em>,</em> <em>optional</em>) – The
+                                    instrument IDs for the data catalog query.
+                                    Can be used if instrument_id is not
+                                    specified. If bar_spec is specified an
+                                    equivalent list of bar_types will be
+                                    constructed.
+                                  </li>
+                                  <li>
+                                    <strong>bar_types</strong> (<em>list</em>
+                                    <em>[</em
+                                    ><a
+                                      href="../model/data/index.htm#posei_trader.model.data.BarType"
+                                      ><em>BarType</em></a
+                                    >
+                                    <em>|</em> <em>str</em> <em>]</em>
+                                    <em>,</em> <em>optional</em>) – The bar
+                                    types for the data catalog query. Can be
+                                    used if instrument_id is not specified.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="catalog_path--str"
+                            >
+                              catalog_path <em>: str</em
+                              ><a
+                                href="#catalog_path--str"
+                                class="hash-link"
+                                aria-label="Direct link to catalog_path--str"
+                                title="Direct link to catalog_path--str"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="data_cls--str"
+                            >
+                              data_cls <em>: str</em
+                              ><a
+                                href="#data_cls--str"
+                                class="hash-link"
+                                aria-label="Direct link to data_cls--str"
+                                title="Direct link to data_cls--str"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="catalog_fs_protocol--str--none"
+                            >
+                              catalog_fs_protocol <em>: str | None</em
+                              ><a
+                                href="#catalog_fs_protocol--str--none"
+                                class="hash-link"
+                                aria-label="Direct link to catalog_fs_protocol--str--none"
+                                title="Direct link to catalog_fs_protocol--str--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="catalog_fs_storage_options--dict--none"
+                            >
+                              catalog_fs_storage_options <em>: dict | None</em
+                              ><a
+                                href="#catalog_fs_storage_options--dict--none"
+                                class="hash-link"
+                                aria-label="Direct link to catalog_fs_storage_options--dict--none"
+                                title="Direct link to catalog_fs_storage_options--dict--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="instrument_id--instrumentid--none"
+                            >
+                              instrument_id
+                              <em
+                                >:
+                                <a
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.InstrumentId"
+                                  >InstrumentId</a
+                                >
+                                | None</em
+                              ><a
+                                href="#instrument_id--instrumentid--none"
+                                class="hash-link"
+                                aria-label="Direct link to instrument_id--instrumentid--none"
+                                title="Direct link to instrument_id--instrumentid--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="start_time--str--int--none"
+                            >
+                              start_time <em>: str | int | None</em
+                              ><a
+                                href="#start_time--str--int--none"
+                                class="hash-link"
+                                aria-label="Direct link to start_time--str--int--none"
+                                title="Direct link to start_time--str--int--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="end_time--str--int--none"
+                            >
+                              end_time <em>: str | int | None</em
+                              ><a
+                                href="#end_time--str--int--none"
+                                class="hash-link"
+                                aria-label="Direct link to end_time--str--int--none"
+                                title="Direct link to end_time--str--int--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="filter_expr--str--none"
+                            >
+                              filter_expr <em>: str | None</em
+                              ><a
+                                href="#filter_expr--str--none"
+                                class="hash-link"
+                                aria-label="Direct link to filter_expr--str--none"
+                                title="Direct link to filter_expr--str--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="client_id--str--none"
+                            >
+                              client_id <em>: str | None</em
+                              ><a
+                                href="#client_id--str--none"
+                                class="hash-link"
+                                aria-label="Direct link to client_id--str--none"
+                                title="Direct link to client_id--str--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="metadata--dict--none"
+                            >
+                              metadata <em>: dict | None</em
+                              ><a
+                                href="#metadata--dict--none"
+                                class="hash-link"
+                                aria-label="Direct link to metadata--dict--none"
+                                title="Direct link to metadata--dict--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="bar_spec--str--none"
+                            >
+                              bar_spec <em>: str | None</em
+                              ><a
+                                href="#bar_spec--str--none"
+                                class="hash-link"
+                                aria-label="Direct link to bar_spec--str--none"
+                                title="Direct link to bar_spec--str--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="instrument_ids--liststr--none"
+                            >
+                              instrument_ids <em>: list[str] | None</em
+                              ><a
+                                href="#instrument_ids--liststr--none"
+                                class="hash-link"
+                                aria-label="Direct link to instrument_ids--liststr--none"
+                                title="Direct link to instrument_ids--liststr--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="bar_types--liststr--none"
+                            >
+                              bar_types <em>: list[str] | None</em
+                              ><a
+                                href="#bar_types--liststr--none"
+                                class="hash-link"
+                                aria-label="Direct link to bar_types--liststr--none"
+                                title="Direct link to bar_types--liststr--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-data_type--type"
+                            >
+                              <em>property</em> data_type <em>: type</em
+                              ><a
+                                href="#property-data_type--type"
+                                class="hash-link"
+                                aria-label="Direct link to property-data_type--type"
+                                title="Direct link to property-data_type--type"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a type for the specified data_cls for the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> type</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-query--dictstr-any"
+                            >
+                              <em>property</em> query <em>: dict[str, Any]</em
+                              ><a
+                                href="#property-query--dictstr-any"
+                                class="hash-link"
+                                aria-label="Direct link to property-query--dictstr-any"
+                                title="Direct link to property-query--dictstr-any"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a catalog query object for the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-start_time_nanos--int"
+                            >
+                              <em>property</em> start_time_nanos <em>: int</em
+                              ><a
+                                href="#property-start_time_nanos--int"
+                                class="hash-link"
+                                aria-label="Direct link to property-start_time_nanos--int"
+                                title="Direct link to property-start_time_nanos--int"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the data configuration start time in UNIX
+                              nanoseconds.
+                            </p>
+                            <p>Will be zero if no start_time was specified.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> int</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-end_time_nanos--int"
+                            >
+                              <em>property</em> end_time_nanos <em>: int</em
+                              ><a
+                                href="#property-end_time_nanos--int"
+                                class="hash-link"
+                                aria-label="Direct link to property-end_time_nanos--int"
+                                title="Direct link to property-end_time_nanos--int"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the data configuration end time in UNIX
+                              nanoseconds.
+                            </p>
+                            <p>
+                              Will be sys.maxsize if no end_time was specified.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> int</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="dict--dictstr-any-1"
+                            >
+                              dict() → dict[str, Any]<a
+                                href="#dict--dictstr-any-1"
+                                class="hash-link"
+                                aria-label="Direct link to dict() → dict[str, Any]"
+                                title="Direct link to dict() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-fully_qualified_name--str-1"
+                            >
+                              <em>classmethod</em> fully_qualified_name() →
+                              str<a
+                                href="#classmethod-fully_qualified_name--str-1"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-fully_qualified_name--str-1"
+                                title="Direct link to classmethod-fully_qualified_name--str-1"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the fully qualified name for the
+                              PoseiConfig class.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-id--str-1"
+                            >
+                              <em>property</em> id <em>: str</em
+                              ><a
+                                href="#property-id--str-1"
+                                class="hash-link"
+                                aria-label="Direct link to property-id--str-1"
+                                title="Direct link to property-id--str-1"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the hashed identifier for the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="json--bytes-1"
+                            >
+                              json() → bytes<a
+                                href="#json--bytes-1"
+                                class="hash-link"
+                                aria-label="Direct link to json() → bytes"
+                                title="Direct link to json() → bytes"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return serialized JSON encoded bytes.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> bytes</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="json_primitives--dictstr-any-1"
+                            >
+                              json_primitives() → dict[str, Any]<a
+                                href="#json_primitives--dictstr-any-1"
+                                class="hash-link"
+                                aria-label="Direct link to json_primitives() → dict[str, Any]"
+                                title="Direct link to json_primitives() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration with JSON primitive types as values.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-json_schema--dictstr-any-1"
+                            >
+                              <em>classmethod</em> json_schema() → dict[str,
+                              Any]<a
+                                href="#classmethod-json_schema--dictstr-any-1"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-json_schema--dictstr-any-1"
+                                title="Direct link to classmethod-json_schema--dictstr-any-1"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Generate a JSON schema for this configuration
+                              class.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-parseraw-bytes--str--any-1"
+                            >
+                              <em>classmethod</em> parse(raw: bytes | str) →
+                              Any<a
+                                href="#classmethod-parseraw-bytes--str--any-1"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-parseraw-bytes--str--any-1"
+                                title="Direct link to classmethod-parseraw-bytes--str--any-1"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return a decoded object of the given cls.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>cls</strong> (<em>type</em>) – The
+                                    type to decode to.
+                                  </li>
+                                  <li>
+                                    <strong>raw</strong> (<em>bytes</em>
+                                    <em>or</em> <em>str</em>) – The raw bytes or
+                                    JSON string to decode.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><strong>Return type:</strong> Any</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="validate--bool-1"
+                            >
+                              validate() → bool<a
+                                href="#validate--bool-1"
+                                class="hash-link"
+                                aria-label="Direct link to validate() → bool"
+                                title="Direct link to validate() → bool"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return whether the configuration can be
+                              represented as valid JSON.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> bool</li>
+                            </ul>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-backtestengineconfig"
+                            >
+                              <em>class</em> BacktestEngineConfig<a
+                                href="#class-backtestengineconfig"
+                                class="hash-link"
+                                aria-label="Direct link to class-backtestengineconfig"
+                                title="Direct link to class-backtestengineconfig"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.system.config.PoseiKernelConfig"
+                                ><code>PoseiKernelConfig</code></a
+                              >
+                            </p>
+                            <p>
+                              Configuration for
+                              <code>BacktestEngine</code> instances.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>trader_id</strong> (<a
+                                      href="../model/identifiers/index.htm#posei_trader.model.identifiers.TraderId"
+                                      ><em>TraderId</em></a
+                                    >) – The trader ID for the node (must be a
+                                    name and ID tag separated by a hyphen).
+                                  </li>
+                                  <li>
+                                    <strong>log_level</strong> (<em>str</em>
+                                    <em>,</em>
+                                    <em>default &quot;INFO&quot;</em>) – The
+                                    stdout log level for the node.
+                                  </li>
+                                  <li>
+                                    <strong>loop_debug</strong> (<em>bool</em>
+                                    <em>,</em> <em>default False</em>) – If the
+                                    asyncio event loop should be in debug mode.
+                                  </li>
+                                  <li>
+                                    <strong>cache</strong> (<a
+                                      href="#posei_trader.cache.config.CacheConfig"
+                                      ><em>CacheConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The cache
+                                    configuration.
+                                  </li>
+                                  <li>
+                                    <strong>data_engine</strong> (<a
+                                      href="#posei_trader.data.config.DataEngineConfig"
+                                      ><em>DataEngineConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The live
+                                    data engine configuration.
+                                  </li>
+                                  <li>
+                                    <strong>risk_engine</strong> (<a
+                                      href="#posei_trader.risk.config.RiskEngineConfig"
+                                      ><em>RiskEngineConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The live
+                                    risk engine configuration.
+                                  </li>
+                                  <li>
+                                    <strong>exec_engine</strong> (<a
+                                      href="#posei_trader.execution.config.ExecEngineConfig"
+                                      ><em>ExecEngineConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The live
+                                    execution engine configuration.
+                                  </li>
+                                  <li>
+                                    <strong>streaming</strong> (<a
+                                      href="#posei_trader.persistence.config.StreamingConfig"
+                                      ><em>StreamingConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The
+                                    configuration for streaming to feather
+                                    files.
+                                  </li>
+                                  <li>
+                                    <strong>strategies</strong> (<em>list</em>
+                                    <em>[</em
+                                    ><a
+                                      href="#posei_trader.trading.config.ImportableStrategyConfig"
+                                      ><em>ImportableStrategyConfig</em></a
+                                    >
+                                    <em>]</em>) – The strategy configurations
+                                    for the kernel.
+                                  </li>
+                                  <li>
+                                    <strong>actors</strong> (<em>list</em>
+                                    <em>[</em
+                                    ><a
+                                      href="#posei_trader.common.config.ImportableActorConfig"
+                                      ><em>ImportableActorConfig</em></a
+                                    >
+                                    <em>]</em>) – The actor configurations for
+                                    the kernel.
+                                  </li>
+                                  <li>
+                                    <strong>exec_algorithms</strong> (<em
+                                      >list</em
+                                    >
+                                    <em>[</em
+                                    ><a
+                                      href="#posei_trader.execution.config.ImportableExecAlgorithmConfig"
+                                      ><em>ImportableExecAlgorithmConfig</em></a
+                                    >
+                                    <em>]</em>) – The execution algorithm
+                                    configurations for the kernel.
+                                  </li>
+                                  <li>
+                                    <strong>controller</strong> (<a
+                                      href="#posei_trader.trading.config.ImportableControllerConfig"
+                                      ><em>ImportableControllerConfig</em></a
+                                    >
+                                    <em>,</em> <em>optional</em>) – The trader
+                                    controller for the kernel.
+                                  </li>
+                                  <li>
+                                    <strong>load_state</strong> (<em>bool</em>
+                                    <em>,</em> <em>default True</em>) – If
+                                    trading strategy state should be loaded from
+                                    the database on start.
+                                  </li>
+                                  <li>
+                                    <strong>save_state</strong> (<em>bool</em>
+                                    <em>,</em> <em>default True</em>) – If
+                                    trading strategy state should be saved to
+                                    the database on stop.
+                                  </li>
+                                  <li>
+                                    <strong>bypass_logging</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default False</em>) – If
+                                    logging should be bypassed.
+                                  </li>
+                                  <li>
+                                    <strong>run_analysis</strong> (<em>bool</em>
+                                    <em>,</em> <em>default True</em>) – If post
+                                    backtest performance analysis should be run.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="environment--environment"
+                            >
+                              environment
+                              <em
+                                >:
+                                <a
+                                  href="../common/index.htm#posei_trader.common.Environment"
+                                  >Environment</a
+                                ></em
+                              ><a
+                                href="#environment--environment"
+                                class="hash-link"
+                                aria-label="Direct link to environment--environment"
+                                title="Direct link to environment--environment"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="trader_id--traderid"
+                            >
+                              trader_id
+                              <em
+                                >:
+                                <a
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.TraderId"
+                                  >TraderId</a
+                                ></em
+                              ><a
+                                href="#trader_id--traderid"
+                                class="hash-link"
+                                aria-label="Direct link to trader_id--traderid"
+                                title="Direct link to trader_id--traderid"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="data_engine--dataengineconfig"
+                            >
+                              data_engine
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.data.config.DataEngineConfig"
+                                  >DataEngineConfig</a
+                                ></em
+                              ><a
+                                href="#data_engine--dataengineconfig"
+                                class="hash-link"
+                                aria-label="Direct link to data_engine--dataengineconfig"
+                                title="Direct link to data_engine--dataengineconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="risk_engine--riskengineconfig"
+                            >
+                              risk_engine
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.risk.config.RiskEngineConfig"
+                                  >RiskEngineConfig</a
+                                ></em
+                              ><a
+                                href="#risk_engine--riskengineconfig"
+                                class="hash-link"
+                                aria-label="Direct link to risk_engine--riskengineconfig"
+                                title="Direct link to risk_engine--riskengineconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="exec_engine--execengineconfig"
+                            >
+                              exec_engine
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.execution.config.ExecEngineConfig"
+                                  >ExecEngineConfig</a
+                                ></em
+                              ><a
+                                href="#exec_engine--execengineconfig"
+                                class="hash-link"
+                                aria-label="Direct link to exec_engine--execengineconfig"
+                                title="Direct link to exec_engine--execengineconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="run_analysis--bool"
+                            >
+                              run_analysis <em>: bool</em
+                              ><a
+                                href="#run_analysis--bool"
+                                class="hash-link"
+                                aria-label="Direct link to run_analysis--bool"
+                                title="Direct link to run_analysis--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="actors--listimportableactorconfig"
+                            >
+                              actors
+                              <em
+                                >: list[<a
+                                  href="#posei_trader.common.config.ImportableActorConfig"
+                                  >ImportableActorConfig</a
+                                >]</em
+                              ><a
+                                href="#actors--listimportableactorconfig"
+                                class="hash-link"
+                                aria-label="Direct link to actors--listimportableactorconfig"
+                                title="Direct link to actors--listimportableactorconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="cache--cacheconfig--none"
+                            >
+                              cache
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.cache.config.CacheConfig"
+                                  >CacheConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#cache--cacheconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to cache--cacheconfig--none"
+                                title="Direct link to cache--cacheconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="catalogs--listdatacatalogconfig"
+                            >
+                              catalogs
+                              <em
+                                >: list[<a
+                                  href="#posei_trader.persistence.config.DataCatalogConfig"
+                                  >DataCatalogConfig</a
+                                >]</em
+                              ><a
+                                href="#catalogs--listdatacatalogconfig"
+                                class="hash-link"
+                                aria-label="Direct link to catalogs--listdatacatalogconfig"
+                                title="Direct link to catalogs--listdatacatalogconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="controller--importablecontrollerconfig--none"
+                            >
+                              controller
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.trading.config.ImportableControllerConfig"
+                                  >ImportableControllerConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#controller--importablecontrollerconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to controller--importablecontrollerconfig--none"
+                                title="Direct link to controller--importablecontrollerconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="dict--dictstr-any-2"
+                            >
+                              dict() → dict[str, Any]<a
+                                href="#dict--dictstr-any-2"
+                                class="hash-link"
+                                aria-label="Direct link to dict() → dict[str, Any]"
+                                title="Direct link to dict() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="emulator--orderemulatorconfig--none"
+                            >
+                              emulator
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.common.config.OrderEmulatorConfig"
+                                  >OrderEmulatorConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#emulator--orderemulatorconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to emulator--orderemulatorconfig--none"
+                                title="Direct link to emulator--orderemulatorconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="exec_algorithms--listimportableexecalgorithmconfig"
+                            >
+                              exec_algorithms
+                              <em
+                                >: list[<a
+                                  href="#posei_trader.execution.config.ImportableExecAlgorithmConfig"
+                                  >ImportableExecAlgorithmConfig</a
+                                >]</em
+                              ><a
+                                href="#exec_algorithms--listimportableexecalgorithmconfig"
+                                class="hash-link"
+                                aria-label="Direct link to exec_algorithms--listimportableexecalgorithmconfig"
+                                title="Direct link to exec_algorithms--listimportableexecalgorithmconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-fully_qualified_name--str-2"
+                            >
+                              <em>classmethod</em> fully_qualified_name() →
+                              str<a
+                                href="#classmethod-fully_qualified_name--str-2"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-fully_qualified_name--str-2"
+                                title="Direct link to classmethod-fully_qualified_name--str-2"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the fully qualified name for the
+                              PoseiConfig class.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-id--str-2"
+                            >
+                              <em>property</em> id <em>: str</em
+                              ><a
+                                href="#property-id--str-2"
+                                class="hash-link"
+                                aria-label="Direct link to property-id--str-2"
+                                title="Direct link to property-id--str-2"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the hashed identifier for the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="instance_id--uuid4--none"
+                            >
+                              instance_id
+                              <em
+                                >:
+                                <a
+                                  href="../core/index.htm#posei_trader.core.UUID4"
+                                  >UUID4</a
+                                >
+                                | None</em
+                              ><a
+                                href="#instance_id--uuid4--none"
+                                class="hash-link"
+                                aria-label="Direct link to instance_id--uuid4--none"
+                                title="Direct link to instance_id--uuid4--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="json--bytes-2"
+                            >
+                              json() → bytes<a
+                                href="#json--bytes-2"
+                                class="hash-link"
+                                aria-label="Direct link to json() → bytes"
+                                title="Direct link to json() → bytes"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return serialized JSON encoded bytes.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> bytes</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="json_primitives--dictstr-any-2"
+                            >
+                              json_primitives() → dict[str, Any]<a
+                                href="#json_primitives--dictstr-any-2"
+                                class="hash-link"
+                                aria-label="Direct link to json_primitives() → dict[str, Any]"
+                                title="Direct link to json_primitives() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration with JSON primitive types as values.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-json_schema--dictstr-any-2"
+                            >
+                              <em>classmethod</em> json_schema() → dict[str,
+                              Any]<a
+                                href="#classmethod-json_schema--dictstr-any-2"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-json_schema--dictstr-any-2"
+                                title="Direct link to classmethod-json_schema--dictstr-any-2"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Generate a JSON schema for this configuration
+                              class.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="load_state--bool"
+                            >
+                              load_state <em>: bool</em
+                              ><a
+                                href="#load_state--bool"
+                                class="hash-link"
+                                aria-label="Direct link to load_state--bool"
+                                title="Direct link to load_state--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="logging--loggingconfig--none"
+                            >
+                              logging
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.common.config.LoggingConfig"
+                                  >LoggingConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#logging--loggingconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to logging--loggingconfig--none"
+                                title="Direct link to logging--loggingconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="loop_debug--bool"
+                            >
+                              loop_debug <em>: bool</em
+                              ><a
+                                href="#loop_debug--bool"
+                                class="hash-link"
+                                aria-label="Direct link to loop_debug--bool"
+                                title="Direct link to loop_debug--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="message_bus--messagebusconfig--none"
+                            >
+                              message_bus
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.common.config.MessageBusConfig"
+                                  >MessageBusConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#message_bus--messagebusconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to message_bus--messagebusconfig--none"
+                                title="Direct link to message_bus--messagebusconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-parseraw-bytes--str--any-2"
+                            >
+                              <em>classmethod</em> parse(raw: bytes | str) →
+                              Any<a
+                                href="#classmethod-parseraw-bytes--str--any-2"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-parseraw-bytes--str--any-2"
+                                title="Direct link to classmethod-parseraw-bytes--str--any-2"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return a decoded object of the given cls.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>cls</strong> (<em>type</em>) – The
+                                    type to decode to.
+                                  </li>
+                                  <li>
+                                    <strong>raw</strong> (<em>bytes</em>
+                                    <em>or</em> <em>str</em>) – The raw bytes or
+                                    JSON string to decode.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><strong>Return type:</strong> Any</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="portfolio--portfolioconfig--none"
+                            >
+                              portfolio <em>: PortfolioConfig | None</em
+                              ><a
+                                href="#portfolio--portfolioconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to portfolio--portfolioconfig--none"
+                                title="Direct link to portfolio--portfolioconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="save_state--bool"
+                            >
+                              save_state <em>: bool</em
+                              ><a
+                                href="#save_state--bool"
+                                class="hash-link"
+                                aria-label="Direct link to save_state--bool"
+                                title="Direct link to save_state--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="strategies--listimportablestrategyconfig"
+                            >
+                              strategies
+                              <em
+                                >: list[<a
+                                  href="#posei_trader.trading.config.ImportableStrategyConfig"
+                                  >ImportableStrategyConfig</a
+                                >]</em
+                              ><a
+                                href="#strategies--listimportablestrategyconfig"
+                                class="hash-link"
+                                aria-label="Direct link to strategies--listimportablestrategyconfig"
+                                title="Direct link to strategies--listimportablestrategyconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="streaming--streamingconfig--none"
+                            >
+                              streaming
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.persistence.config.StreamingConfig"
+                                  >StreamingConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#streaming--streamingconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to streaming--streamingconfig--none"
+                                title="Direct link to streaming--streamingconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="timeout_connection--positivefloat"
+                            >
+                              timeout_connection <em>: PositiveFloat</em
+                              ><a
+                                href="#timeout_connection--positivefloat"
+                                class="hash-link"
+                                aria-label="Direct link to timeout_connection--positivefloat"
+                                title="Direct link to timeout_connection--positivefloat"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="timeout_disconnection--positivefloat"
+                            >
+                              timeout_disconnection <em>: PositiveFloat</em
+                              ><a
+                                href="#timeout_disconnection--positivefloat"
+                                class="hash-link"
+                                aria-label="Direct link to timeout_disconnection--positivefloat"
+                                title="Direct link to timeout_disconnection--positivefloat"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="timeout_portfolio--positivefloat"
+                            >
+                              timeout_portfolio <em>: PositiveFloat</em
+                              ><a
+                                href="#timeout_portfolio--positivefloat"
+                                class="hash-link"
+                                aria-label="Direct link to timeout_portfolio--positivefloat"
+                                title="Direct link to timeout_portfolio--positivefloat"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="timeout_post_stop--positivefloat"
+                            >
+                              timeout_post_stop <em>: PositiveFloat</em
+                              ><a
+                                href="#timeout_post_stop--positivefloat"
+                                class="hash-link"
+                                aria-label="Direct link to timeout_post_stop--positivefloat"
+                                title="Direct link to timeout_post_stop--positivefloat"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="timeout_reconciliation--positivefloat"
+                            >
+                              timeout_reconciliation <em>: PositiveFloat</em
+                              ><a
+                                href="#timeout_reconciliation--positivefloat"
+                                class="hash-link"
+                                aria-label="Direct link to timeout_reconciliation--positivefloat"
+                                title="Direct link to timeout_reconciliation--positivefloat"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="timeout_shutdown--positivefloat"
+                            >
+                              timeout_shutdown <em>: PositiveFloat</em
+                              ><a
+                                href="#timeout_shutdown--positivefloat"
+                                class="hash-link"
+                                aria-label="Direct link to timeout_shutdown--positivefloat"
+                                title="Direct link to timeout_shutdown--positivefloat"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="validate--bool-2"
+                            >
+                              validate() → bool<a
+                                href="#validate--bool-2"
+                                class="hash-link"
+                                aria-label="Direct link to validate() → bool"
+                                title="Direct link to validate() → bool"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return whether the configuration can be
+                              represented as valid JSON.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> bool</li>
+                            </ul>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-backtestrunconfig"
+                            >
+                              <em>class</em> BacktestRunConfig<a
+                                href="#class-backtestrunconfig"
+                                class="hash-link"
+                                aria-label="Direct link to class-backtestrunconfig"
+                                title="Direct link to class-backtestrunconfig"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.common.config.NautilusConfig"
+                                ><code>PoseiConfig</code></a
+                              >
+                            </p>
+                            <p>
+                              Represents the configuration for one specific
+                              backtest run.
+                            </p>
+                            <p>
+                              This includes a backtest engine with its actors
+                              and strategies, with the external inputs of venues
+                              and data.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>venues</strong> (<em>list</em>
+                                    <em>[</em
+                                    ><a
+                                      href="#posei_trader.backtest.config.BacktestVenueConfig"
+                                      ><em>BacktestVenueConfig</em></a
+                                    >
+                                    <em>]</em>) – The venue configurations for
+                                    the backtest run.
+                                  </li>
+                                  <li>
+                                    <strong>data</strong> (<em>list</em>
+                                    <em>[</em
+                                    ><a
+                                      href="#posei_trader.backtest.config.BacktestDataConfig"
+                                      ><em>BacktestDataConfig</em></a
+                                    >
+                                    <em>]</em>) – The data configurations for
+                                    the backtest run.
+                                  </li>
+                                  <li>
+                                    <strong>engine</strong> (<a
+                                      href="#posei_trader.backtest.config.BacktestEngineConfig"
+                                      ><em>BacktestEngineConfig</em></a
+                                    >) – The backtest engine configuration (the
+                                    core system kernel).
+                                  </li>
+                                  <li>
+                                    <strong>chunk_size</strong> (<em>int</em>
+                                    <em>,</em> <em>optional</em>) – The number
+                                    of data points to process in each chunk
+                                    during streaming mode. If None, the backtest
+                                    will run without streaming, loading all data
+                                    at once.
+                                  </li>
+                                  <li>
+                                    <strong>raise_exception</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default False</em>) – If
+                                    exceptions during an engine build or run
+                                    should be raised to interrupt the nodes
+                                    process.
+                                  </li>
+                                  <li>
+                                    <strong>dispose_on_completion</strong> (<em
+                                      >bool</em
+                                    >
+                                    <em>,</em> <em>default True</em>) – If the
+                                    backtest engine should be disposed on
+                                    completion of the run. If True, then will
+                                    drop data and all state. If False, then will
+                                    <em>only</em> drop data.
+                                  </li>
+                                  <li>
+                                    <strong>start</strong> (<em>datetime</em>
+                                    <em>or</em> <em>str</em> <em>or</em>
+                                    <em>int</em> <em>,</em> <em>optional</em>) –
+                                    The start datetime (UTC) for the backtest
+                                    run. If <code>None</code> engine runs from
+                                    the start of the data.
+                                  </li>
+                                  <li>
+                                    <strong>end</strong> (<em>datetime</em>
+                                    <em>or</em> <em>str</em> <em>or</em>
+                                    <em>int</em> <em>,</em> <em>optional</em>) –
+                                    The end datetime (UTC) for the backtest run.
+                                    If <code>None</code> engine runs to the end
+                                    of the data.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="venues--listbacktestvenueconfig"
+                            >
+                              venues
+                              <em
+                                >: list[<a
+                                  href="#posei_trader.backtest.config.BacktestVenueConfig"
+                                  >BacktestVenueConfig</a
+                                >]</em
+                              ><a
+                                href="#venues--listbacktestvenueconfig"
+                                class="hash-link"
+                                aria-label="Direct link to venues--listbacktestvenueconfig"
+                                title="Direct link to venues--listbacktestvenueconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="data--listbacktestdataconfig"
+                            >
+                              data
+                              <em
+                                >: list[<a
+                                  href="#posei_trader.backtest.config.BacktestDataConfig"
+                                  >BacktestDataConfig</a
+                                >]</em
+                              ><a
+                                href="#data--listbacktestdataconfig"
+                                class="hash-link"
+                                aria-label="Direct link to data--listbacktestdataconfig"
+                                title="Direct link to data--listbacktestdataconfig"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="engine--backtestengineconfig--none"
+                            >
+                              engine
+                              <em
+                                >:
+                                <a
+                                  href="#posei_trader.backtest.config.BacktestEngineConfig"
+                                  >BacktestEngineConfig</a
+                                >
+                                | None</em
+                              ><a
+                                href="#engine--backtestengineconfig--none"
+                                class="hash-link"
+                                aria-label="Direct link to engine--backtestengineconfig--none"
+                                title="Direct link to engine--backtestengineconfig--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="chunk_size--int--none"
+                            >
+                              chunk_size <em>: int | None</em
+                              ><a
+                                href="#chunk_size--int--none"
+                                class="hash-link"
+                                aria-label="Direct link to chunk_size--int--none"
+                                title="Direct link to chunk_size--int--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="raise_exception--bool"
+                            >
+                              raise_exception <em>: bool</em
+                              ><a
+                                href="#raise_exception--bool"
+                                class="hash-link"
+                                aria-label="Direct link to raise_exception--bool"
+                                title="Direct link to raise_exception--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="dispose_on_completion--bool"
+                            >
+                              dispose_on_completion <em>: bool</em
+                              ><a
+                                href="#dispose_on_completion--bool"
+                                class="hash-link"
+                                aria-label="Direct link to dispose_on_completion--bool"
+                                title="Direct link to dispose_on_completion--bool"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="start--str--int--none"
+                            >
+                              start <em>: str | int | None</em
+                              ><a
+                                href="#start--str--int--none"
+                                class="hash-link"
+                                aria-label="Direct link to start--str--int--none"
+                                title="Direct link to start--str--int--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="end--str--int--none"
+                            >
+                              end <em>: str | int | None</em
+                              ><a
+                                href="#end--str--int--none"
+                                class="hash-link"
+                                aria-label="Direct link to end--str--int--none"
+                                title="Direct link to end--str--int--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="dict--dictstr-any-3"
+                            >
+                              dict() → dict[str, Any]<a
+                                href="#dict--dictstr-any-3"
+                                class="hash-link"
+                                aria-label="Direct link to dict() → dict[str, Any]"
+                                title="Direct link to dict() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-fully_qualified_name--str-3"
+                            >
+                              <em>classmethod</em> fully_qualified_name() →
+                              str<a
+                                href="#classmethod-fully_qualified_name--str-3"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-fully_qualified_name--str-3"
+                                title="Direct link to classmethod-fully_qualified_name--str-3"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the fully qualified name for the
+                              PoseiConfig class.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-id--str-3"
+                            >
+                              <em>property</em> id <em>: str</em
+                              ><a
+                                href="#property-id--str-3"
+                                class="hash-link"
+                                aria-label="Direct link to property-id--str-3"
+                                title="Direct link to property-id--str-3"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the hashed identifier for the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="json--bytes-3"
+                            >
+                              json() → bytes<a
+                                href="#json--bytes-3"
+                                class="hash-link"
+                                aria-label="Direct link to json() → bytes"
+                                title="Direct link to json() → bytes"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return serialized JSON encoded bytes.</p>
+                            <ul>
+                              <li><strong>Return type:</strong> bytes</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="json_primitives--dictstr-any-3"
+                            >
+                              json_primitives() → dict[str, Any]<a
+                                href="#json_primitives--dictstr-any-3"
+                                class="hash-link"
+                                aria-label="Direct link to json_primitives() → dict[str, Any]"
+                                title="Direct link to json_primitives() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration with JSON primitive types as values.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-json_schema--dictstr-any-3"
+                            >
+                              <em>classmethod</em> json_schema() → dict[str,
+                              Any]<a
+                                href="#classmethod-json_schema--dictstr-any-3"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-json_schema--dictstr-any-3"
+                                title="Direct link to classmethod-json_schema--dictstr-any-3"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Generate a JSON schema for this configuration
+                              class.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-parseraw-bytes--str--any-3"
+                            >
+                              <em>classmethod</em> parse(raw: bytes | str) →
+                              Any<a
+                                href="#classmethod-parseraw-bytes--str--any-3"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-parseraw-bytes--str--any-3"
+                                title="Direct link to classmethod-parseraw-bytes--str--any-3"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Return a decoded object of the given cls.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>cls</strong> (<em>type</em>) – The
+                                    type to decode to.
+                                  </li>
+                                  <li>
+                                    <strong>raw</strong> (<em>bytes</em>
+                                    <em>or</em> <em>str</em>) – The raw bytes or
+                                    JSON string to decode.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li><strong>Return type:</strong> Any</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="validate--bool-3"
+                            >
+                              validate() → bool<a
+                                href="#validate--bool-3"
+                                class="hash-link"
+                                aria-label="Direct link to validate() → bool"
+                                title="Direct link to validate() → bool"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return whether the configuration can be
+                              represented as valid JSON.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> bool</li>
+                            </ul>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-simulationmoduleconfig"
+                            >
+                              <em>class</em> SimulationModuleConfig<a
+                                href="#class-simulationmoduleconfig"
+                                class="hash-link"
+                                aria-label="Direct link to class-simulationmoduleconfig"
+                                title="Direct link to class-simulationmoduleconfig"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.common.config.ActorConfig"
+                                ><code>ActorConfig</code></a
+                              >
+                            </p>
+                            <p>
+                              Configuration for
+                              <code>SimulationModule</code> instances.
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="component_id--componentid--none"
+                            >
+                              component_id
+                              <em
+                                >:
+                                <a
+                                  href="../model/identifiers/index.htm#posei_trader.model.identifiers.ComponentId"
+                                  >ComponentId</a
+                                >
+                                | None</em
+                              ><a
+                                href="#component_id--componentid--none"
+                                class="hash-link"
+                                aria-label="Direct link to component_id--componentid--none"
+                                title="Direct link to component_id--componentid--none"
+                                >​</a
+                              >
+                            </h4>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="dict--dictstr-any-4"
+                            >
+                              dict() → dict[str, Any]<a
+                                href="#dict--dictstr-any-4"
+                                class="hash-link"
+                                aria-label="Direct link to dict() → dict[str, Any]"
+                                title="Direct link to dict() → dict[str, Any]"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return a dictionary representation of the
+                              configuration.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Return type:</strong> dict[str, Any]
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="classmethod-fully_qualified_name--str-4"
+                            >
+                              <em>classmethod</em> fully_qualified_name() →
+                              str<a
+                                href="#classmethod-fully_qualified_name--str-4"
+                                class="hash-link"
+                                aria-label="Direct link to classmethod-fully_qualified_name--str-4"
+                                title="Direct link to classmethod-fully_qualified_name--str-4"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Return the fully qualified name for the
+                              PoseiConfig class.
+                            </p>
+                            <ul>
+                              <li><strong>Return type:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="property-id--str-4"
+                            >
+                              <em>property</em> id <em>: str</em
+                              ><a
+                                href="#property-id--str-4"
+                                class="hash-link"
+                                aria-label="Direct link to property-id--str-4"
+                                title="Direct link to property-id--str-4"
+                              ></a>
+                            </h4>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

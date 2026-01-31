@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["get_project_root_path","get_test_data_path","get_tests_root_path","get_workspace_root_path"]};

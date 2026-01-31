@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["adapter","config","engine","ids_generator"]};

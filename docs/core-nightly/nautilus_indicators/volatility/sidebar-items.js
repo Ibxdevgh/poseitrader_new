@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["atr","dc","fuzzy","kc","kp","rvi","vr"]};

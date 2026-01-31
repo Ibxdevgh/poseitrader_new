@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["burn","mint","pool_created","swap"]};

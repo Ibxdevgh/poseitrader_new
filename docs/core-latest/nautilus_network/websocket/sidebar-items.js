@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Consumer"],"struct":["WebSocketClient","WebSocketConfig"],"type":["MessageReader"]};

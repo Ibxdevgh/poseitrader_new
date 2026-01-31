@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["combine_data_files","combine_parquet_files","min_max_from_parquet_metadata","write_batch_to_parquet","write_batches_to_parquet"]};

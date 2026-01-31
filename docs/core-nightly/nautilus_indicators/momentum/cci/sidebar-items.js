@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["fast_mad_with_mean"],"struct":["CommodityChannelIndex"]};

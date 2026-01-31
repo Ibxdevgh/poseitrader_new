@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["amat","aroon","bb","bias","cci","cmo","dm","kvo","macd","obv","pressure","psl","roc","rsi","stochastics","swings","vhf"]};

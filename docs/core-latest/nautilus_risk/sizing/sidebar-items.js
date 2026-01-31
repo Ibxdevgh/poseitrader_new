@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["calculate_fixed_risk_position_size"]};

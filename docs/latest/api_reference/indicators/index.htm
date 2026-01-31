@@ -1,0 +1,2708 @@
+﻿<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="docs-wrapper plugin-docs plugin-id-default docs-version-latest docs-doc-page docs-doc-id-api_reference/indicators"
+  data-has-hydrated="false"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="Docusaurus v3.8.1" />
+    <title data-rh="true">Indicators | PoseiTrader Documentation</title>
+    <meta
+      data-rh="true"
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+    <meta
+      data-rh="true"
+      property="og:image"
+      content="https://poseitrader.io/docs/img/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      name="twitter:image"
+      content="https://poseitrader.io/docs/img/docusaurus-social-card.jpg"
+    />
+    <meta
+      data-rh="true"
+      property="og:url"
+      content="https://poseitrader.io/docs/latest/api_reference/indicators"
+    />
+    <meta data-rh="true" property="og:locale" content="en" />
+    <meta data-rh="true" name="docusaurus_locale" content="en" />
+    <meta data-rh="true" name="docsearch:language" content="en" />
+    <meta
+      data-rh="true"
+      name="keywords"
+      content="Open-source trading platform, Algorithmic trading software, Event-driven backtesting, Live trading with no code changes, Trade any asset class, Low-latency trading execution, Python API for trading strategies, Custom market data integration, Futures and options trading, Crypto spot and derivatives trading, Equities trading simulation, FX spot trading, Sports betting markets trading, Fast backtesting strategies, Advanced trading orders, Rust-based trading platform, High-performance trading system, Nanosecond resolution market simulation, Trading across multiple venues, Trading platform for hedge funds, Seamless data integration, Customizable trading strategies, AI and ML trading strategies, Nautilus trading platform, Multi-venue trading, Unlimited backtesting strategies, Fast trading execution solutions, Realistic market simulations, Seamless trading API integration, Posei Trader Documentation, Docs, poseitrader Docs"
+    />
+    <meta data-rh="true" name="title" content="PoseiTrader Documentation" />
+    <meta data-rh="true" name="og:title" content="PoseiTrader Documentation" />
+    <meta
+      data-rh="true"
+      name="og:description"
+      content="poseitrader is a high-performance platform for automating trading strategies, built on the powerful Nautilus framework for backtesting and real-time trading."
+    />
+    <meta data-rh="true" name="og:image" content="img/preview.png" />
+    <meta
+      data-rh="true"
+      name="og:url"
+      content="https://poseitrader.io/docs"
+    />
+    <meta data-rh="true" name="docusaurus_version" content="latest" />
+    <meta data-rh="true" name="docusaurus_tag" content="docs-default-latest" />
+    <meta data-rh="true" name="docsearch:version" content="latest" />
+    <meta
+      data-rh="true"
+      name="docsearch:docusaurus_tag"
+      content="docs-default-latest"
+    />
+    <meta
+      data-rh="true"
+      property="og:title"
+      content="Indicators | PoseiTrader Documentation"
+    />
+    <meta
+      data-rh="true"
+      name="description"
+      content="The indicator subpackage provides a set of efficient indicators and analyzers."
+    />
+    <meta
+      data-rh="true"
+      property="og:description"
+      content="The indicator subpackage provides a set of efficient indicators and analyzers."
+    />
+    <link data-rh="true" rel="icon" href="../../../img/shell.ico" />
+    <link data-rh="true" rel="canonical" href="index.htm" />
+    <link data-rh="true" rel="alternate" href="index.htm" hreflang="en" />
+    <link
+      data-rh="true"
+      rel="alternate"
+      href="index.htm"
+      hreflang="x-default"
+    />
+    <link
+      data-rh="true"
+      rel="preconnect"
+      href="https://CWRKEEL01M-dsn.algolia.net"
+      crossorigin="anonymous"
+    />
+    <script data-rh="true" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Python API",
+            "item": "https://poseitrader.io/docs/latest/api_reference/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Indicators",
+            "item": "https://poseitrader.io/docs/latest/api_reference/indicators"
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="PoseiTrader Documentation"
+      href="../../../opensearch.xml"
+    />
+    <script>
+      !(function () {
+        var t = window.location.pathname;
+        if (
+          t.startsWith("/docs") &&
+          !t.startsWith("/docs/latest") &&
+          !t.startsWith("/docs/nightly")
+        ) {
+          var s = t.replace("/docs", "/docs/latest");
+          window.location.href = s;
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TR4XK597XK"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-TR4XK597XK", { anonymize_ip: !0 });
+    </script>
+    <link rel="stylesheet" href="../../../assets/css/styles.0f0f692e.css" />
+    <script
+      src="../../../assets/js/runtime~main.92b727d5.js"
+      defer="defer"
+    ></script>
+    <script src="../../../assets/js/main.1cd42d85.js" defer="defer"></script>
+  </head>
+  <body class="navigation-with-keyboard">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol id="theme-svg-external-link" viewbox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <script>
+      !(function () {
+        var t = "dark";
+        var e =
+          (function () {
+            try {
+              return new URLSearchParams(window.location.search).get(
+                "docusaurus-theme"
+              );
+            } catch (t) {}
+          })() ||
+          (function () {
+            try {
+              return window.localStorage.getItem("theme");
+            } catch (t) {}
+          })();
+        document.documentElement.setAttribute("data-theme", e || t),
+          document.documentElement.setAttribute("data-theme-choice", e || t);
+      })(),
+        (function () {
+          try {
+            const c = new URLSearchParams(window.location.search).entries();
+            for (var [t, e] of c)
+              if (t.startsWith("docusaurus-data-")) {
+                var a = t.replace("docusaurus-data-", "data-");
+                document.documentElement.setAttribute(a, e);
+              }
+          } catch (t) {}
+        })();
+    </script>
+    <div id="__docusaurus">
+      <div role="region" aria-label="Skip to main content">
+        <a
+          class="skipToContent_fXgn"
+          href="#__docusaurus_skipToContent_fallback"
+          >Skip to main content</a
+        >
+      </div>
+      <nav
+        aria-label="Main"
+        class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"
+      >
+        <div class="navbar__inner">
+          <div class="theme-layout-navbar-left navbar__items">
+            <button
+              aria-label="Toggle navigation bar"
+              aria-expanded="false"
+              class="navbar__toggle clean-btn"
+              type="button"
+            >
+              <svg
+                width="30"
+                height="30"
+                viewbox="0 0 30 30"
+                aria-hidden="true"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                  d="M4 7h22M4 15h22M4 23h22"
+                ></path>
+              </svg></button
+            ><a
+              href="../../../../index.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__brand"
+              ><div class="navbar__logo">
+                <img
+                  src="../../../img/nt-black-large.webp"
+                  alt="poseitrader Logo"
+                  class="themedComponent_mlkZ themedComponent--light_NVdE"
+                /><img
+                  src="../../../img/nt-white-large.webp"
+                  alt="poseitrader Logo"
+                  class="themedComponent_mlkZ themedComponent--dark_xIcU"
+                />
+              </div>
+              <b class="navbar__title text--truncate"></b
+            ></a>
+            <div class="navbar__item dropdown dropdown--hoverable">
+              <a
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+                role="button"
+                class="navbar__link"
+                >Version</a
+              >
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    aria-current="page"
+                    class="dropdown__link dropdown__link--active"
+                    href="../../index.htm"
+                    >latest</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown__link" href="../../../nightly/index.htm"
+                    >nightly</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="navbarSearchContainer_Bca1">
+              <button
+                type="button"
+                class="DocSearch DocSearch-Button"
+                aria-label="Search (Command+K)"
+              >
+                <span class="DocSearch-Button-Container"
+                  ><svg
+                    width="20"
+                    height="20"
+                    class="DocSearch-Search-Icon"
+                    viewbox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                      stroke="currentColor"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path></svg
+                  ><span class="DocSearch-Button-Placeholder"
+                    >Search</span
+                  ></span
+                ><span class="DocSearch-Button-Keys"></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="theme-layout-navbar-right navbar__items navbar__items--right"
+          >
+            <a
+              href="https://github.com/poseitrader/posei_trader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-github-link common-social"
+              aria-label="GitHub repository"
+            ></a
+            > <a
+              href="https://twitter.com/poseitrader"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="navbar__item navbar__link header-x-link common-social"
+              aria-label="X"
+            ></a>
+             
+          </div>
+        </div>
+        <div role="presentation" class="navbar-sidebar__backdrop"></div>
+      </nav>
+      <div
+        id="__docusaurus_skipToContent_fallback"
+        class="theme-layout-main main-wrapper mainWrapper_z2l0"
+      >
+        <div class="docsWrapper_hBAB">
+          <button
+            aria-label="Scroll back to top"
+            class="clean-btn theme-back-to-top-button backToTopButton_sjWU"
+            type="button"
+          ></button>
+          <div class="docRoot_UBD9">
+            <aside class="theme-doc-sidebar-container docSidebarContainer_YfHR">
+              <div class="sidebarViewport_aRkj">
+                <div class="sidebar_njMd sidebarWithHideableNavbar_wUlq">
+                  <a
+                    href="../../../../index.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                    class="sidebarLogo_isFc"
+                    ><img
+                      src="../../../img/nt-black-large.webp"
+                      alt="poseitrader Logo"
+                      class="themedComponent_mlkZ themedComponent--light_NVdE" /><img
+                      src="../../../img/nt-white-large.webp"
+                      alt="poseitrader Logo"
+                      class="themedComponent_mlkZ themedComponent--dark_xIcU" /><b></b
+                  ></a>
+                  <nav
+                    aria-label="Docs sidebar"
+                    class="menu thin-scrollbar menu_SIkG"
+                  >
+                    <ul class="theme-doc-sidebar-menu menu__list">
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a class="menu__link" href="../../index.htm"
+                          >PoseiTrader Documentation</a
+                        >
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../getting_started/index.htm"
+                            >Getting Started</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Getting Started&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../concepts/index.htm"
+                            >Concepts</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Concepts&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../tutorials/index.htm"
+                            >Tutorials</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Tutorials&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../integrations/index.htm"
+                            >Integrations</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Integrations&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist menu__link--active"
+                            href="../index.htm"
+                            >Python API</a
+                          ><button
+                            aria-label="Collapse sidebar category &#x27;Python API&#x27;"
+                            aria-expanded="true"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                        <ul class="menu__list">
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../accounting/index.htm"
+                              >Accounting</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"
+                          >
+                            <div class="menu__list-item-collapsible">
+                              <a
+                                class="menu__link menu__link--sublist"
+                                tabindex="0"
+                                href="../adapters/index.htm"
+                                >Adapters</a
+                              ><button
+                                aria-label="Expand sidebar category &#x27;Adapters&#x27;"
+                                aria-expanded="false"
+                                type="button"
+                                class="clean-btn menu__caret"
+                              ></button>
+                            </div>
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../analysis/index.htm"
+                              >Analysis</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../backtest/index.htm"
+                              >Backtest</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../cache/index.htm"
+                              >Cache</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../common/index.htm"
+                              >Common</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../config/index.htm"
+                              >Config</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../core/index.htm"
+                              >Core</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../data/index.htm"
+                              >Data</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../execution/index.htm"
+                              >Execution</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link menu__link--active"
+                              aria-current="page"
+                              tabindex="0"
+                              href="index.htm"
+                              >Indicators</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../live/index.htm"
+                              >Live</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"
+                          >
+                            <div class="menu__list-item-collapsible">
+                              <a
+                                class="menu__link menu__link--sublist"
+                                tabindex="0"
+                                href="../model/index.htm"
+                                >Model</a
+                              ><button
+                                aria-label="Expand sidebar category &#x27;Model&#x27;"
+                                aria-expanded="false"
+                                type="button"
+                                class="clean-btn menu__caret"
+                              ></button>
+                            </div>
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../persistence/index.htm"
+                              >Persistence</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../portfolio/index.htm"
+                              >Portfolio</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../risk/index.htm"
+                              >Risk</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../serialization/index.htm"
+                              >Serialization</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../system/index.htm"
+                              >System</a
+                            >
+                          </li>
+                          <li
+                            class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"
+                          >
+                            <a
+                              class="menu__link"
+                              tabindex="0"
+                              href="../trading/index.htm"
+                              >Trading</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"
+                      >
+                        <a
+                          href="../../../core-latest/index.htm"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="menu__link menuExternalLink_NmtK"
+                          >Rust API<svg
+                            width="13.5"
+                            height="13.5"
+                            aria-hidden="true"
+                            class="iconExternalLink_nPIU"
+                          >
+                            <use href="#theme-svg-external-link"></use></svg
+                        ></a>
+                      </li>
+                      <li
+                        class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                      >
+                        <div class="menu__list-item-collapsible">
+                          <a
+                            class="menu__link menu__link--sublist"
+                            href="../../developer_guide/index.htm"
+                            >Developer Guide</a
+                          ><button
+                            aria-label="Expand sidebar category &#x27;Developer Guide&#x27;"
+                            aria-expanded="false"
+                            type="button"
+                            class="clean-btn menu__caret"
+                          ></button>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </aside>
+            <main class="docMainContainer_TBSr">
+              <div class="container padding-top--md padding-bottom--lg">
+                <div>
+                  <div class="row">
+                    <div class="col docItemCol_VOVn">
+                      <div class="docItemContainer_Djhp">
+                        <article>
+                          <nav
+                            class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl"
+                            aria-label="Breadcrumbs"
+                          >
+                            <ul class="breadcrumbs">
+                              <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="../index.htm"
+                                  ><span>Python API</span></a
+                                >
+                              </li>
+                              <li
+                                class="breadcrumbs__item breadcrumbs__item--active"
+                              >
+                                <span class="breadcrumbs__link"
+                                  >Indicators</span
+                                >
+                              </li>
+                            </ul>
+                          </nav>
+                          <span
+                            class="theme-doc-version-badge badge badge--secondary"
+                            >Version: latest</span
+                          >
+                          <div
+                            class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"
+                          >
+                            <button
+                              type="button"
+                              class="clean-btn tocCollapsibleButton_TO0P"
+                            >
+                              On this page
+                            </button>
+                          </div>
+                          <div class="theme-doc-markdown markdown">
+                            <header><h1>Indicators</h1></header>
+                            <p>
+                              The indicator subpackage provides a set of
+                              efficient indicators and analyzers.
+                            </p>
+                            <p>
+                              These are classes which can be used for signal
+                              discovery and filtering. The idea is to use the
+                              provided indicators as is, or as inspiration for a
+                              trader to implement their own proprietary
+                              indicator algorithms with the platform.
+                            </p>
+                            <p>
+                              <a
+                                id="module-posei_trader.indicators.average.ama"
+                              ></a>
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-adaptivemovingaverage"
+                            >
+                              <em>class</em> AdaptiveMovingAverage<a
+                                href="#class-adaptivemovingaverage"
+                                class="hash-link"
+                                aria-label="Direct link to class-adaptivemovingaverage"
+                                title="Direct link to class-adaptivemovingaverage"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.indicators.average.moving_average.MovingAverage"
+                                ><code>MovingAverage</code></a
+                              >
+                            </p>
+                            <p>
+                              AdaptiveMovingAverage(int period_er, int
+                              period_alpha_fast, int period_alpha_slow,
+                              PriceType price_type=PriceType.LAST) An indicator
+                              which calculates an adaptive moving average (AMA)
+                              across a rolling window. Developed by Perry
+                              Kaufman, the AMA is a moving average designed to
+                              account for market noise and volatility. The AMA
+                              will closely follow prices when the price swings
+                              are relatively small and the noise is low. The AMA
+                              will increase lag when the price swings increase.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>period_er</strong> (<em>int</em>) –
+                                    The period for the internal EfficiencyRatio
+                                    indicator (&gt; 0).
+                                  </li>
+                                  <li>
+                                    <strong>period_alpha_fast</strong>
+                                    (<em>int</em>) – The period for the fast
+                                    smoothing constant (&gt; 0).
+                                  </li>
+                                  <li>
+                                    <strong>period_alpha_slow</strong>
+                                    (<em>int</em>) – The period for the slow
+                                    smoothing constant (&gt; 0 &lt; alpha_fast).
+                                  </li>
+                                  <li>
+                                    <strong>price_type</strong>
+                                    (<em>PriceType</em>) – The specified price
+                                    type for extracting values from quotes.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="alpha_diff"
+                            >
+                              alpha_diff<a
+                                href="#alpha_diff"
+                                class="hash-link"
+                                aria-label="Direct link to alpha_diff"
+                                title="Direct link to alpha_diff"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The alpha difference value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="alpha_fast"
+                            >
+                              alpha_fast<a
+                                href="#alpha_fast"
+                                class="hash-link"
+                                aria-label="Direct link to alpha_fast"
+                                title="Direct link to alpha_fast"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The alpha fast value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="alpha_slow"
+                            >
+                              alpha_slow<a
+                                href="#alpha_slow"
+                                class="hash-link"
+                                aria-label="Direct link to alpha_slow"
+                                title="Direct link to alpha_slow"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The alpha slow value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="count"
+                            >
+                              count<a
+                                href="#count"
+                                class="hash-link"
+                                aria-label="Direct link to count"
+                                title="Direct link to count"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The count of inputs received by the indicator.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> int</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_barself-bar-bar--void"
+                            >
+                              handle_bar(self, Bar bar) → void<a
+                                href="#handle_barself-bar-bar--void"
+                                class="hash-link"
+                                aria-label="Direct link to handle_bar(self, Bar bar) → void"
+                                title="Direct link to handle_bar(self, Bar bar) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Update the indicator with the given bar.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>bar</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.Bar"
+                                  ><em>Bar</em></a
+                                >) – The update bar to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_quote_tickself-quotetick-tick--void"
+                            >
+                              handle_quote_tick(self, QuoteTick tick) → void<a
+                                href="#handle_quote_tickself-quotetick-tick--void"
+                                class="hash-link"
+                                aria-label="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                title="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given quote tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.QuoteTick"
+                                  ><em>QuoteTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_trade_tickself-tradetick-tick--void"
+                            >
+                              handle_trade_tick(self, TradeTick tick) → void<a
+                                href="#handle_trade_tickself-tradetick-tick--void"
+                                class="hash-link"
+                                aria-label="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                title="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given trade tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
+                                  ><em>TradeTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="has_inputs"
+                            >
+                              has_inputs<a
+                                href="#has_inputs"
+                                class="hash-link"
+                                aria-label="Direct link to has_inputs"
+                                title="Direct link to has_inputs"
+                                >​</a
+                              >
+                            </h4>
+                            <p>If the indicator has received inputs.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="initialized"
+                            >
+                              initialized<a
+                                href="#initialized"
+                                class="hash-link"
+                                aria-label="Direct link to initialized"
+                                title="Direct link to initialized"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              If the indicator is warmed up and initialized.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="name"
+                            >
+                              name<a
+                                href="#name"
+                                class="hash-link"
+                                aria-label="Direct link to name"
+                                title="Direct link to name"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The name of the indicator.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period"
+                            >
+                              period<a
+                                href="#period"
+                                class="hash-link"
+                                aria-label="Direct link to period"
+                                title="Direct link to period"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The moving average period.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period_alpha_fast"
+                            >
+                              period_alpha_fast<a
+                                href="#period_alpha_fast"
+                                class="hash-link"
+                                aria-label="Direct link to period_alpha_fast"
+                                title="Direct link to period_alpha_fast"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The period of the fast smoothing constant.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period_alpha_slow"
+                            >
+                              period_alpha_slow<a
+                                href="#period_alpha_slow"
+                                class="hash-link"
+                                aria-label="Direct link to period_alpha_slow"
+                                title="Direct link to period_alpha_slow"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The period of the slow smoothing constant.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period_er"
+                            >
+                              period_er<a
+                                href="#period_er"
+                                class="hash-link"
+                                aria-label="Direct link to period_er"
+                                title="Direct link to period_er"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The period of the internal EfficiencyRatio
+                              indicator.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="price_type"
+                            >
+                              price_type<a
+                                href="#price_type"
+                                class="hash-link"
+                                aria-label="Direct link to price_type"
+                                title="Direct link to price_type"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The specified price type for extracting values
+                              from quotes.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="resetself--void"
+                            >
+                              reset(self) → void<a
+                                href="#resetself--void"
+                                class="hash-link"
+                                aria-label="Direct link to reset(self) → void"
+                                title="Direct link to reset(self) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Reset the indicator.</p>
+                            <p>
+                              All stateful fields are reset to their initial
+                              value.
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_rawself-double-value--void"
+                            >
+                              update_raw(self, double value) → void<a
+                                href="#update_rawself-double-value--void"
+                                class="hash-link"
+                                aria-label="Direct link to update_raw(self, double value) → void"
+                                title="Direct link to update_raw(self, double value) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given raw value.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>value</strong> (<em>double</em>) – The
+                                update value.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="value"
+                            >
+                              value<a
+                                href="#value"
+                                class="hash-link"
+                                aria-label="Direct link to value"
+                                title="Direct link to value"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The current output value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <p>
+                              <a
+                                id="module-posei_trader.indicators.average.ema"
+                              ></a>
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-exponentialmovingaverage"
+                            >
+                              <em>class</em> ExponentialMovingAverage<a
+                                href="#class-exponentialmovingaverage"
+                                class="hash-link"
+                                aria-label="Direct link to class-exponentialmovingaverage"
+                                title="Direct link to class-exponentialmovingaverage"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.indicators.average.moving_average.MovingAverage"
+                                ><code>MovingAverage</code></a
+                              >
+                            </p>
+                            <p>
+                              ExponentialMovingAverage(int period, PriceType
+                              price_type=PriceType.LAST) An indicator which
+                              calculates an exponential moving average across a
+                              rolling window.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>period</strong> (<em>int</em>) – The
+                                    rolling window period for the indicator
+                                    (&gt; 0).
+                                  </li>
+                                  <li>
+                                    <strong>price_type</strong>
+                                    (<em>PriceType</em>) – The specified price
+                                    type for extracting values from quotes.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If period is not
+                                positive (&gt; 0).
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="alpha"
+                            >
+                              alpha<a
+                                href="#alpha"
+                                class="hash-link"
+                                aria-label="Direct link to alpha"
+                                title="Direct link to alpha"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The moving average alpha value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="count-1"
+                            >
+                              count<a
+                                href="#count-1"
+                                class="hash-link"
+                                aria-label="Direct link to count"
+                                title="Direct link to count"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The count of inputs received by the indicator.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> int</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_barself-bar-bar--void-1"
+                            >
+                              handle_bar(self, Bar bar) → void<a
+                                href="#handle_barself-bar-bar--void-1"
+                                class="hash-link"
+                                aria-label="Direct link to handle_bar(self, Bar bar) → void"
+                                title="Direct link to handle_bar(self, Bar bar) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Update the indicator with the given bar.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>bar</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.Bar"
+                                  ><em>Bar</em></a
+                                >) – The update bar to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_quote_tickself-quotetick-tick--void-1"
+                            >
+                              handle_quote_tick(self, QuoteTick tick) → void<a
+                                href="#handle_quote_tickself-quotetick-tick--void-1"
+                                class="hash-link"
+                                aria-label="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                title="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given quote tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.QuoteTick"
+                                  ><em>QuoteTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_trade_tickself-tradetick-tick--void-1"
+                            >
+                              handle_trade_tick(self, TradeTick tick) → void<a
+                                href="#handle_trade_tickself-tradetick-tick--void-1"
+                                class="hash-link"
+                                aria-label="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                title="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given trade tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
+                                  ><em>TradeTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="has_inputs-1"
+                            >
+                              has_inputs<a
+                                href="#has_inputs-1"
+                                class="hash-link"
+                                aria-label="Direct link to has_inputs"
+                                title="Direct link to has_inputs"
+                                >​</a
+                              >
+                            </h4>
+                            <p>If the indicator has received inputs.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="initialized-1"
+                            >
+                              initialized<a
+                                href="#initialized-1"
+                                class="hash-link"
+                                aria-label="Direct link to initialized"
+                                title="Direct link to initialized"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              If the indicator is warmed up and initialized.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="name-1"
+                            >
+                              name<a
+                                href="#name-1"
+                                class="hash-link"
+                                aria-label="Direct link to name"
+                                title="Direct link to name"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The name of the indicator.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period-1"
+                            >
+                              period<a
+                                href="#period-1"
+                                class="hash-link"
+                                aria-label="Direct link to period"
+                                title="Direct link to period"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The moving average period.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="price_type-1"
+                            >
+                              price_type<a
+                                href="#price_type-1"
+                                class="hash-link"
+                                aria-label="Direct link to price_type"
+                                title="Direct link to price_type"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The specified price type for extracting values
+                              from quotes.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="resetself--void-1"
+                            >
+                              reset(self) → void<a
+                                href="#resetself--void-1"
+                                class="hash-link"
+                                aria-label="Direct link to reset(self) → void"
+                                title="Direct link to reset(self) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Reset the indicator.</p>
+                            <p>
+                              All stateful fields are reset to their initial
+                              value.
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_rawself-double-value--void-1"
+                            >
+                              update_raw(self, double value) → void<a
+                                href="#update_rawself-double-value--void-1"
+                                class="hash-link"
+                                aria-label="Direct link to update_raw(self, double value) → void"
+                                title="Direct link to update_raw(self, double value) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given raw value.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>value</strong> (<em>double</em>) – The
+                                update value.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="value-1"
+                            >
+                              value<a
+                                href="#value-1"
+                                class="hash-link"
+                                aria-label="Direct link to value"
+                                title="Direct link to value"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The current output value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <p>
+                              <a
+                                id="module-posei_trader.indicators.donchian_channel"
+                              ></a>
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-donchianchannel"
+                            >
+                              <em>class</em> DonchianChannel<a
+                                href="#class-donchianchannel"
+                                class="hash-link"
+                                aria-label="Direct link to class-donchianchannel"
+                                title="Direct link to class-donchianchannel"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.indicators.base.indicator.Indicator"
+                                ><code>Indicator</code></a
+                              >
+                            </p>
+                            <p>
+                              DonchianChannel(int period) Donchian Channels are
+                              three lines generated by moving average
+                              calculations that comprise an indicator formed by
+                              upper and lower bands around a mid-range or median
+                              band. The upper band marks the highest price of a
+                              instrument_id over N periods while the lower band
+                              marks the lowest price of a instrument_id over N
+                              periods. The area between the upper and lower
+                              bands represents the Donchian Channel.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>period</strong> (<em>int</em>) – The
+                                rolling window period for the indicator (&gt;
+                                0).
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If period is not
+                                positive (&gt; 0).
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_barself-bar-bar--void-2"
+                            >
+                              handle_bar(self, Bar bar) → void<a
+                                href="#handle_barself-bar-bar--void-2"
+                                class="hash-link"
+                                aria-label="Direct link to handle_bar(self, Bar bar) → void"
+                                title="Direct link to handle_bar(self, Bar bar) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Update the indicator with the given bar.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>bar</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.Bar"
+                                  ><em>Bar</em></a
+                                >) – The update bar.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_quote_tickself-quotetick-tick--void-2"
+                            >
+                              handle_quote_tick(self, QuoteTick tick) → void<a
+                                href="#handle_quote_tickself-quotetick-tick--void-2"
+                                class="hash-link"
+                                aria-label="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                title="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given ticks high and
+                              low prices.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
+                                  ><em>TradeTick</em></a
+                                >) – The tick for the update.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_trade_tickself-tradetick-tick--void-2"
+                            >
+                              handle_trade_tick(self, TradeTick tick) → void<a
+                                href="#handle_trade_tickself-tradetick-tick--void-2"
+                                class="hash-link"
+                                aria-label="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                title="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given ticks price.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
+                                  ><em>TradeTick</em></a
+                                >) – The tick for the update.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="has_inputs-2"
+                            >
+                              has_inputs<a
+                                href="#has_inputs-2"
+                                class="hash-link"
+                                aria-label="Direct link to has_inputs"
+                                title="Direct link to has_inputs"
+                                >​</a
+                              >
+                            </h4>
+                            <p>If the indicator has received inputs.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="initialized-2"
+                            >
+                              initialized<a
+                                href="#initialized-2"
+                                class="hash-link"
+                                aria-label="Direct link to initialized"
+                                title="Direct link to initialized"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              If the indicator is warmed up and initialized.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="lower"
+                            >
+                              lower<a
+                                href="#lower"
+                                class="hash-link"
+                                aria-label="Direct link to lower"
+                                title="Direct link to lower"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The current value of the lower band.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="middle"
+                            >
+                              middle<a
+                                href="#middle"
+                                class="hash-link"
+                                aria-label="Direct link to middle"
+                                title="Direct link to middle"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The current value of the middle band.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="name-2"
+                            >
+                              name<a
+                                href="#name-2"
+                                class="hash-link"
+                                aria-label="Direct link to name"
+                                title="Direct link to name"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The name of the indicator.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period-2"
+                            >
+                              period<a
+                                href="#period-2"
+                                class="hash-link"
+                                aria-label="Direct link to period"
+                                title="Direct link to period"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The period for the moving average.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> int</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="resetself--void-2"
+                            >
+                              reset(self) → void<a
+                                href="#resetself--void-2"
+                                class="hash-link"
+                                aria-label="Direct link to reset(self) → void"
+                                title="Direct link to reset(self) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Reset the indicator.</p>
+                            <p>
+                              All stateful fields are reset to their initial
+                              value.
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_rawself-double-high-double-low--void"
+                            >
+                              update_raw(self, double high, double low) → void<a
+                                href="#update_rawself-double-high-double-low--void"
+                                class="hash-link"
+                                aria-label="Direct link to update_raw(self, double high, double low) → void"
+                                title="Direct link to update_raw(self, double high, double low) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Update the indicator with the given prices.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>high</strong> (<em>double</em>) –
+                                    The price for the upper channel.
+                                  </li>
+                                  <li>
+                                    <strong>low</strong> (<em>double</em>) – The
+                                    price for the lower channel.
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="upper"
+                            >
+                              upper<a
+                                href="#upper"
+                                class="hash-link"
+                                aria-label="Direct link to upper"
+                                title="Direct link to upper"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The current value of the upper band.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <p>
+                              <a
+                                id="module-posei_trader.indicators.average.hma"
+                              ></a>
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-hullmovingaverage"
+                            >
+                              <em>class</em> HullMovingAverage<a
+                                href="#class-hullmovingaverage"
+                                class="hash-link"
+                                aria-label="Direct link to class-hullmovingaverage"
+                                title="Direct link to class-hullmovingaverage"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.indicators.average.moving_average.MovingAverage"
+                                ><code>MovingAverage</code></a
+                              >
+                            </p>
+                            <p>
+                              HullMovingAverage(int period, PriceType
+                              price_type=PriceType.LAST) An indicator which
+                              calculates a Hull Moving Average (HMA) across a
+                              rolling window. The HMA, developed by Alan Hull,
+                              is an extremely fast and smooth moving average.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>period</strong> (<em>int</em>) – The
+                                    rolling window period for the indicator
+                                    (&gt; 0).
+                                  </li>
+                                  <li>
+                                    <strong>price_type</strong>
+                                    (<em>PriceType</em>) – The specified price
+                                    type for extracting values from quotes.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If period is not
+                                positive (&gt; 0).
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="count-2"
+                            >
+                              count<a
+                                href="#count-2"
+                                class="hash-link"
+                                aria-label="Direct link to count"
+                                title="Direct link to count"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The count of inputs received by the indicator.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> int</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_barself-bar-bar--void-3"
+                            >
+                              handle_bar(self, Bar bar) → void<a
+                                href="#handle_barself-bar-bar--void-3"
+                                class="hash-link"
+                                aria-label="Direct link to handle_bar(self, Bar bar) → void"
+                                title="Direct link to handle_bar(self, Bar bar) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Update the indicator with the given bar.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>bar</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.Bar"
+                                  ><em>Bar</em></a
+                                >) – The update bar to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_quote_tickself-quotetick-tick--void-3"
+                            >
+                              handle_quote_tick(self, QuoteTick tick) → void<a
+                                href="#handle_quote_tickself-quotetick-tick--void-3"
+                                class="hash-link"
+                                aria-label="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                title="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given quote tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.QuoteTick"
+                                  ><em>QuoteTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_trade_tickself-tradetick-tick--void-3"
+                            >
+                              handle_trade_tick(self, TradeTick tick) → void<a
+                                href="#handle_trade_tickself-tradetick-tick--void-3"
+                                class="hash-link"
+                                aria-label="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                title="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given trade tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
+                                  ><em>TradeTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="has_inputs-3"
+                            >
+                              has_inputs<a
+                                href="#has_inputs-3"
+                                class="hash-link"
+                                aria-label="Direct link to has_inputs"
+                                title="Direct link to has_inputs"
+                                >​</a
+                              >
+                            </h4>
+                            <p>If the indicator has received inputs.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="initialized-3"
+                            >
+                              initialized<a
+                                href="#initialized-3"
+                                class="hash-link"
+                                aria-label="Direct link to initialized"
+                                title="Direct link to initialized"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              If the indicator is warmed up and initialized.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="name-3"
+                            >
+                              name<a
+                                href="#name-3"
+                                class="hash-link"
+                                aria-label="Direct link to name"
+                                title="Direct link to name"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The name of the indicator.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period-3"
+                            >
+                              period<a
+                                href="#period-3"
+                                class="hash-link"
+                                aria-label="Direct link to period"
+                                title="Direct link to period"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The moving average period.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="price_type-2"
+                            >
+                              price_type<a
+                                href="#price_type-2"
+                                class="hash-link"
+                                aria-label="Direct link to price_type"
+                                title="Direct link to price_type"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The specified price type for extracting values
+                              from quotes.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="resetself--void-3"
+                            >
+                              reset(self) → void<a
+                                href="#resetself--void-3"
+                                class="hash-link"
+                                aria-label="Direct link to reset(self) → void"
+                                title="Direct link to reset(self) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Reset the indicator.</p>
+                            <p>
+                              All stateful fields are reset to their initial
+                              value.
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_rawself-double-value--void-2"
+                            >
+                              update_raw(self, double value) → void<a
+                                href="#update_rawself-double-value--void-2"
+                                class="hash-link"
+                                aria-label="Direct link to update_raw(self, double value) → void"
+                                title="Direct link to update_raw(self, double value) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given raw value.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>value</strong> (<em>double</em>) – The
+                                update value.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="value-2"
+                            >
+                              value<a
+                                href="#value-2"
+                                class="hash-link"
+                                aria-label="Direct link to value"
+                                title="Direct link to value"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The current output value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <p>
+                              <a
+                                id="module-posei_trader.indicators.average.ma_factory"
+                              ></a>
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-movingaveragefactory"
+                            >
+                              <em>class</em> MovingAverageFactory<a
+                                href="#class-movingaveragefactory"
+                                class="hash-link"
+                                aria-label="Direct link to class-movingaveragefactory"
+                                title="Direct link to class-movingaveragefactory"
+                                >​</a
+                              >
+                            </h3>
+                            <p>Bases: <code>object</code></p>
+                            <p>
+                              Provides a factory to construct different moving
+                              average indicators.
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="static-createint-period-ma_type-movingaveragetype-kwargs--movingaverage"
+                            >
+                              <em>static</em> create(int period, ma_type:
+                              MovingAverageType, **kwargs) →
+                              <a
+                                href="#posei_trader.indicators.average.moving_average.MovingAverage"
+                                >MovingAverage</a
+                              ><a
+                                href="#static-createint-period-ma_type-movingaveragetype-kwargs--movingaverage"
+                                class="hash-link"
+                                aria-label="Direct link to static-createint-period-ma_type-movingaveragetype-kwargs--movingaverage"
+                                title="Direct link to static-createint-period-ma_type-movingaveragetype-kwargs--movingaverage"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Create a moving average indicator corresponding to
+                              the given ma_type.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>period</strong> (<em>int</em>) – The
+                                    period of the moving average (&gt; 0).
+                                  </li>
+                                  <li>
+                                    <strong>ma_type</strong> (<a
+                                      href="#posei_trader.indicators.average.moving_average.MovingAverageType"
+                                      ><em>MovingAverageType</em></a
+                                    >) – The moving average type.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Return type:</strong>
+                                <a
+                                  href="#posei_trader.indicators.average.moving_average.MovingAverage"
+                                  >MovingAverage</a
+                                >
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If period is not
+                                positive (&gt; 0).
+                              </li>
+                            </ul>
+                            <p>
+                              <a
+                                id="module-posei_trader.indicators.average.sma"
+                              ></a>
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-simplemovingaverage"
+                            >
+                              <em>class</em> SimpleMovingAverage<a
+                                href="#class-simplemovingaverage"
+                                class="hash-link"
+                                aria-label="Direct link to class-simplemovingaverage"
+                                title="Direct link to class-simplemovingaverage"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.indicators.average.moving_average.MovingAverage"
+                                ><code>MovingAverage</code></a
+                              >
+                            </p>
+                            <p>
+                              SimpleMovingAverage(int period, PriceType
+                              price_type=PriceType.LAST) An indicator which
+                              calculates a simple moving average across a
+                              rolling window.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>period</strong> (<em>int</em>) – The
+                                    rolling window period for the indicator
+                                    (&gt; 0).
+                                  </li>
+                                  <li>
+                                    <strong>price_type</strong>
+                                    (<em>PriceType</em>) – The specified price
+                                    type for extracting values from quotes.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If period is not
+                                positive (&gt; 0).
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="count-3"
+                            >
+                              count<a
+                                href="#count-3"
+                                class="hash-link"
+                                aria-label="Direct link to count"
+                                title="Direct link to count"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The count of inputs received by the indicator.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> int</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_barself-bar-bar--void-4"
+                            >
+                              handle_bar(self, Bar bar) → void<a
+                                href="#handle_barself-bar-bar--void-4"
+                                class="hash-link"
+                                aria-label="Direct link to handle_bar(self, Bar bar) → void"
+                                title="Direct link to handle_bar(self, Bar bar) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Update the indicator with the given bar.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>bar</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.Bar"
+                                  ><em>Bar</em></a
+                                >) – The update bar to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_quote_tickself-quotetick-tick--void-4"
+                            >
+                              handle_quote_tick(self, QuoteTick tick) → void<a
+                                href="#handle_quote_tickself-quotetick-tick--void-4"
+                                class="hash-link"
+                                aria-label="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                title="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given quote tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.QuoteTick"
+                                  ><em>QuoteTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_trade_tickself-tradetick-tick--void-4"
+                            >
+                              handle_trade_tick(self, TradeTick tick) → void<a
+                                href="#handle_trade_tickself-tradetick-tick--void-4"
+                                class="hash-link"
+                                aria-label="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                title="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given trade tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
+                                  ><em>TradeTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="has_inputs-4"
+                            >
+                              has_inputs<a
+                                href="#has_inputs-4"
+                                class="hash-link"
+                                aria-label="Direct link to has_inputs"
+                                title="Direct link to has_inputs"
+                                >​</a
+                              >
+                            </h4>
+                            <p>If the indicator has received inputs.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="initialized-4"
+                            >
+                              initialized<a
+                                href="#initialized-4"
+                                class="hash-link"
+                                aria-label="Direct link to initialized"
+                                title="Direct link to initialized"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              If the indicator is warmed up and initialized.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="name-4"
+                            >
+                              name<a
+                                href="#name-4"
+                                class="hash-link"
+                                aria-label="Direct link to name"
+                                title="Direct link to name"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The name of the indicator.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period-4"
+                            >
+                              period<a
+                                href="#period-4"
+                                class="hash-link"
+                                aria-label="Direct link to period"
+                                title="Direct link to period"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The moving average period.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="price_type-3"
+                            >
+                              price_type<a
+                                href="#price_type-3"
+                                class="hash-link"
+                                aria-label="Direct link to price_type"
+                                title="Direct link to price_type"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The specified price type for extracting values
+                              from quotes.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="resetself--void-4"
+                            >
+                              reset(self) → void<a
+                                href="#resetself--void-4"
+                                class="hash-link"
+                                aria-label="Direct link to reset(self) → void"
+                                title="Direct link to reset(self) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Reset the indicator.</p>
+                            <p>
+                              All stateful fields are reset to their initial
+                              value.
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_rawself-double-value--void-3"
+                            >
+                              update_raw(self, double value) → void<a
+                                href="#update_rawself-double-value--void-3"
+                                class="hash-link"
+                                aria-label="Direct link to update_raw(self, double value) → void"
+                                title="Direct link to update_raw(self, double value) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given raw value.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>value</strong> (<em>double</em>) – The
+                                update value.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="value-3"
+                            >
+                              value<a
+                                href="#value-3"
+                                class="hash-link"
+                                aria-label="Direct link to value"
+                                title="Direct link to value"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The current output value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <p>
+                              <a
+                                id="module-posei_trader.indicators.average.wma"
+                              ></a>
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-weightedmovingaverage"
+                            >
+                              <em>class</em> WeightedMovingAverage<a
+                                href="#class-weightedmovingaverage"
+                                class="hash-link"
+                                aria-label="Direct link to class-weightedmovingaverage"
+                                title="Direct link to class-weightedmovingaverage"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.indicators.average.moving_average.MovingAverage"
+                                ><code>MovingAverage</code></a
+                              >
+                            </p>
+                            <p>
+                              WeightedMovingAverage(int period, weights=None,
+                              PriceType price_type=PriceType.LAST) An indicator
+                              which calculates a weighted moving average across
+                              a rolling window.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>period</strong> (<em>int</em>) – The
+                                    rolling window period for the indicator
+                                    (&gt; 0).
+                                  </li>
+                                  <li>
+                                    <strong>weights</strong> (<em>iterable</em>)
+                                    – The weights for the moving average
+                                    calculation (if not <code>None</code> then =
+                                    period).
+                                  </li>
+                                  <li>
+                                    <strong>price_type</strong>
+                                    (<em>PriceType</em>) – The specified price
+                                    type for extracting values from quotes.
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <strong>Raises:</strong>
+                                <strong>ValueError</strong> – If period is not
+                                positive (&gt; 0).
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="count-4"
+                            >
+                              count<a
+                                href="#count-4"
+                                class="hash-link"
+                                aria-label="Direct link to count"
+                                title="Direct link to count"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The count of inputs received by the indicator.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> int</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_barself-bar-bar--void-5"
+                            >
+                              handle_bar(self, Bar bar) → void<a
+                                href="#handle_barself-bar-bar--void-5"
+                                class="hash-link"
+                                aria-label="Direct link to handle_bar(self, Bar bar) → void"
+                                title="Direct link to handle_bar(self, Bar bar) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Update the indicator with the given bar.</p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>bar</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.Bar"
+                                  ><em>Bar</em></a
+                                >) – The update bar to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_quote_tickself-quotetick-tick--void-5"
+                            >
+                              handle_quote_tick(self, QuoteTick tick) → void<a
+                                href="#handle_quote_tickself-quotetick-tick--void-5"
+                                class="hash-link"
+                                aria-label="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                title="Direct link to handle_quote_tick(self, QuoteTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given quote tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.QuoteTick"
+                                  ><em>QuoteTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="handle_trade_tickself-tradetick-tick--void-5"
+                            >
+                              handle_trade_tick(self, TradeTick tick) → void<a
+                                href="#handle_trade_tickself-tradetick-tick--void-5"
+                                class="hash-link"
+                                aria-label="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                title="Direct link to handle_trade_tick(self, TradeTick tick) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given trade tick.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>tick</strong> (<a
+                                  href="../model/data/index.htm#posei_trader.model.data.TradeTick"
+                                  ><em>TradeTick</em></a
+                                >) – The update tick to handle.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="has_inputs-5"
+                            >
+                              has_inputs<a
+                                href="#has_inputs-5"
+                                class="hash-link"
+                                aria-label="Direct link to has_inputs"
+                                title="Direct link to has_inputs"
+                                >​</a
+                              >
+                            </h4>
+                            <p>If the indicator has received inputs.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="initialized-5"
+                            >
+                              initialized<a
+                                href="#initialized-5"
+                                class="hash-link"
+                                aria-label="Direct link to initialized"
+                                title="Direct link to initialized"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              If the indicator is warmed up and initialized.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> bool</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="name-5"
+                            >
+                              name<a
+                                href="#name-5"
+                                class="hash-link"
+                                aria-label="Direct link to name"
+                                title="Direct link to name"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The name of the indicator.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> str</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="period-5"
+                            >
+                              period<a
+                                href="#period-5"
+                                class="hash-link"
+                                aria-label="Direct link to period"
+                                title="Direct link to period"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The moving average period.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="price_type-4"
+                            >
+                              price_type<a
+                                href="#price_type-4"
+                                class="hash-link"
+                                aria-label="Direct link to price_type"
+                                title="Direct link to price_type"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The specified price type for extracting values
+                              from quotes.
+                            </p>
+                            <ul>
+                              <li><strong>Returns:</strong> PriceType</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="resetself--void-5"
+                            >
+                              reset(self) → void<a
+                                href="#resetself--void-5"
+                                class="hash-link"
+                                aria-label="Direct link to reset(self) → void"
+                                title="Direct link to reset(self) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>Reset the indicator.</p>
+                            <p>
+                              All stateful fields are reset to their initial
+                              value.
+                            </p>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="update_rawself-double-value--void-4"
+                            >
+                              update_raw(self, double value) → void<a
+                                href="#update_rawself-double-value--void-4"
+                                class="hash-link"
+                                aria-label="Direct link to update_raw(self, double value) → void"
+                                title="Direct link to update_raw(self, double value) → void"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              Update the indicator with the given raw value.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <strong>value</strong> (<em>double</em>) – The
+                                update value.
+                              </li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="value-4"
+                            >
+                              value<a
+                                href="#value-4"
+                                class="hash-link"
+                                aria-label="Direct link to value"
+                                title="Direct link to value"
+                                >​</a
+                              >
+                            </h4>
+                            <p>The current output value.</p>
+                            <ul>
+                              <li><strong>Returns:</strong> double</li>
+                            </ul>
+                            <h4
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="weights"
+                            >
+                              weights<a
+                                href="#weights"
+                                class="hash-link"
+                                aria-label="Direct link to weights"
+                                title="Direct link to weights"
+                                >​</a
+                              >
+                            </h4>
+                            <p>
+                              The weights for the moving average calculation.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Returns:</strong> np.ndarray[float64]
+                              </li>
+                            </ul>
+                            <p>
+                              <a id="module-posei_trader.indicators.atr"></a>
+                            </p>
+                            <h3
+                              class="anchor anchorWithHideOnScrollNavbar_WYt5"
+                              id="class-averagetruerange"
+                            >
+                              <em>class</em> AverageTrueRange<a
+                                href="#class-averagetruerange"
+                                class="hash-link"
+                                aria-label="Direct link to class-averagetruerange"
+                                title="Direct link to class-averagetruerange"
+                                >​</a
+                              >
+                            </h3>
+                            <p>
+                              Bases:
+                              <a
+                                href="#posei_trader.indicators.base.indicator.Indicator"
+                                ><code>Indicator</code></a
+                              >
+                            </p>
+                            <p>
+                              AverageTrueRange(int period, ma_type:
+                              MovingAverageType = MovingAverageType.SIMPLE, bool
+                              use_previous=True, double value_floor=0) An
+                              indicator which calculates the average true range
+                              across a rolling window. Different moving average
+                              types can be selected for the inner calculation.
+                            </p>
+                            <ul>
+                              <li>
+                                <strong>Parameters:</strong>
+                                <ul>
+                                  <li>
+                                    <strong>period</strong> (<em>int</em>) – The
+                                    rolling window period for the indicator
+                                    (&gt; 0).
+                                  </li>
+                                  <li>
+                                    <strong>ma_type</strong> (<a
+                                      href="#posei_trader.indicators.average.moving_average.MovingAverageType"
+                                      ><em>MovingAverageType</em></a
+                                    >) – The moving average type for the
+                                    indicator (cannot be None).
+                                  </li>
+                                  <li>
+                                    <strong>use_previous</strong>
+                                    (<em>bool</em>)
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

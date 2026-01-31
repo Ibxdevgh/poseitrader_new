@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ERC20Calls"],"fn":["new"],"struct":["ERC20Instance","decimalsCall","decimalsReturn","nameCall","nameReturn","symbolCall","symbolReturn"]};

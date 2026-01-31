@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["CoinbaseIntxWsChannel","WsErrorType","WsMessageType","WsOperation"],"struct":["CoinbaseIntxWsChannelIter","WsErrorTypeIter","WsMessageTypeIter","WsOperationIter"]};

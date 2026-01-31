@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["py_get_exchange_rate"]};

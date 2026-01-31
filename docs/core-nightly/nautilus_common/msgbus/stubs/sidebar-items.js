@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["check_handler_was_called","get_call_check_shareable_handler","get_message_saving_handler","get_saved_messages","get_stub_shareable_handler"],"struct":["CallCheckMessageHandler","MessageSavingHandler","StubMessageHandler"]};
