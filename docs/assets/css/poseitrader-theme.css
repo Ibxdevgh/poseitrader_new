@@ -1,0 +1,333 @@
+/* ===== PoseiTrader Theme Override ===== */
+
+:root,
+[data-theme="dark"] {
+  --ifm-color-primary: #d4a574;
+  --ifm-color-primary-dark: #c99058;
+  --ifm-color-primary-darker: #c3854a;
+  --ifm-color-primary-darkest: #a56b34;
+  --ifm-color-primary-light: #deba90;
+  --ifm-color-primary-lighter: #e3c59e;
+  --ifm-color-primary-lightest: #f0dcc2;
+  --ifm-background-color: #060606;
+  --ifm-background-surface-color: #0e0e0e;
+  --ifm-navbar-background-color: rgba(6,6,6,0.85);
+  --ifm-footer-background-color: #060606;
+  --ifm-font-family-base: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --ifm-font-color-base: #f0ece4;
+  --ifm-font-color-secondary: #8a8680;
+  --ifm-color-emphasis-0: #060606;
+  --ifm-color-emphasis-100: #1a1a1a;
+  --ifm-color-emphasis-200: #2a2a2a;
+  --ifm-color-emphasis-300: #3a3632;
+  --ifm-color-emphasis-400: #5a5652;
+  --ifm-color-emphasis-500: #6a6660;
+  --ifm-color-emphasis-600: #8a8680;
+  --ifm-color-emphasis-700: #a0a0a0;
+  --ifm-color-emphasis-800: #c0c0c0;
+  --ifm-color-emphasis-900: #e0dcd4;
+  --ifm-color-emphasis-1000: #f0ece4;
+  --ifm-hero-background-color: #060606;
+  --ifm-link-color: #d4a574;
+  --ifm-link-hover-color: #e8c9a4;
+  --ifm-menu-color: #8a8680;
+  --ifm-menu-color-active: #d4a574;
+  --ifm-menu-color-background-active: rgba(212,165,116,0.08);
+  --ifm-menu-color-background-hover: rgba(255,255,255,0.03);
+  --ifm-toc-link-color: #8a8680;
+  --ifm-color-content: #f0ece4;
+  --ifm-color-content-secondary: #8a8680;
+  --ifm-heading-color: #f0ece4;
+  --ifm-hr-border-color: #1a1a1a;
+  --ifm-code-background: rgba(212,165,116,0.08);
+  --ifm-code-border-radius: 6px;
+  --ifm-code-font-size: 85%;
+  --ifm-code-padding-horizontal: 0.4rem;
+  --ifm-code-padding-vertical: 0.15rem;
+  --ifm-pre-background: #0a0a0a;
+  --ifm-pre-border-radius: 12px;
+  --ifm-global-border-color: #1a1a1a;
+  --ifm-table-border-color: #1a1a1a;
+  --ifm-table-stripe-background: rgba(255,255,255,0.02);
+  --ifm-card-background-color: #0e0e0e;
+  --ifm-alert-background-color: #0e0e0e;
+  --ifm-badge-border-radius: 999px;
+  --ifm-navbar-height: 60px;
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-padding-horizontal: 24px;
+  --docusaurus-highlighted-code-line-bg: rgba(212,165,116,0.1);
+  --ifm-scrollbar-track-background-color: #0e0e0e;
+  --ifm-scrollbar-thumb-background-color: #2a2a2a;
+  --ifm-scrollbar-thumb-hover-background-color: #3a3632;
+  --docsearch-primary-color: #d4a574;
+  --docsearch-text-color: #f0ece4;
+  --docsearch-muted-color: #8a8680;
+  --docsearch-container-background: rgba(6,6,6,0.8);
+  --docsearch-modal-background: #0e0e0e;
+  --docsearch-searchbox-background: #1a1a1a;
+  --docsearch-searchbox-focus-background: #1a1a1a;
+  --docsearch-hit-background: #141414;
+  --docsearch-hit-active-color: #d4a574;
+  --docsearch-footer-background: #0e0e0e;
+  --docsearch-key-gradient: linear-gradient(0deg,#1a1a1a,#2a2a2a);
+  --docsearch-key-shadow: none;
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.navbar__title {
+  color: #f0ece4;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.navbar__link {
+  color: #8a8680;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #f0ece4;
+}
+
+.navbar__logo img {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(30%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(85%);
+}
+
+/* Sidebar */
+.menu__link {
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background: rgba(212,165,116,0.08);
+  color: #d4a574;
+  border-left: 2px solid #d4a574;
+  font-weight: 500;
+}
+
+.menu__link:hover {
+  background: rgba(255,255,255,0.03);
+  color: #f0ece4;
+}
+
+.menu__list-item-collapsible:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+/* Sidebar border */
+.theme-doc-sidebar-container {
+  border-right: 1px solid #1a1a1a !important;
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  color: #8a8680;
+  background: rgba(255,255,255,0.03);
+  border-radius: 999px;
+  font-size: 0.82rem;
+}
+
+.breadcrumbs__link:hover {
+  background: rgba(212,165,116,0.08);
+  color: #d4a574;
+}
+
+/* Article headings */
+.markdown h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #f0ece4;
+}
+
+.markdown h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #f0ece4;
+  border-bottom-color: #1a1a1a;
+}
+
+.markdown h3 {
+  font-weight: 500;
+  color: #f0ece4;
+}
+
+/* Code blocks */
+.prism-code {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px !important;
+}
+
+code {
+  color: #e8c9a4;
+  border: 1px solid rgba(212,165,116,0.15);
+}
+
+/* Cards */
+.card {
+  background: #0e0e0e;
+  border: 1px solid #1a1a1a;
+  border-radius: 14px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: #2a2a2a;
+}
+
+.card h2 a,
+.card h2 {
+  color: #d4a574 !important;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  background: #0e0e0e;
+  color: #f0ece4;
+  font-weight: 500;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+table td {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+table tr:nth-child(2n) {
+  background: rgba(255,255,255,0.02);
+}
+
+/* Pagination */
+.pagination-nav__link {
+  background: #0e0e0e;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.pagination-nav__link:hover {
+  border-color: rgba(212,165,116,0.3);
+}
+
+.pagination-nav__sublabel {
+  color: #5a5652;
+  font-size: 0.82rem;
+}
+
+.pagination-nav__label {
+  color: #d4a574;
+}
+
+/* TOC */
+.table-of-contents__link--active {
+  color: #d4a574;
+  font-weight: 500;
+}
+
+.table-of-contents__link:hover {
+  color: #e8c9a4;
+}
+
+/* Footer */
+.footer {
+  background: #060606;
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer__title {
+  color: #f0ece4;
+}
+
+.footer__link-item {
+  color: #8a8680;
+}
+
+.footer__link-item:hover {
+  color: #d4a574;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060606;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3632;
+}
+
+/* Tabs */
+.tabs__item {
+  border-radius: 8px 8px 0 0;
+  color: #8a8680;
+  font-weight: 400;
+}
+
+.tabs__item--active {
+  color: #d4a574;
+  border-bottom-color: #d4a574;
+}
+
+/* Admonitions */
+.alert {
+  border-radius: 12px;
+  border-left-width: 3px;
+}
+
+.alert--info {
+  --ifm-alert-background-color: rgba(212,165,116,0.06);
+  --ifm-alert-border-color: #d4a574;
+  --ifm-alert-foreground-color: #f0ece4;
+}
+
+/* Version badge */
+.badge {
+  background: rgba(212,165,116,0.1);
+  border: 1px solid rgba(212,165,116,0.2);
+  color: #d4a574;
+}
+
+/* Search */
+.DocSearch-Button {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 999px !important;
+  color: #8a8680 !important;
+}
+
+.DocSearch-Button:hover {
+  border-color: #2a2a2a !important;
+  background: rgba(255,255,255,0.06) !important;
+}
+
+/* Selection */
+::selection {
+  background: rgba(212,165,116,0.3);
+  color: #f0ece4;
+}
